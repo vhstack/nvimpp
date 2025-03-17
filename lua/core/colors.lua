@@ -13,7 +13,7 @@ end
 -- Catppuchin Themes (catppuccini, catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha)
 SetColor('catppuccin')
 
--- Andere Themen
+-- Andere Themen kanagawa,onedark,glowbeam
 --SetColor('kanagawa-wave')
 --SetColor('onedark')
 

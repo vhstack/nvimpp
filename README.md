@@ -28,8 +28,28 @@ Dieses Repository enthält eine optimierte **NeoVim**-Konfiguration für die **C
 | `buffline` | Erweiterte Buffer-Navigation |
 | `blankline` | Visuelle Darstellung von Einrückungen |
 | `neotree` | Dateimanager für verbesserte Navigation |
+| `neogen` | Dokumentation Generator in Sourcen |
 | `dashboard` | Startbildschirm für NeoVim mit Schnellzugriff |
 | `whichkey` | Schnelle Anzeige von Tastenkombinationen |
+
+## 🎨 Themen
+
+**Installierte Farbthemen:**
+- kanagawa
+- onedark
+- glowbeam
+- catppuccin
+
+**Standard-Theme:**
+`catppuccin` ist als voreingestelltes Colorscheme konfiguriert.
+
+**Anpassungen:**
+Theme-Einstellungen können einfach angepasst werden in:
+`~/.config/nvim/lua/core/colors.lua`
+
+**Option für helle Themes:**
+Fans von hellen Themes können nutzen:
+`catppuccin-latte` (Variante von catppuccin) oder weitere Themes installieren.
 
 ## 📥 Installation
 
