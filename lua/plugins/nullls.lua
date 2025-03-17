@@ -16,7 +16,7 @@ null_ls.setup({
 		-- null_ls.builtins.diagnostics.cpplint,
     
 		-- clangd für die Sprache
-		null_ls.builtins.completion.lsp,
+		-- null_ls.builtins.completion.lsp,
 
 		-- Optional: clangd für LSP-Completion nur für C/C++ aktiv
 		-- null_ls.builtins.completion.lsp.with({

@@ -41,7 +41,7 @@ Dieses Repository enthält eine optimierte **NeoVim**-Konfiguration für die **C
 - catppuccin
 
 **Standard-Theme:**  
-`catppuccin` ist als voreingestelltes Colorscheme konfiguriert.
+Das Colorscheme `catppuccin` ist standardmäßig voreingestellt.
 
 **Anpassungen:**  
 Theme-Einstellungen können einfach angepasst werden in:
