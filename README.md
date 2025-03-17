@@ -40,17 +40,14 @@ Dieses Repository enthält eine optimierte **NeoVim**-Konfiguration für die **C
 - glowbeam
 - catppuccin
 
-**Standard-Theme:**
-
+**Standard-Theme:**  
 `catppuccin` ist als voreingestelltes Colorscheme konfiguriert.
 
-**Anpassungen:**
-
+**Anpassungen:**  
 Theme-Einstellungen können einfach angepasst werden in:
 `~/.config/nvim/lua/core/colors.lua`
 
-**Option für helle Themes:**
-
+**Option für helle Themes:**  
 Fans von hellen Themes können nutzen:
 `catppuccin-latte` (Variante von catppuccin) oder weitere Themes installieren.
 
