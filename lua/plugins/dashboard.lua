@@ -17,7 +17,7 @@ require('dashboard').setup {
         header = default_header(),
         center = {
 			{
-                icon = '󰙅 ',
+                icon = '󰈙 ',
                 icon_hl = 'Title',
                 desc = 'New file',
                 desc_hl = 'String',
@@ -29,10 +29,10 @@ require('dashboard').setup {
 			{
                 icon = '󰙅 ',
                 icon_hl = 'Title',
-                desc = 'Last opened',
+                desc = 'Recent files',
                 desc_hl = 'String',
                 key = 'r',
-                keymap = 'SPC r',
+                keymap = 'SPC SPC',
                 key_hl = 'Number',
                 action = ':Telescope oldfiles'
 			},

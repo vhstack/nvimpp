@@ -67,14 +67,69 @@ Fans von hellen Themes können nutzen:
 :MasonInstall clangd cmake-language-server
 ```
 
-## 🛠 Nutzung
+## 🛠 Konfiguration
+### LSP Unterstützung
+LSP Unterstützung kann in der Konfigurationsdatei `init.lua` über die Variable `vim.g.is_lsp_enabled` aktiviert/deaktiviert werden.
 
-- **Suche nach Dateien:** `:Telescope find_files`
-- **Code-Autovervollständigung:** Automatisch mit `nvim-cmp`
-- **LSP-Diagnosen anzeigen:** `:lua vim.diagnostic.open_float()`
-- **Dateimanager öffnen:** `:NeoTree`
-- **Git-Änderungen anzeigen:** `:Gitsigns toggle_current_line_blame`
-- **Terminal öffnen:** `<leader>t` (mit `toggleterm` konfiguriert)
+## ⌨  Grundlegende Tastenkombinationen
+Dies ist eine Übersicht der wichtigsten Tastenkombinationen, die in meiner NeoVim-Konfiguration definiert sind. Die Tasten sind als Lua-Key-Mappings konfiguriert und decken eine Vielzahl von Funktionen ab, von der Navigation bis hin zu spezifischen Plugins.
+
+
+### Neogen Plugin
+- `<F5>`: Aktiviert das `Neogen` Plugin zur automatischen Dokumentation.
+
+### Make Commands
+- `<F9>`: Führt den `make` Befehl aus.
+- `<F10>`: Führt `make clean` aus und baut das Projekt komplett aus
+- `<F12>`: Schließt den aktuellen Puffer.
+
+### NeoTree
+- `<leader>E`: Öffnet `Neotree` im schwebenden Modus und zeigt den aktuellen Ordner an.
+- `<leader>e`: Öffnet `Neotree` links und zeigt den aktuellen Ordner an.
+- `<leader>o`: Öffnet `Neotree` im schwebenden Modus und zeigt den Git-Status an.
+- `<c-e>`: Schaltet `Neotree` links ein oder aus.
+
+### Telescope
+- `<leader><leader>`: Zeigt eine Liste der zuletzt geöffneten Dateien mit `Telescope`.
+- `<c-f>`: Sucht nach einer Datei mit `Telescope`.
+- `<c-g>`: Führt eine Live-Suche in Dateien mit `Telescope` aus.
+- `<c-t>`: Zeigt eine Liste geöffneter Puffer mit `Telescope`.
+
+### Navigation
+- `<c-k>`: Wechselt in das obere Fenster (`:wincmd k`).
+- `<c-j>`: Wechselt in das untere Fenster (`:wincmd j`).
+- `<c-h>`: Wechselt in das linke Fenster (`:wincmd h`).
+- `<c-l>`: Wechselt in das rechte Fenster (`:wincmd l`).
+- `<leader>/`: Kommentiert die aktuelle Zeile oder Auswahl ein oder aus.
+
+### Git
+- `<leader>gb`: Öffnet Git Branches (`:Telescope git_branches`).
+- `<leader>gc`: Öffnet Git Commits (`:Telescope git_commits`).
+- `<leader>gs`: Öffnet Git Diffs (`:Telescope git_status`).
+- `<leader>gf`: Öffnet Git Files (`:Neotree float git_status`).
+
+### Methodenübersicht
+- `<c-s>`: Öffnet/schliesst die Methodenübersicht mit `:Outline`.
+
+### Splits
+- `|`: Vertikalen Split öffnen (`:vsplit`).
+- `\\`: Horizontalen Split öffnen (`:split`).
+
+### Tabs
+- `<Tab>`: Wechselt zu dem nächsten Tab (`:BufferLineCycleNext`).
+- `<s-Tab>`: Wechselt zu dem vorherigen Tab (`:BufferLineCyclePrev`).
+
+### Terminal
+- `<leader>tf`: Öffnet das Terminal im schwebenden Modus (`:ToggleTerm direction=float`).
+- `<leader>th`: Öffnet das Terminal im horizontalen Modus (`:ToggleTerm direction=horizontal`).
+- `<leader>tv`: Öffnet das Terminal im vertikalen Modus (`:ToggleTerm direction=vertical`).
+
+### Sonstige Befehle
+- `<leader>w`: Speichert die Datei (`:w`).
+- `<leader>x`: Schließt den aktuellen Puffer (`:BufferLinePickClose`).
+- `<leader>X`: Schließt alle Puffer rechts vom aktuellen (`:BufferLineCloseRight`).
+- `<leader>s`: Sortiert die Puffer nach Tabs (`:BufferLineSortByTabs`).
+- `<leader>h`: Hebt die Hervorhebung der Suche auf (`:nohlsearch`).
 
 ## 📜 Lizenz
 Dieses Projekt steht unter der **MIT-Lizenz**.

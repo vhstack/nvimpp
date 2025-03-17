@@ -10,28 +10,42 @@ vim.keymap.set('i', '<F10>', '<ESC>:make clean<CR>:make -j3<CR>');
 vim.keymap.set('n', '<F12>', ':bd<CR>')
 vim.keymap.set('i', '<F12>', '<ESC>:bd<CR>')
 
+-- Komplette Zeile mit Y kopieren
+vim.api.nvim_set_keymap('n', 'Y', 'yy', { noremap = true, silent = true })
+
 -- NeoTree
 vim.keymap.set('n', '<leader>E', ':Neotree float reveal<CR>')
 vim.keymap.set('n', '<leader>e', ':Neotree left reveal<CR>')
-vim.keymap.set('n', '<leader>o', ':Neotree float git_status<CR>')
-vim.keymap.set('n', '<leader>o', ':Neotree float git_status<CR>')
+vim.keymap.set('n', '<leader>gs', ':Neotree float git_status<CR>')
 vim.keymap.set('n', '<c-e>', ':Neotree left toggle<CR>')
 
 -- Telescope
 vim.keymap.set("n", "<leader><leader>", ":Telescope oldfiles<CR>")
-vim.keymap.set("n", "<c-p>", ":Telescope find_files<CR>")
-vim.keymap.set("n", "<c-f>", ":Telescope live_grep<CR>")
+vim.keymap.set('n', '<leader>ff', ":Telescope find_files<CR>")
+vim.keymap.set('n', '<leader>fw', ":Telescope live_grep<CR>")
+vim.keymap.set('n', '<leader>fb', ":Telescope buffers<CR>")
+vim.keymap.set('n', '<leader>fh', ":Telescope help_tags<CR>")
+vim.keymap.set("n", "<c-f>", ":Telescope find_files<CR>")
+vim.keymap.set("n", "<c-g>", ":Telescope live_grep<CR>")
 vim.keymap.set("n", "<c-t>", ":Telescope buffers<CR>")
+
+-- Telescope Git 
+vim.keymap.set('n', '<leader>gb', ":Telescope git_branches<CR>")
+vim.keymap.set('n', '<leader>gc', ":Telescope git_commits<CR>")
+vim.keymap.set('n', '<leader>gd', ":Telescope git_status<CR>")
 
 -- Navigation
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
-vim.keymap.set('n', '<leader>/', ':CommentToggle<CR>')
 
 -- Methoden Übersicht
 vim.keymap.set('n', '<c-s>', ':Outline<CR>')
+
+-- Kommentar
+vim.keymap.set('n', '<leader>/', ':CommentToggle<CR>')
+vim.keymap.set('v', '<leader>/', ':CommentToggle<CR>')
 
 -- Splits
 vim.keymap.set('n', '|', ':vsplit<CR>')
@@ -40,9 +54,7 @@ vim.keymap.set('n', '\\', ':split<CR>')
 -- Andere
 vim.keymap.set('n', '<leader>w', ':w<CR>')
 vim.keymap.set('n', '<leader>x', ':BufferLinePickClose<CR>')
-vim.keymap.set('n', '<leader>X', ':BufferLineCloseRight<CR>')
 vim.keymap.set('n', '<leader>s', ':BufferLineSortByTabs<CR>')
-vim.keymap.set('i', 'jj', '<Esc>')
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
 -- Tabs

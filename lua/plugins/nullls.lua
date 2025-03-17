@@ -3,31 +3,25 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
     sources = {
-        null_ls.builtins.formatting.eslint_d.with { filetypes = {
-            "typescript",
-            "javascript",
-            "typescriptreact",
-            "javascriptreact"
-        } },
-        null_ls.builtins.formatting.lua_format,
-        null_ls.builtins.diagnostics.eslint_d,
-        null_ls.builtins.formatting.stylua,
-        null_ls.builtins.diagnostics.ltrs,
-        null_ls.builtins.formatting.rustfmt,
-        null_ls.builtins.formatting.prettierd.with { filetypes = {
-        "css",
-        "scss",
-        "less",
-        "html",
-        "json",
-        "jsonc",
-        "yaml",
-        "markdown",
-        "markdown.mdx",
-        "graphql",
-        "handlebars",
-    },
-}
+		-- clang-format nur für C und C++-Dateien
+		null_ls.builtins.formatting.clang_format.with({
+			filetypes = { "c", "cpp", "cc", "cxx" },  
+		}),
+
+		-- clang-format als Formatierer
+		null_ls.builtins.formatting.clang_format,
+    
+		-- cppcheck als Linter
+		-- null_ls.builtins.diagnostics.cppcheck,
+		-- null_ls.builtins.diagnostics.cpplint,
+    
+		-- clangd für die Sprache
+		null_ls.builtins.completion.lsp,
+
+		-- Optional: clangd für LSP-Completion nur für C/C++ aktiv
+		-- null_ls.builtins.completion.lsp.with({
+		--	filetypes = { "c", "cpp", "cc", "cxx" },  
+		--}),
     },
 	on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then

@@ -1,11 +1,12 @@
 local wk = require("which-key")
 
 wk.add(
-  -- Suggested Spec:
+  -- Befehle 
   {
-    { "<leader>c", group = "Comment" },
-    { "<leader>cl", desc = "Comment Line" },
-    { "<leader>e", desc = "File Manager" },
+    { "<leader><leader>", desc = "Recent Files" },
+    { "<leader>/", desc = "Comment" },
+    { "<leader>e", desc = "Files left" },
+    { "<leader>E", desc = "File float" },
     { "<leader>f", group = "Find" },
     { "<leader>fb", desc = "Find Buffer" },
     { "<leader>ff", desc = "Find File" },
@@ -14,8 +15,24 @@ wk.add(
     { "<leader>g", group = "Git" },
     { "<leader>gb", desc = "Branches" },
     { "<leader>gc", desc = "Commits" },
+    { "<leader>gd", desc = "Diffs" },
     { "<leader>gs", desc = "Status" },
-    { "<leader>h", desc = "No highlight" },
+    { "<leader>h", desc = "No Highlight" },
+    { "<leader>o", desc = "Git Status" },
+    { "<leader>t", group = "Terminal" },
+    { "<leader>tf", desc = "Float Terminal" },
+    { "<leader>th", desc = "Horizontal Terminal" },
+    { "<leader>tv", desc = "Vertical Terminal" },
+    { "<leader>w", desc = "Save" },
+    { "<leader>x", desc = "Close Buffer" },
+    { "<leader>s", desc = "Sort Buffer" },
+  }
+)
+
+if vim.g.is_lsp_enabled then
+wk.add(
+  -- Optionale Befehle
+  {
     { "<leader>l", group = "LSP" },
     { "<leader>lD", desc = "Hover diagnostic" },
     { "<leader>la", desc = "Action" },
@@ -24,38 +41,6 @@ wk.add(
     { "<leader>lr", desc = "Rename" },
     { "<leader>ls", desc = "Symbol" },
     { "<leader>lm", "<cmd>Outline<cr>", desc = "Members" },
-    { "<leader>o", desc = "Git status" },
-    { "<leader>t", group = "Terminal" },
-    { "<leader>tf", desc = "Float terminal" },
-    { "<leader>th", desc = "Horizontal terminal" },
-    { "<leader>w", desc = "Save" },
-    { "<leader>x", desc = "Close Buffer" },
   }
 )
--- wk.register({
---
---     f = {
---         name = "Find",
---         f = {"Find File"},
---         b = {"Find Buffer"},
---         h = {"Find Help"},
---         w = {"Find Text"}
---     },
---     e = {"File Manager"},
---     o = {"Git status"},
---     x = {"Close Buffer"},
---     w = {"Save"},
---     t = {name = "Terminal", f = {"Float terminal"}, h = {"Horizontal terminal"}},
---     h = {"No highlight"},
---     g = {name = "Git", b = "Branches", c = "Commits", s = "Status"},
---     c = {name = "Comment", l = "Comment Line"},
---     l = {
---         name = "LSP",
---         d = "Diagnostic",
---         D = "Hover diagnostic",
---         f = "Format",
---         r = "Rename",
---         a = "Action",
---         s = "Symbol"
---     }
--- }, {prefix = "<leader>"})
+end
