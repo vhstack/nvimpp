@@ -41,13 +41,16 @@ Dieses Repository enthält eine optimierte **NeoVim**-Konfiguration für die **C
 - catppuccin
 
 **Standard-Theme:**
+
 `catppuccin` ist als voreingestelltes Colorscheme konfiguriert.
 
 **Anpassungen:**
+
 Theme-Einstellungen können einfach angepasst werden in:
 `~/.config/nvim/lua/core/colors.lua`
 
 **Option für helle Themes:**
+
 Fans von hellen Themes können nutzen:
 `catppuccin-latte` (Variante von catppuccin) oder weitere Themes installieren.
 
