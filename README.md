@@ -53,7 +53,7 @@ Fans von hellen Themes können nutzen:
 
 ## 📥 Installation
 
-1. **NeoVim installieren** (mindestens Version 0.8 erforderlich)
+1. **NeoVim installieren** 
 2. **Repository klonen & Git-Verzeichnis entfernen:**
    ```sh
    git clone https://github.com/vhstack/nvimpp ~/.config/nvim

@@ -26,6 +26,7 @@ wk.add(
     { "<leader>w", desc = "Save" },
     { "<leader>x", desc = "Close Buffer" },
     { "<leader>s", desc = "Sort Buffer" },
+    { "<leader>n", desc = "Toggle Linenumber" },
   }
 )
 
@@ -34,12 +35,15 @@ wk.add(
   -- Optionale Befehle
   {
     { "<leader>l", group = "LSP" },
-    { "<leader>lD", desc = "Hover diagnostic" },
-    { "<leader>la", desc = "Action" },
-    { "<leader>ld", desc = "Diagnostic" },
+    { "<leader>ld", desc = "Definition" },
+    { "<leader>lD", desc = "Declaration" },
+    { "<leader>lg", desc = "Diagnostic List" },
+    { "<leader>lG", desc = "Diagnostic Float" },
     { "<leader>lf", desc = "Format" },
-    { "<leader>lr", desc = "Rename" },
-    { "<leader>ls", desc = "Symbol" },
+    { "<leader>lr", desc = "References" },
+    { "<leader>lR", desc = "Rename" },
+    { "<leader>lt", desc = "Typ Info" },
+    { "<leader>lT", desc = "Type Definition" },
     { "<leader>lm", "<cmd>Outline<cr>", desc = "Members" },
   }
 )
