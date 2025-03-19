@@ -6,7 +6,6 @@
 vim.g.is_lsp_enabled = true
 
 -- Basic config
-require("core.functions")
 require("core.mappings")
 require("core.plugins")
 require("core.colors")

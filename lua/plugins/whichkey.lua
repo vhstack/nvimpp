@@ -27,6 +27,9 @@ wk.add(
     { "<leader>x", desc = "Close Buffer" },
     { "<leader>s", desc = "Sort Buffer" },
     { "<leader>n", desc = "Toggle Linenumber" },
+    { "<leader>p", group = "Plugins" },
+    { "<leader>pl", desc = "Lazy" },
+    { "<leader>pm", desc = "Mason" },
   }
 )
 
@@ -42,8 +45,9 @@ wk.add(
     { "<leader>lf", desc = "Format" },
     { "<leader>lr", desc = "References" },
     { "<leader>lR", desc = "Rename" },
-    { "<leader>lt", desc = "Typ Info" },
-    { "<leader>lT", desc = "Type Definition" },
+    { "<leader>lK", desc = "Typ Info" },
+    { "<leader>lt", desc = "Type Definition" },
+    { "<leader>lp", desc = "Build Projekt Flags" },
     { "<leader>lm", "<cmd>Outline<cr>", desc = "Members" },
   }
 )

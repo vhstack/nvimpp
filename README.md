@@ -54,13 +54,15 @@ Fans von hellen Themes können nutzen:
 ## 📥 Installation
 
 1. **NeoVim installieren** 
-2. **Repository klonen & Git-Verzeichnis entfernen:**
+2. **Tool regrep installieren**
+3. **Für LSP clangd installieren**
+4. **Repository klonen & Git-Verzeichnis entfernen:**
    ```sh
    git clone https://github.com/vhstack/nvimpp ~/.config/nvim
    rm -rf ~/.config/nvim/.git
    ```
-3. **Plugins synchronisieren** mit dem Plugin-Manager (`Packer`, `Lazy`, etc.)
-4. **LSPs & Tools installieren** über Mason (`:Mason` in NeoVim ausführen)
+5. **Plugins synchronisieren** mit dem Plugin-Manager (`Packer`, `Lazy`, etc.)
+6. **LSPs & Tools installieren** über Mason (`:Mason` in NeoVim ausführen)
 
 ```sh
 # Falls Mason installiert ist, öffne NeoVim und führe aus:
@@ -75,10 +77,8 @@ LSP Unterstützung kann in der Konfigurationsdatei `init.lua` über die Variable
 Dies ist eine Übersicht der wichtigsten Tastenkombinationen, die in meiner NeoVim-Konfiguration definiert sind. Die Tasten sind als Lua-Key-Mappings konfiguriert und decken eine Vielzahl von Funktionen ab, von der Navigation bis hin zu spezifischen Plugins.
 
 
-### Neogen Plugin
+### Funktionstasten
 - `<F5>`: Aktiviert das `Neogen` Plugin zur automatischen Dokumentation.
-
-### Make Commands
 - `<F9>`: Führt den `make` Befehl aus.
 - `<F10>`: Führt `make clean` aus und baut das Projekt komplett aus
 - `<F12>`: Schließt den aktuellen Puffer.
@@ -108,7 +108,10 @@ Dies ist eine Übersicht der wichtigsten Tastenkombinationen, die in meiner NeoV
 - `<leader>gs`: Öffnet Git Diffs (`:Telescope git_status`).
 - `<leader>gf`: Öffnet Git Files (`:Neotree float git_status`).
 
-### Methodenübersicht
+### LSP
+- `<s-t>`: Springt zur Definition eines Symbols. mit `:vim.lsp.buf.declaration`.
+- `<s-T>`: Springt zur Deklaration eines Symbols mit `:vim.lsp.buf.definition`.
+- `<s-K>`: Zeigt die Hover-Dokumentation an mit `:vim.lsp.buf.hover`.
 - `<c-s>`: Öffnet/schliesst die Methodenübersicht mit `:Outline`.
 
 ### Splits

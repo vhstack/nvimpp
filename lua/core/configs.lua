@@ -11,6 +11,9 @@ vim.opt.virtualedit = "block"
 vim.opt.undofile = true
 vim.opt.shell = "/bin/bash"
 
+-- Letzte Cursor Position merken
+vim.o.shada = "'100,f1"
+
 -- Speichert automatisch, wenn nötig
 vim.opt.autowrite = true 
 
@@ -54,5 +57,21 @@ vim.opt.fillchars = {
     foldclose = "▸"
 }
 
+-- Hervorhebung zurücksetzen
 vim.cmd([[highlight clear LineNr]])
 vim.cmd([[highlight clear SignColumn]])
+
+-- Letzte Cursor Position merken
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = "*",
+  callback = function()
+    local last_pos = vim.api.nvim_buf_get_mark(0, '"')
+    local line_count = vim.api.nvim_buf_line_count(0)
+
+    if last_pos[1] > 0 and last_pos[1] <= line_count then
+      vim.api.nvim_win_set_cursor(0, last_pos)
+    end
+  end,
+})
+
+
