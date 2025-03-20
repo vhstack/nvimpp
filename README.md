@@ -54,8 +54,8 @@ Fans von hellen Themes können nutzen:
 ## 📥 Installation
 
 1. **NeoVim installieren** 
-2. **Tool regrep installieren**
-3. **Für LSP clangd installieren**
+2. **Tool `regrep` installieren**
+3. **Für LSP `clangd` installieren**
 4. **Repository klonen & Git-Verzeichnis entfernen:**
    ```sh
    git clone https://github.com/vhstack/nvimpp ~/.config/nvim
@@ -74,65 +74,126 @@ Fans von hellen Themes können nutzen:
 LSP Unterstützung kann in der Konfigurationsdatei `init.lua` über die Variable `vim.g.is_lsp_enabled` aktiviert/deaktiviert werden.
 
 ## ⌨  Grundlegende Tastenkombinationen
-Dies ist eine Übersicht der wichtigsten Tastenkombinationen, die in meiner NeoVim-Konfiguration definiert sind. Die Tasten sind als Lua-Key-Mappings konfiguriert und decken eine Vielzahl von Funktionen ab, von der Navigation bis hin zu spezifischen Plugins.
+Dies ist eine Übersicht der wichtigsten Tastenkombinationen, die in meiner NeoVim-Konfiguration definiert sind. 
+Die Tasten sind als Lua-Key-Mappings konfiguriert und decken eine Vielzahl von Funktionen ab, von der Navigation bis hin zu spezifischen Plugins.
+Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nutzen.
 
 
-### Funktionstasten
-- `<F5>`: Aktiviert das `Neogen` Plugin zur automatischen Dokumentation.
-- `<F9>`: Führt den `make` Befehl aus.
-- `<F10>`: Führt `make clean` aus und baut das Projekt komplett aus
-- `<F12>`: Schließt den aktuellen Puffer.
+### Globale Leader Taste
 
-### NeoTree
-- `<leader>E`: Öffnet `Neotree` im schwebenden Modus und zeigt den aktuellen Ordner an.
-- `<leader>e`: Öffnet `Neotree` links und zeigt den aktuellen Ordner an.
-- `<leader>o`: Öffnet `Neotree` im schwebenden Modus und zeigt den Git-Status an.
-- `<c-e>`: Schaltet `Neotree` links ein oder aus.
+| Kürzel    | Bedeutung    |
+| --------- | ------------ |
+| `<Space>` | Leader Taste |
 
-### Telescope
-- `<leader><leader>`: Zeigt eine Liste der zuletzt geöffneten Dateien mit `Telescope`.
-- `<c-f>`: Sucht nach einer Datei mit `Telescope`.
-- `<c-g>`: Führt eine Live-Suche in Dateien mit `Telescope` aus.
-- `<c-t>`: Zeigt eine Liste geöffneter Puffer mit `Telescope`.
+### F-Tasten
+
+| Kürzel  | Bedeutung                           |
+| ------- | ----------------------------------- |
+| `<F5>`  | Neogen-Dokumentation generieren     |
+| `<F9>`  | `make` ausführen                    |
+| `<F10>` | `make clean` & `make -j3` ausführen |
+| `<F12>` | Buffer schließen                    |
 
 ### Navigation
-- `<c-k>`: Wechselt in das obere Fenster (`:wincmd k`).
-- `<c-j>`: Wechselt in das untere Fenster (`:wincmd j`).
-- `<c-h>`: Wechselt in das linke Fenster (`:wincmd h`).
-- `<c-l>`: Wechselt in das rechte Fenster (`:wincmd l`).
-- `<leader>/`: Kommentiert die aktuelle Zeile oder Auswahl ein oder aus.
 
-### Git
-- `<leader>gb`: Öffnet Git Branches (`:Telescope git_branches`).
-- `<leader>gc`: Öffnet Git Commits (`:Telescope git_commits`).
-- `<leader>gs`: Öffnet Git Diffs (`:Telescope git_status`).
-- `<leader>gf`: Öffnet Git Files (`:Neotree float git_status`).
+| Kürzel  | Bedeutung           |
+| ------- | ------------------- |
+| `<C-k>` | Fenster nach oben   |
+| `<C-j>` | Fenster nach unten  |
+| `<C-h>` | Fenster nach links  |
+| `<C-l>` | Fenster nach rechts |
 
-### LSP
-- `<s-t>`: Springt zur Definition eines Symbols. mit `:vim.lsp.buf.declaration`.
-- `<s-T>`: Springt zur Deklaration eines Symbols mit `:vim.lsp.buf.definition`.
-- `<s-K>`: Zeigt die Hover-Dokumentation an mit `:vim.lsp.buf.hover`.
-- `<c-s>`: Öffnet/schliesst die Methodenübersicht mit `:Outline`.
+### NeoTree
+
+| Kürzel       | Bedeutung                  |
+| ------------ | -------------------------- |
+| `<leader>E`  | NeoTree als Float anzeigen |
+| `<leader>e`  | NeoTree links anzeigen     |
+| `<leader>gs` | Git-Status in NeoTree      |
+| `<C-e>`      | NeoTree links umschalten   |
+
+### Telescope
+
+| Kürzel             | Bedeutung                 |
+| ------------------ | ------------------------- |
+| `<leader><leader>` | Zuletzt geöffnete Dateien |
+| `<leader>ff`       | Dateien suchen            |
+| `<leader>fw`       | Live-Grep-Suche           |
+| `<leader>fb`       | Geöffnete Buffer          |
+| `<leader>fh`       | Hilfetags durchsuchen     |
+| `<C-f>`            | Dateien suchen            |
+| `<C-g>`            | Live-Grep-Suche           |
+| `<C-t>`            | Buffer durchsuchen        |
+
+### Git (Telescope)
+
+| Kürzel       | Bedeutung    |
+| ------------ | ------------ |
+| `<leader>gb` | Git-Branches |
+| `<leader>gc` | Git-Commits  |
+| `<leader>gd` | Git-Status   |
+
+### Kommentare
+
+| Kürzel      | Bedeutung            |
+| ----------- | -------------------- |
+| `<leader>/` | Kommentar umschalten |
 
 ### Splits
-- `|`: Vertikalen Split öffnen (`:vsplit`).
-- `\\`: Horizontalen Split öffnen (`:split`).
+
+| Kürzel | Bedeutung           |
+| ------ | ------------------- |
+| `|`    | Vertikales Split   |
+| `\`    | Horizontales Split |
 
 ### Tabs
-- `<Tab>`: Wechselt zu dem nächsten Tab (`:BufferLineCycleNext`).
-- `<s-Tab>`: Wechselt zu dem vorherigen Tab (`:BufferLineCyclePrev`).
+
+| Kürzel    | Bedeutung               |
+| --------- | ----------------------- |
+| `<Tab>`   | Nächsten Tab wechseln   |
+| `<S-Tab>` | Vorherigen Tab wechseln |
 
 ### Terminal
-- `<leader>tf`: Öffnet das Terminal im schwebenden Modus (`:ToggleTerm direction=float`).
-- `<leader>th`: Öffnet das Terminal im horizontalen Modus (`:ToggleTerm direction=horizontal`).
-- `<leader>tv`: Öffnet das Terminal im vertikalen Modus (`:ToggleTerm direction=vertical`).
 
-### Sonstige Befehle
-- `<leader>w`: Speichert die Datei (`:w`).
-- `<leader>x`: Schließt den aktuellen Puffer (`:BufferLinePickClose`).
-- `<leader>X`: Schließt alle Puffer rechts vom aktuellen (`:BufferLineCloseRight`).
-- `<leader>s`: Sortiert die Puffer nach Tabs (`:BufferLineSortByTabs`).
-- `<leader>h`: Hebt die Hervorhebung der Suche auf (`:nohlsearch`).
+| Kürzel       | Bedeutung             |
+| ------------ | --------------------- |
+| `<leader>tf` | Terminal (Float)      |
+| `<leader>th` | Terminal (Horizontal) |
+| `<leader>tv` | Terminal (Vertikal)   |
+
+### LSP
+
+| Kürzel       | Bedeutung                |
+| ------------ | ------------------------ |
+| `<leader>lg` | Diagnostik in Quickfix   |
+| `<leader>lG` | Diagnostik als Float     |
+| `[d`         | Vorherige Diagnose       |
+| `]d`         | Nächste Diagnose         |
+| `<leader>ld` | Zur Definition springen  |
+| `<leader>lD` | Zur Deklaration springen |
+| `<leader>lK` | Hover-Dokumentation      |
+| `<leader>lr` | Referenzen anzeigen      |
+| `<leader>lt` | Typdefinition anzeigen   |
+| `<leader>lR` | Umbenennen               |
+| `<leader>lf` | Formatieren              |
+| `K`          | Hover-Dokumentation      |
+| `t`          | Zur Deklaration springen |
+| `T`          | Zur Definition springen  |
+
+### Sonstige
+
+| Kürzel       | Bedeutung                  |
+| ------------ | -------------------------- |
+| `<leader>n`  | Zeilennummern umschalten   |
+| `Y`          | Ganze Zeile kopieren       |
+| `<leader>w`  | Datei speichern            |
+| `<leader>x`  | Buffer schließen           |
+| `<leader>s`  | Buffer nach Tabs sortieren |
+| `<leader>h`  | Highlighting zurücksetzen  |
+| `<leader>pl` | Lazy Plugins öffnen        |
+| `<leader>pm` | Mason Plugins öffnen       |
+
+
 
 ## 📜 Lizenz
 Dieses Projekt steht unter der **MIT-Lizenz**.
