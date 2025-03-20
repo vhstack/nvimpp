@@ -5,6 +5,9 @@
 -- LSP aktivieren/deaktivieren
 vim.g.is_lsp_enabled = true
 
+-- Tranzparens aktivieren/deaktivieren
+vim.g.is_transparency_enabled=true
+
 -- Basic config
 require("core.mappings")
 require("core.plugins")
@@ -34,3 +37,13 @@ if vim.g.is_lsp_enabled then
 	require("plugins.cmp")
 	require("plugins.lsp")
 end
+
+-- Transparenz
+if vim.g.is_transparency_enabled then
+	require('transparent').clear_prefix('BufferLine')
+	require('transparent').clear_prefix('NeoTree')
+	vim.cmd('TransparentEnable')
+else
+	vim.cmd('TransparentDisable')
+end
+--require('transparent').clear_prefix('lualine')

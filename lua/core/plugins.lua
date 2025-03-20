@@ -9,6 +9,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	-- Colorschemes
+	{'cooperuser/glowbeam.nvim'}, 
+	{'joshdick/onedark.vim'},
+	{'catppuccin/nvim'}, 
+    {'rebelot/kanagawa.nvim'},
+
 	-- Telescope
     {
         'nvim-telescope/telescope.nvim',
@@ -16,11 +22,8 @@ require("lazy").setup({
         dependencies = {'nvim-lua/plenary.nvim'}
     }, 
 
-	-- Colorschemes
-	{'cooperuser/glowbeam.nvim'}, 
-	{'joshdick/onedark.vim'},
-	{'catppuccin/nvim'}, 
-    {'rebelot/kanagawa.nvim'},
+	-- Transparenz
+	{'xiyaowong/transparent.nvim'},
 
 	-- Indent Blankline
 	{'lukas-reineke/indent-blankline.nvim',
@@ -87,6 +90,7 @@ require("lazy").setup({
         config = function() require('lsp-progress').setup() end
     }, 
 
+	-- Anzeige Klassen Members
 	{'hedyhli/outline.nvim'},
 
 	-- Dashboard
