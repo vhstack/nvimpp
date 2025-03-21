@@ -31,6 +31,7 @@ Dieses Repository enthält eine optimierte **NeoVim**-Konfiguration für die **C
 | `neogen` | Dokumentation Generator in Sourcen |
 | `dashboard` | Startbildschirm für NeoVim mit Schnellzugriff |
 | `whichkey` | Schnelle Anzeige von Tastenkombinationen |
+| `transparent` | Transparenz Modus für Farbschema |
 
 ## 🎨 Themen
 
@@ -38,14 +39,15 @@ Dieses Repository enthält eine optimierte **NeoVim**-Konfiguration für die **C
 - kanagawa
 - onedark
 - glowbeam
-- catppuccin
+- catppuccin (catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha)
 
 **Standard-Theme:**  
-Das Colorscheme `catppuccin` ist standardmäßig voreingestellt.
+Das catppuccin-Farbschema und die Transparenz sind standardmäßig aktiviert. 
 
 **Anpassungen:**  
-Theme-Einstellungen können einfach angepasst werden in:
-`~/.config/nvim/lua/core/colors.lua`
+Diese Einstellungen können bei Bedarf in der Datei `.config/nvim/core/configs.lua` angepasst werden.
+Farbschema: `vim.g.colorscheme`
+Transparenz: `vim.g.is_transparency_enabled`
 
 **Option für helle Themes:**  
 Fans von hellen Themes können nutzen:
@@ -71,7 +73,7 @@ Fans von hellen Themes können nutzen:
 
 ## 🛠 Konfiguration
 ### LSP Unterstützung
-LSP Unterstützung kann in der Konfigurationsdatei `init.lua` über die Variable `vim.g.is_lsp_enabled` aktiviert/deaktiviert werden.
+LSP Unterstützung kann in der Konfigurationsdatei `.config/nvim/core/configs.lua` über die Variable `vim.g.is_lsp_enabled` aktiviert/deaktiviert werden.
 
 ## ⌨  Grundlegende Tastenkombinationen
 Dies ist eine Übersicht der wichtigsten Tastenkombinationen, die in meiner NeoVim-Konfiguration definiert sind. 
@@ -190,6 +192,7 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | `<leader>x`  | Buffer schließen           |
 | `<leader>s`  | Buffer nach Tabs sortieren |
 | `<leader>h`  | Highlighting zurücksetzen  |
+| `<leader>T`  | Transparenz umschalten     |
 | `<leader>pl` | Lazy Plugins öffnen        |
 | `<leader>pm` | Mason Plugins öffnen       |
 

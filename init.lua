@@ -2,17 +2,11 @@
 -- Author: Viktor Herzog
 -- GitHub: https://github.com/vhstack/nvimpp
 
--- LSP aktivieren/deaktivieren
-vim.g.is_lsp_enabled = true
-
--- Tranzparens aktivieren/deaktivieren
-vim.g.is_transparency_enabled=true
-
 -- Basic config
-require("core.mappings")
 require("core.plugins")
-require("core.colors")
+require("core.mappings")
 require("core.configs")
+require("core.colors")
 
 -- Plugins config
 require("plugins.telescope")

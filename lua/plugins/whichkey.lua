@@ -26,6 +26,7 @@ wk.add(
     { "<leader>x", desc = "Close Buffer", icon ={icon = "", color = "red"}},
     { "<leader>s", desc = "Sort Buffer", icon ={icon = "", color = "blue"}},
     { "<leader>n", desc = "Linenumber", icon ={icon = "", color = "blue"}},
+    { "<leader>T", desc = "Transparency", icon ={icon = "", color = "blue"}},
     { "<leader>p", group = "Plugins", icon ={icon = "", color = "blue"}},
     { "<leader>pl", desc = "Lazy", icon ={icon = "", color = "blue"}},
     { "<leader>pm", desc = "Mason", icon ={icon = "", color = "blue"}},
