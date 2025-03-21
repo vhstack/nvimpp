@@ -73,6 +73,14 @@ Fans von hellen Themes können nutzen:
 :MasonInstall clangd cmake-language-server
 ```
 
+## 🖥️ Terminal Schriftart
+Es wird empfohlen, eine Nerd Schriftart zu installieren, um eine optimale Darstellung von Symbolen und Glyphen im Terminal zu gewährleisten.
+
+Nerd Schriftarten sind unter [Nerd Fonts](https://www.nerdfonts.com/) verfügbar. 
+
+Gute Schriftarten fürs Coden sind: **Cascadia**, **FiraCode**, **DejaVuSansM**, **Cousine**
+
+
 ## 🛠 Konfiguration
 ### LSP Unterstützung
 LSP Unterstützung kann in der Konfigurationsdatei `.config/nvim/core/configs.lua` über die Variable `vim.g.is_lsp_enabled` aktiviert/deaktiviert werden.
