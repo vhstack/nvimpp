@@ -27,7 +27,7 @@ require('dashboard').setup {
                 action = ':enew'
 			},
 			{
-                icon = '󰙅 ',
+                icon = '󰚰 ',
                 icon_hl = 'Title',
                 desc = 'Recent files',
                 desc_hl = 'String',
@@ -55,7 +55,7 @@ require('dashboard').setup {
                 key_hl = 'Number',
                 action = ':Telescope find_files'
             }, {
-                icon = ' ',
+                icon = ' ',
                 icon_hl = 'Title',
                 desc = 'Find text',
                 desc_hl = 'String',
