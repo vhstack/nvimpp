@@ -4,8 +4,8 @@
 
 -- Basic config
 require("core.plugins")
-require("core.mappings")
 require("core.configs")
+require("core.mappings")
 require("core.colors")
 
 -- Plugins config
