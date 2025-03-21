@@ -36,8 +36,9 @@ end
 if vim.g.is_transparency_enabled then
 	require('transparent').clear_prefix('BufferLine')
 	require('transparent').clear_prefix('NeoTree')
+	require('transparent').clear_prefix('whichkey')
+	--require('transparent').clear_prefix('lualine')
 	vim.cmd('TransparentEnable')
 else
 	vim.cmd('TransparentDisable')
 end
---require('transparent').clear_prefix('lualine')
