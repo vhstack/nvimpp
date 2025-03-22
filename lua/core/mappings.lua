@@ -98,7 +98,8 @@ if vim.g.is_lsp_enabled then
 	vim.keymap.set('n', '<leader>lf', ':lua vim.lsp.buf.format()<CR>')
 	vim.keymap.set('n', '<leader>lp', functions.GenerateCompileCommands, { noremap = true, silent = true })
 	vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-	vim.keymap.set('n', 't', vim.lsp.buf.declaration, opt)
-	vim.keymap.set('n', 'T', vim.lsp.buf.definition, opt)
+	vim.keymap.set('n', 'T', vim.lsp.buf.declaration, opt)
+	vim.keymap.set('n', 't', vim.lsp.buf.definition, opt)
+	vim.keymap.set('n', '<c-p>', vim.lsp.buf.definition, opt)
 end
 
