@@ -47,7 +47,7 @@ mit leistungsstarken Plugins für Autovervollständigung, Syntaxhervorhebung, Gi
 Das catppuccin-Farbschema und die Transparenz sind standardmäßig aktiviert. 
 
 **Anpassungen:**  
-Diese Einstellungen können bei Bedarf in der Datei `.config/nvim/core/configs.lua` angepasst werden.
+Diese Einstellungen können bei Bedarf in der Datei `.config/nvim/init.lua` angepasst werden.
 Farbschema: `vim.g.colorscheme`
 Transparenz: `vim.g.is_transparency_enabled`
 
@@ -83,7 +83,7 @@ Gute Schriftarten fürs Coden sind: **Cascadia**, **FiraCode**, **DejaVuSansM**,
 
 ## 🛠 Konfiguration
 ### LSP Unterstützung
-LSP Unterstützung kann in der Konfigurationsdatei `.config/nvim/core/configs.lua` über die Variable `vim.g.is_lsp_enabled` aktiviert/deaktiviert werden.
+LSP Unterstützung kann in der Konfigurationsdatei `.config/nvim/init.lua` über die Variable `vim.g.is_lsp_enabled` aktiviert/deaktiviert werden.
 
 ## ⌨  Grundlegende Tastenkombinationen
 Dies ist eine Übersicht der wichtigsten Tastenkombinationen, die in meiner NeoVim-Konfiguration definiert sind. 

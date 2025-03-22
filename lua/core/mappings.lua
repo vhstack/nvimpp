@@ -80,6 +80,9 @@ vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical size=40<CR>')
 vim.keymap.set('n', '<leader>pl', ':Lazy<CR>')
 vim.keymap.set('n', '<leader>pm', ':Mason<CR>')
 
+-- Schnell zwischen Änderungen mit 'g,' und 'g-' springen
+vim.keymap.set("n", "g-", "g;", { noremap = true, silent = true })
+
 -- LSP
 if vim.g.is_lsp_enabled then
 	vim.keymap.set("n", "<leader>lg", vim.diagnostic.setqflist, { noremap = true, silent = true })
