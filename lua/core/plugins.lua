@@ -58,13 +58,11 @@ require("lazy").setup({
     {'akinsho/toggleterm.nvim', version = "*", config = true},
 
 	-- Null LS Formatter
-    {'jose-elias-alvarez/null-ls.nvim'}, 
+    --{'jose-elias-alvarez/null-ls.nvim'}, 
+    {'nvimtools/none-ls.nvim'}, 
 
 	-- Auto Klammern
 	{'windwp/nvim-autopairs'},
-
-	-- Buffer Management
-    --{'Djancyp/outline'}, 
 
 	-- Komments Plugin
 	{'terrortylor/nvim-comment'},

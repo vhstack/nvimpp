@@ -191,6 +191,8 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | `K`          | Hover-Dokumentation      |
 | `t`          | Zur Deklaration springen |
 | `T`          | Zur Definition springen  |
+| `<c-p>`      | Zur Deklaration springen |
+| `<c-o>`      | Zurück springen          |
 
 ### Sonstige
 
