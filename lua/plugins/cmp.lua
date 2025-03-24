@@ -14,6 +14,13 @@ cmp.setup({
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered()
     },
+	matching = {
+		disallow_fuzzy_matching = true,  -- Deaktiviert fuzzy matching
+		disallow_fullfuzzy_matching = false,  -- Keine vollständige Fuzzy-Suche
+		disallow_partial_fuzzy_matching = false,  -- Keine Teil-Fuzzy-Suche
+		disallow_partial_matching = true,  -- Erlaubt teilweise Präfix-Suche
+		disallow_prefix_unmatching = false,  -- Erlaubt nur Präfix-Suche
+	},
     mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -29,7 +36,7 @@ cmp.setup({
         end, {"i", "s"}),
         ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
-                cmp.select_first_item()
+                cmp.select_next_item()
             else
                 fallback()
             end
