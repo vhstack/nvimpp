@@ -35,9 +35,10 @@ cmp.setup({
             end
         end, {"i", "s"})
     }),
-    sources = cmp.config.sources({
-        {name = 'nvim_lsp'}, {name = 'vsnip'} -- For vsnip users.
-    }, {{name = 'buffer'}, {name = 'nvim_lsp_signature_help'}})
+    sources = cmp.config.sources(
+		{{name = 'nvim_lsp'}, {name = 'vsnip'}}, -- For vsnip users.
+		{{name = 'buffer'}, {name = 'nvim_lsp_signature_help'}}
+	)
 })
 
 -- Set configuration for specific filetype.
