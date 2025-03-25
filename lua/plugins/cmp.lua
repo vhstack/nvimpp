@@ -18,7 +18,7 @@ cmp.setup({
 		disallow_fuzzy_matching = true,  -- Deaktiviert fuzzy matching
 		disallow_fullfuzzy_matching = false,  -- Keine vollständige Fuzzy-Suche
 		disallow_partial_fuzzy_matching = false,  -- Keine Teil-Fuzzy-Suche
-		disallow_partial_matching = true,  -- Erlaubt teilweise Präfix-Suche
+		disallow_partial_matching = false,  -- Erlaubt teilweise Präfix-Suche
 		disallow_prefix_unmatching = false,  -- Erlaubt nur Präfix-Suche
 	},
     mapping = cmp.mapping.preset.insert({
@@ -49,10 +49,10 @@ cmp.setup({
             end
         end, {"i", "s"})
     }),
-    sources = cmp.config.sources(
-		{{name = 'nvim_lsp'}, {name = 'vsnip'}}, -- For vsnip users.
-		{{name = 'buffer'}, {name = 'nvim_lsp_signature_help'}}
-	)
+    sources = cmp.config.sources({
+		{name = 'nvim_lsp'}, {name = 'vsnip'}, 
+		{name = 'buffer'}, {name = 'nvim_lsp_signature_help'}
+	})
 })
 
 -- Set configuration for specific filetype.

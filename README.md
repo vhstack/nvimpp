@@ -114,6 +114,7 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | `<C-j>` | Fenster nach unten  |
 | `<C-h>` | Fenster nach links  |
 | `<C-l>` | Fenster nach rechts |
+| `<C-w>` | Fenster wechseln    |
 
 ### NeoTree
 

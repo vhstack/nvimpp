@@ -41,7 +41,7 @@ vim.keymap.set('n', '<leader>gb', ":Telescope git_branches<CR>")
 vim.keymap.set('n', '<leader>gc', ":Telescope git_commits<CR>")
 vim.keymap.set('n', '<leader>gd', ":Telescope git_status<CR>")
 
--- Navigation
+-- Navigation Fenster
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
