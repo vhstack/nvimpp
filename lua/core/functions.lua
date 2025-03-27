@@ -19,7 +19,7 @@ end
 function M.GenerateCompileCommands()
 	vim.cmd("silent! !(make clean)")
 	local tmpfile = vim.fn.expand('/tmp/compilecommands$USER.txt')
-	local cmd = "make 2>&1 -wn | egrep 'gcc|clang|clang\\+\\+|g\\+\\+.*' > " .. tmpfile
+	local cmd = "make 2>&1 -wn | egrep 'gcc|clang|clang\\+\\+|c\\+\\+|g\\+\\+.*' > " .. tmpfile
 	vim.cmd("silent! !" .. cmd)
 	if vim.v.shell_error == 0 then
 		local f = io.open(tmpfile, "r")
