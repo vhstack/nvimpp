@@ -10,7 +10,7 @@ null_ls.setup({
 
 		-- clang-format als Formatierer
 		null_ls.builtins.formatting.clang_format,
-    
+
 		-- cppcheck als Linter
 		-- null_ls.builtins.diagnostics.cppcheck,
 		-- null_ls.builtins.diagnostics.cpplint,
