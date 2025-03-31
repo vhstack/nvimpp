@@ -38,6 +38,7 @@ require("plugins.neotree")
 require("plugins.dashboard")
 require("plugins.whichkey")
 require("plugins.outline")
+require("plugins.colorizer")
 
 -- LSP Konfiguration
 if vim.g.is_lsp_enabled then

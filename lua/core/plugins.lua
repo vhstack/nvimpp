@@ -108,6 +108,9 @@ require("lazy").setup({
     {'hrsh7th/vim-vsnip'},
     {'hrsh7th/vim-vsnip-integ'},
 
+	-- Colorizer 
+	{'norcalli/nvim-colorizer.lua'},
+
 	-- Doxygen Autodokumentation
     {
 		'danymat/neogen', 
