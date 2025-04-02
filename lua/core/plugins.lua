@@ -12,8 +12,20 @@ require("lazy").setup({
 	-- Colorschemes
 	{'cooperuser/glowbeam.nvim'}, 
 	{'joshdick/onedark.vim'},
-	{'catppuccin/nvim'}, 
-    {'rebelot/kanagawa.nvim'},
+   	{'rebelot/kanagawa.nvim'},
+	{'catppuccin/nvim'},
+	-- {'catppuccin/nvim',
+	--  	config = function() require('catppuccin').setup({
+	--  		custom_highlights = function(colors)
+	--  			return {
+	--  				--Search = { bg = '#FFcccc', fg = '#000000' },  
+	--  				--IncSearch = { bg = '#FFFF66', fg = '#000000' }, 
+	--  				--CurSearch = { bg = '#FFFF00', fg = '#000000' }, 
+	--  			}
+	--  		end
+	--  	})
+	--  	end
+	--  }, 
 
 	-- Telescope
     {

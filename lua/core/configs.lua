@@ -60,8 +60,8 @@ vim.opt.fillchars = {
 }
 
 -- Hervorhebung zurücksetzen
-vim.cmd([[highlight clear LineNr]])
-vim.cmd([[highlight clear SignColumn]])
+vim.api.nvim_set_hl(0, "LineNr", {})
+vim.api.nvim_set_hl(0, "SignColumn", {})
 
 -- Letzte Cursor Position merken
 vim.api.nvim_create_autocmd("BufReadPost", {
