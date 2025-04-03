@@ -180,6 +180,7 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | ------------ | ------------------------ |
 | `<leader>lg` | Diagnostik in Quickfix   |
 | `<leader>lG` | Diagnostik als Float     |
+| `<c-d>`      | Diagnostik mit Telescope |
 | `[d`         | Vorherige Diagnose       |
 | `]d`         | Nächste Diagnose         |
 | `<leader>ld` | Zur Definition springen  |
