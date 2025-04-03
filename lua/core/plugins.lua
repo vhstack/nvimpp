@@ -20,7 +20,7 @@ require("lazy").setup({
 	--  			return {
 	--  				--Search = { bg = '#FFcccc', fg = '#000000' },  
 	--  				--IncSearch = { bg = '#FFFF66', fg = '#000000' }, 
-	--  				--CurSearch = { bg = '#FFFF00', fg = '#000000' }, 
+	--  				--CurSearch = { bg = '#ff87af', fg = '#000000' }, 
 	--  			}
 	--  		end
 	--  	})
@@ -122,6 +122,9 @@ require("lazy").setup({
 
 	-- Colorizer 
 	{'norcalli/nvim-colorizer.lua'},
+
+	-- Multiple Highlighting
+	{'lfv89/vim-interestingwords'},
 
 	-- Doxygen Autodokumentation
     {

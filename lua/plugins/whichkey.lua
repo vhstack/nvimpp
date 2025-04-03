@@ -5,6 +5,7 @@ wk.add(
   {
     { "<leader><leader>", desc = "Recent Files", icon = {icon="󰚰", color="cyan"}},
     { "<leader>/", desc = "Comment", icon = {icon="", color="orange"}},
+    { "<leader>/", desc = "Comment", icon = {icon="", color="orange"}, mode = "v"},
     { "<leader>e", desc = "Files left", icon = {icon="", color="cyan"}},
     { "<leader>E", desc = "File float",  icon = {icon="", color="cyan"}},
     { "<leader>f", group = "Find", icon = {icon="", color="cyan"}},
@@ -17,7 +18,9 @@ wk.add(
     { "<leader>gc", desc = "Commits", icon = {icon="", color="red"}},
     { "<leader>gd", desc = "Diffs", icon = {icon="", color="red"}},
     { "<leader>gs", desc = "Status", icon = {icon="", color="red"}},
-    { "<leader>h", desc = "No Highlight", icon = {icon="󰙒", color="yellow"} },
+    { "<leader>h", desc = "Highlight", icon = {icon="󰙒", color="yellow"} },
+    { "<leader>h", desc = "Highlight", icon = {icon="󰙒", color="yellow"}, mode = "v" },
+    { "<leader>H", desc = "No Highlights", icon = {icon="󰷙", color="white"} },
     { "<leader>t", group = "Terminal", icon = {icon="", color="grau"}},
     { "<leader>tf", desc = "Float Terminal", icon = {icon="", color="white"}},
     { "<leader>th", desc = "Horizontal Terminal", icon = {icon="", color="white"}},

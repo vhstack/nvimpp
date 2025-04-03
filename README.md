@@ -170,7 +170,7 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 | Kürzel       | Bedeutung             |
 | ------------ | --------------------- |
-| `<leader>tf` | Terminal (Float)      |
+| `<leader>tt` | Terminal (Float)      |
 | `<leader>th` | Terminal (Horizontal) |
 | `<leader>tv` | Terminal (Vertikal)   |
 
@@ -204,7 +204,8 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | `<leader>w`  | Datei speichern            |
 | `<leader>x`  | Buffer schließen           |
 | `<leader>s`  | Buffer nach Tabs sortieren |
-| `<leader>h`  | Highlighting zurücksetzen  |
+| `<leader>h`  | Wort oder Auswahl farblich markieren  |
+| `<leader>H`  | Alle Markierungen zurücksetzen  |
 | `<leader>T`  | Transparenz umschalten     |
 | `<leader>pl` | Lazy Plugins öffnen        |
 | `<leader>pm` | Mason Plugins öffnen       |

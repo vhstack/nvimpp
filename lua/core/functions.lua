@@ -55,6 +55,14 @@ function M.GenerateCompileCommands()
 	end
 end
 
+-- Deaktiviert alle Highligts
+function M.DisableAllHighlights()
+	vim.cmd([[
+        call UncolorAllWords()
+        nohlsearch
+    ]])
+end
+
 -- Funktionen exportieren
 return M
 
