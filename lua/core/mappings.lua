@@ -93,6 +93,7 @@ vim.keymap.set("n", "g-", "g;", { noremap = true, silent = true })
 if vim.g.is_lsp_enabled then
 	vim.keymap.set("n", "<leader>lg", vim.diagnostic.setqflist, { noremap = true, silent = true })
 	vim.keymap.set("n", "<leader>lG", vim.diagnostic.open_float, { noremap = true, silent = true })
+	vim.keymap.set("n", "<c-d>", functions.TelescopeDiagnostics, { noremap = true, silent = true })
 	vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { noremap = true, silent = true })
 	vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { noremap = true, silent = true })
 	vim.keymap.set('n', '<leader>ld', ':lua vim.lsp.buf.definition()<CR>', { silent = true })

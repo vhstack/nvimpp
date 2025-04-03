@@ -55,6 +55,11 @@ function M.GenerateCompileCommands()
 	end
 end
 
+-- Zeigr Diagnostic Liste im Telescope
+function M.TelescopeDiagnostics()
+	require("telescope.builtin").diagnostics() 
+end
+
 -- Deaktiviert alle Highligts
 function M.DisableAllHighlights()
 	vim.cmd([[
