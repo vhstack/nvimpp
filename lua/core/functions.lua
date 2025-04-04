@@ -55,9 +55,14 @@ function M.GenerateCompileCommands()
 	end
 end
 
--- Zeigr Diagnostic Liste im Telescope
+-- Zeigt Diagnostic Liste im Telescope
 function M.TelescopeDiagnostics()
 	require("telescope.builtin").diagnostics() 
+end
+
+-- Zeigt Referenzen Liste im Telescope
+function M.TelescopeReferences()
+	require("telescope.builtin").lsp_references() 
 end
 
 -- Deaktiviert alle Highligts
