@@ -191,8 +191,8 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | `<leader>lR` | Umbenennen               |
 | `<leader>lf` | Formatieren              |
 | `K`          | Hover-Dokumentation      |
-| `t`          | Zur Deklaration springen |
-| `T`          | Zur Definition springen  |
+| `t`          | Zur Definition springen  |
+| `T`          | Zur Deklaration springen |
 | `<c-p>`      | Zur Deklaration springen |
 | `<c-o>`      | Zurück springen          |
 
