@@ -165,6 +165,10 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | --------- | ----------------------- |
 | `<Tab>`   | Nächsten Tab wechseln   |
 | `<S-Tab>` | Vorherigen Tab wechseln |
+| `<c-right>`   | Nächsten Tab wechseln   |
+| `<c-left>` | Vorherigen Tab wechseln |
+| `<c-s-right>`   | Tab nach rechts verschieben   |
+| `<c-s-left>` | Tab nach links verschieben |
 
 ### Terminal
 

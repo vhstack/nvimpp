@@ -73,6 +73,8 @@ vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>', { silent = true })
 vim.keymap.set('n', '<s-Tab>', ':BufferLineCyclePrev<CR>', { silent = true })
 vim.keymap.set('n', '<c-right>', ':BufferLineCycleNext<CR>', { silent = true })
 vim.keymap.set('n', '<c-left>', ':BufferLineCyclePrev<CR>', { silent = true })
+vim.keymap.set('n', '<c-s-right>', ':BufferLineMoveNext<CR>', { silent = true })
+vim.keymap.set('n', '<c-s-left>', ':BufferLineMovePrev<CR>', { silent = true })
 
 -- Transparenz
 vim.keymap.set('n', '<leader>T', ':TransparentToggle<CR>', { silent = true });
