@@ -95,6 +95,7 @@ vim.keymap.set("n", "g-", "g;", { noremap = true, silent = true })
 if vim.g.is_lsp_enabled then
 	vim.keymap.set("n", "<leader>lg", functions.TelescopeDiagnostics, { noremap = true, silent = true })
 	vim.keymap.set("n", "<leader>lG", vim.diagnostic.open_float, { noremap = true, silent = true })
+	vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { noremap = true, silent = true })
 	vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, { silent = true })
 	vim.keymap.set('n', '<leader>lD', vim.lsp.buf.declaration, { silent = true })
 	vim.keymap.set('n', '<leader>lK', vim.lsp.buf.hover, { silent = true })

@@ -2,7 +2,12 @@
 
 Dieses Repository enthält eine optimierte **NeoVim**-Konfiguration für die **C/C++-Entwicklung** 
 mit leistungsstarken Plugins für Autovervollständigung, Syntaxhervorhebung, Git-Integration und mehr.
-![Screenshot](screenshot.png)
+
+![Screenshot](screenshot01.png)
+
+![Screenshot](screenshot02.png)
+
+![Screenshot](screenshot03.png)
 
 ## 🚀 Features
 - **LSP-Unterstützung** für C/C++ mit automatischer Vervollständigung
@@ -216,10 +221,8 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | `<leader>pm` | Mason Plugins öffnen       |
 
 
+🎯 Schlusswort
 
-## 📜 Lizenz
-Dieses Projekt steht unter der **MIT-Lizenz**.
-
----
-
-Falls du weitere Funktionen hinzufügen möchtest, einfach anpassen! 🚀
+Wenn du Ideen für neue Features hast oder das Projekt verbessern möchtest, 
+dann fühl dich frei, es nach deinen Vorstellungen weiterzuentwickeln! 
+Viel Spaß und viel Erfolg beim Programmieren mit nvimpp! 💻🚀
