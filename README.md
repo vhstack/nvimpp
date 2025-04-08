@@ -192,6 +192,7 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | `<c-d>`      | Diagnostik mit Telescope |
 | `[d`         | Vorherige Diagnose       |
 | `]d`         | Nächste Diagnose         |
+| `<leader>la` | Code Aktionen            |
 | `<leader>ld` | Zur Definition springen  |
 | `<leader>lD` | Zur Deklaration springen |
 | `<leader>lK` | Hover-Dokumentation      |
