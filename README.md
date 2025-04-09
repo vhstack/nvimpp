@@ -3,11 +3,11 @@
 Dieses Repository enthält eine optimierte **NeoVim**-Konfiguration für die **C/C++-Entwicklung** 
 mit leistungsstarken Plugins für Autovervollständigung, Syntaxhervorhebung, Git-Integration und mehr.
 
-![Screenshot](screenshot01.png)
+![Screenshot](assets/screenshot01.png)
 
-![Screenshot](screenshot02.png)
+![Screenshot](assets/screenshot02.png)
 
-![Screenshot](screenshot03.png)
+![Screenshot](assets/screenshot03.png)
 
 ## 🚀 Features
 - **LSP-Unterstützung** für C/C++ mit automatischer Vervollständigung
