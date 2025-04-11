@@ -68,7 +68,7 @@ Fans von hellen Themes können nutzen:
 4. **Repository klonen & Git-Verzeichnis entfernen:**
    ```sh
    git clone https://github.com/vhstack/nvimpp ~/.config/nvim
-   rm -rf ~/.config/nvim/.git
+   rm -rf ~/.config/nvim/.git ~/.config/nvim/assets ~/.config/nvim/README.md
    ```
 5. **Plugins synchronisieren** mit dem Plugin-Manager (`Packer`, `Lazy`, etc.)
 6. **LSPs & Tools installieren** über Mason (`:Mason` in NeoVim ausführen)
