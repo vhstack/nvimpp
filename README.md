@@ -2,6 +2,10 @@
 
 Dieses Repository enthält eine optimierte **NeoVim**-Konfiguration für die **C/C++-Entwicklung** 
 mit leistungsstarken Plugins für Autovervollständigung, Syntaxhervorhebung, Git-Integration und mehr.
+Das Setup ist bewusst schlank gehalten – schnell startklar, fokussiert auf das Wesentliche und lässt sich leicht an 
+deine eigenen Bedürfnisse anpassen. 
+Zusammen mit meinen anderen Projekten **[vhstack/tmuxpp](https://github.com/vhstack/tmuxpp)** und **[vhstack/termpp](https://github.com/vhstack/termpp)** 
+bildet es eine perfekt abgestimmte Arbeitsumgebung, die dir eine nahtlose und effiziente Nutzung von Terminal, Tmux und Neovim ermöglicht.
 
 ![Screenshot](assets/screenshot01.png)
 
@@ -74,7 +78,7 @@ Fans von hellen Themes können nutzen:
 6. **LSPs & Tools installieren** über Mason (`:Mason` in NeoVim ausführen)
 
 ```sh
-# Falls Mason installiert ist, öffne NeoVim und führe aus:
+# Optional: Um clangd zu installieren, öffne Neovim und führe folgenden Befehl aus:
 :MasonInstall clangd cmake-language-server
 ```
 
