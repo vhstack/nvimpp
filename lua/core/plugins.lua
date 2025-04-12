@@ -67,7 +67,7 @@ require("lazy").setup({
     }, 
 
 	-- Mason Plugins
-    {"williamboman/mason.nvim", build = ":MasonUpdate"},
+    {"williamboman/mason.nvim"},
 
 	-- Terminal
     {'akinsho/toggleterm.nvim', version = "*", config = true},
