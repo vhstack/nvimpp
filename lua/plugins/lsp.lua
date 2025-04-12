@@ -17,23 +17,28 @@ lspconfig.clangd.setup {
   }
 }
 
--- Use LspAttach autocommand to only map the following keys
--- after the language server attaches to the current buffer
--- LspAttach wird dann aufgerufen, wenn Verbindung mit Language Server entsteht
-vim.api.nvim_create_autocmd('LspAttach', {
-    group = vim.api.nvim_create_augroup('UserLspConfig', {}),
-    callback = function(ev)
-        -- Enable completion triggered by <c-x><c-o>
-        vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+-- Konfiguration LSP Diagnostics
+vim.diagnostic.config({
+  virtual_text = true,       -- zeigt Text inline (in der Codezeile)
+  signs = {                  -- zeigt die Gutter-Zeichen (❌ etc.)
+    text = {
+      [vim.diagnostic.severity.ERROR] = "",
+      [vim.diagnostic.severity.WARN] = "",
+      [vim.diagnostic.severity.INFO] = "",
+      [vim.diagnostic.severity.HINT] = "",
+    }
+  },
+  underline = true,          -- unterstreicht problematische Stellen
+  update_in_insert = false,
+  severity_sort = true,
+  float = {
+    source = "always",       -- zeige Quelle des Fehlers (z.B. clangd)
+    border = "rounded",
+  },
+})
 
-        -- local opts = {buffer = ev.buf}
-        -- vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-        -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-        -- vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-        -- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
-        -- vim.keymap.set('n', '<Leader>lR', vim.lsp.buf.rename, opts)
-        -- vim.keymap.set({'n', 'v'}, '<Leader>la', vim.lsp.buf.code_action, opts)
-        -- vim.keymap.set('n', '<Leader>lf',
-        --                function() vim.lsp.buf.format {async = true} end, opts)
-    end
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    vim.diagnostic.open_float(nil, { focus = false })
+  end
 })
