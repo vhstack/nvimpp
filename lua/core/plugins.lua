@@ -14,23 +14,11 @@ require("lazy").setup({
 	{'joshdick/onedark.vim'},
    	{'rebelot/kanagawa.nvim'},
 	{'catppuccin/nvim'},
-	-- {'catppuccin/nvim',
-	--  	config = function() require('catppuccin').setup({
-	--  		custom_highlights = function(colors)
-	--  			return {
-	--  				--Search = { bg = '#FFcccc', fg = '#000000' },  
-	--  				--IncSearch = { bg = '#FFFF66', fg = '#000000' }, 
-	--  				--CurSearch = { bg = '#ff87af', fg = '#000000' }, 
-	--  			}
-	--  		end
-	--  	})
-	--  	end
-	--  }, 
 
 	-- Telescope
     {
         'nvim-telescope/telescope.nvim',
-        --tag = '0.1.8',
+		cmd = "Telescope",
         dependencies = {'nvim-lua/plenary.nvim'}
     }, 
 
@@ -55,7 +43,10 @@ require("lazy").setup({
     {'hrsh7th/cmp-cmdline'}, {'hrsh7th/nvim-cmp'}, 
 
 	-- Git Signs
-	{'lewis6991/gitsigns.nvim'},
+	{
+		'lewis6991/gitsigns.nvim',
+		 event = { "BufReadPre", "BufNewFile" }
+	},
 
 	-- Status Line
     {
@@ -85,7 +76,6 @@ require("lazy").setup({
 	-- Neo Tree Explorer
 	{
         "nvim-neo-tree/neo-tree.nvim",
-        --branch = "v2.x",
         dependencies = {
             "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons",
             "MunifTanjim/nui.nvim", "s1n7ax/nvim-window-picker"
