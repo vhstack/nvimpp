@@ -71,7 +71,7 @@ Fans von hellen Themes können nutzen:
 3. **Für LSP `clangd` installieren**
 4. **Repository klonen & Git-Verzeichnis entfernen:**
    ```sh
-   git clone https://github.com/vhstack/nvimpp ~/.config/nvim
+   git clone --depth 1 https://github.com/vhstack/nvimpp ~/.config/nvim
    rm -rf ~/.config/nvim/.git ~/.config/nvim/assets ~/.config/nvim/README.md
    ```
 5. **Plugins synchronisieren** mit dem Plugin-Manager (`Packer`, `Lazy`, etc.)
@@ -91,8 +91,35 @@ Gute Schriftarten fürs Coden sind: **Cascadia**, **FiraCode**, **DejaVuSansM**,
 
 
 ## 🛠 Konfiguration
-### LSP Unterstützung
-LSP Unterstützung kann in der Konfigurationsdatei `.config/nvim/init.lua` über die Variable `vim.g.is_lsp_enabled` aktiviert/deaktiviert werden.
+In diesem Setup gibt es zwei spezielle Lua-Skripte, die es dir ermöglichen, **zusätzliche Einstellungen und Anpassungen** 
+vor und nach dem Laden der Standardkonfiguration vorzunehmen.
+
+### 📂 Verzeichnis erstellen
+Bevor du diese Dateien verwendest, stelle sicher, dass du das Verzeichnis `~/.config/nvim/custom` auf deinem System erstellst. 
+Lege dort die Skripte `preload.lua` und `postload.lua` ab:
+
+```bash
+mkdir -p ~/.config/nvim/custom
+```
+
+### 📜 `lua/custom/preload.lua`
+- **Wird beim Starten von Neovim geladen.**
+- Hier kannst du **globale Variablen** setzen, Umgebungsvariablen definieren oder grundlegende Initialisierungen vornehmen.
+- **Beispiel**: LSP-Flag setzen, Themes laden, globale Optionen anpassen.
+
+Folgende Variablen können im `preload.lua` angepasst werden:
+
+| **Variable**                    | **Beschreibung**                                  | **Standardwert**           |
+|----------------------------------|--------------------------------------------------|----------------------------|
+| `vim.g.colorscheme`              | Setzt das Farbschema von Neovim                  | `'catppuccin'`             |
+| `vim.g.is_transparency_enabled`  | Aktiviert/deaktiviert die Transparenz            | `true`                     |
+| `vim.g.is_lsp_enabled`           | Aktiviert/deaktiviert LSP-Funktionen             | `true`                     |
+| `vim.g.is_git_enabled`           | Aktiviert/deaktiviert Git-Funktionen.            | `true`                     |
+
+### 📜 `lua/custom/postload.lua`
+- **Wird nach dem Laden der Hauptkonfiguration geladen.**
+- Ideal für **Keymaps**, **UI-Anpassungen** und **Feintuning** nach der initialen Konfiguration.
+- **Beispiel**: Keymap-Änderungen, Farben, Statusline-Anpassungen.
 
 ## ⌨  Grundlegende Tastenkombinationen
 Dies ist eine Übersicht der wichtigsten Tastenkombinationen, die in meiner NeoVim-Konfiguration definiert sind. 

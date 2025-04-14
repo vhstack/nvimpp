@@ -23,13 +23,15 @@ vim.api.nvim_set_keymap('n', 'Y', 'yy', { noremap = true, silent = true })
 -- NeoTree
 vim.keymap.set('n', '<leader>E', ':Neotree float reveal<CR>', { silent = true })
 vim.keymap.set('n', '<leader>e', ':Neotree left reveal<CR>', { silent = true })
-vim.keymap.set('n', '<leader>gs', ':Neotree float git_status<CR>', { silent = true })
+if vim.g.is_git_enabled then
+	vim.keymap.set('n', '<leader>gs', ':Neotree float git_status<CR>', { silent = true })
+end
 vim.keymap.set('n', '<c-e>', ':Neotree left toggle<CR>', { silent = true })
 
 -- Telescope
 vim.keymap.set("n", "<leader><leader>", ":Telescope oldfiles<CR>", { silent = true })
 vim.keymap.set('n', '<leader>ff', ":Telescope find_files<CR>", { silent = true })
-vim.keymap.set('n', '<leader>fw', ":Telescope live_grep<CR>", { silent = true })
+vim.keymap.set('n', '<leader>fg', ":Telescope live_grep<CR>", { silent = true })
 vim.keymap.set('n', '<leader>fb', ":Telescope buffers<CR>", { silent = true })
 vim.keymap.set('n', '<leader>fh', ":Telescope help_tags<CR>", { silent = true })
 vim.keymap.set("n", "<c-f>", ":Telescope find_files<CR>", { silent = true })
@@ -37,9 +39,11 @@ vim.keymap.set("n", "<c-g>", ":Telescope live_grep<CR>", { silent = true })
 vim.keymap.set("n", "<c-t>", ":Telescope buffers<CR>", { silent = true })
 
 -- Telescope Git 
-vim.keymap.set('n', '<leader>gb', ":Telescope git_branches<CR>", { silent = true })
-vim.keymap.set('n', '<leader>gc', ":Telescope git_commits<CR>", { silent = true })
-vim.keymap.set('n', '<leader>gd', ":Telescope git_status<CR>", { silent = true })
+if vim.g.is_git_enabled then
+	vim.keymap.set('n', '<leader>gb', ":Telescope git_branches<CR>", { silent = true })
+	vim.keymap.set('n', '<leader>gc', ":Telescope git_commits<CR>", { silent = true })
+	vim.keymap.set('n', '<leader>gd', ":Telescope git_status<CR>", { silent = true })
+end
 
 -- Navigation Fenster
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>', { silent = true })

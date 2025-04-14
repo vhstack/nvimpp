@@ -38,14 +38,24 @@ require("lazy").setup({
     {'nvim-treesitter/nvim-treesitter'}, 
 
 	-- LSP Konfiguration
-	{'neovim/nvim-lspconfig'}, 
+	{
+		'neovim/nvim-lspconfig',
+		cond = function()
+			return vim.g.is_lsp_enabled == true
+		end,
+	}, 
+
+	-- Autocomplete
     {'hrsh7th/cmp-nvim-lsp'}, {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},
     {'hrsh7th/cmp-cmdline'}, {'hrsh7th/nvim-cmp'}, 
 
 	-- Git Signs
 	{
 		'lewis6991/gitsigns.nvim',
-		 event = { "BufReadPre", "BufNewFile" }
+		cond = function()
+			return vim.g.is_git_enabled == true
+		end,
+		event = { "BufReadPre", "BufNewFile" }
 	},
 
 	-- Status Line

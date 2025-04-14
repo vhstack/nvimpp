@@ -1,7 +1,7 @@
 local wk = require("which-key")
 
+-- Allgemeine Funktionen 
 wk.add(
-  -- Befehle 
   {
     { "<leader><leader>", desc = "Recent Files", icon = {icon="󰚰", color="cyan"}},
     { "<leader>/", desc = "Comment", icon = {icon="", color="orange"}},
@@ -12,12 +12,7 @@ wk.add(
     { "<leader>fb", desc = "Find Buffer", icon = {icon="", color="cyan"} },
     { "<leader>ff", desc = "Find File", icon = {icon="", color="cyan"} },
     { "<leader>fh", desc = "Find Help", icon = {icon="", color="cyan"} },
-    { "<leader>fw", desc = "Find Text", icon = {icon="", color="cyan"} },
-    { "<leader>g", group = "Git", icon = {icon="", color="red"}},
-    { "<leader>gb", desc = "Branches", icon = {icon="", color="red"}},
-    { "<leader>gc", desc = "Commits", icon = {icon="", color="red"}},
-    { "<leader>gd", desc = "Diffs", icon = {icon="", color="red"}},
-    { "<leader>gs", desc = "Status", icon = {icon="", color="red"}},
+    { "<leader>fg", desc = "Live Grep", icon = {icon="", color="cyan"} },
     { "<leader>h", desc = "Highlight", icon = {icon="󰙒", color="yellow"} },
     { "<leader>h", desc = "Highlight", icon = {icon="󰙒", color="yellow"}, mode = "v" },
     { "<leader>H", desc = "No Highlights", icon = {icon="󰷙", color="white"} },
@@ -27,7 +22,7 @@ wk.add(
     { "<leader>tv", desc = "Vertical Terminal", icon = {icon="", color="white"}},
     { "<leader>w", desc = "Save Buffer", icon = {icon ="󰆓", color = "azure"}},
     { "<leader>x", desc = "Close Buffer", icon ={icon = "", color = "red"}},
-    { "<leader>s", desc = "Sort Buffer", icon ={icon = "", color = "blue"}},
+    { "<leader>s", desc = "Sort Buffers", icon ={icon = "", color = "blue"}},
     { "<leader>n", desc = "Linenumber", icon ={icon = "", color = "blue"}},
     { "<leader>T", desc = "Transparency", icon ={icon = "", color = "blue"}},
     { "<leader>p", group = "Plugins", icon ={icon = "", color = "blue"}},
@@ -36,11 +31,34 @@ wk.add(
   }
 )
 
+-- GIT Funktionen anzeigen nur wenn im Git Repo
+if vim.g.is_git_enabled then
+wk.add(
+  {
+    { "<leader>g", group = "Git", icon = {icon="", color="red"}},
+    { "<leader>gb", desc = "Branches", icon = {icon="", color="red"}},
+    { "<leader>gc", desc = "Commits", icon = {icon="", color="red"}},
+    { "<leader>gd", desc = "Diffs", icon = {icon="", color="red"}},
+    { "<leader>gs", desc = "Status", icon = {icon="", color="red"}},
+  }
+)
+end
+
+-- LSP Funktionen, die ohne LSP Server gehen
+wk.add(
+  {
+	{ "<leader>l", group = "LSP", icon ={icon = "", color = "yellow"}},
+	{ "<leader>lp", desc = "Build Projekt Flags",icon ={icon ="󰙵", color = "yellow"} },
+	{ "<leader>ls", "<cmd>Outline<cr>", desc = "Symbols <c-s>", icon ={icon ="", color = "cyan"} }
+  }
+)
+
+
+-- LSP Funktionen, die LSP Server veraussetzen
 if vim.g.is_lsp_enabled then
 wk.add(
-  -- Optionale Befehle
+  -- LSP Befehle
   {
-    { "<leader>l", group = "LSP", icon ={icon = "", color = "yellow"}},
     { "<leader>ld", desc = "Definition", icon ={icon ="󰫍", color = "blue"}},
     { "<leader>lD", desc = "Declaration", icon ={icon ="󰫍", color = "blue"}},
     { "<leader>lg", desc = "Diagnostic List", icon ={icon ="󰨮", color = "purple"}},
@@ -50,9 +68,7 @@ wk.add(
     { "<leader>lr", desc = "References",icon ={icon ="", color = "yellow"} },
     { "<leader>lR", desc = "Rename",icon ={icon ="󰑕", color = "red"} },
     { "<leader>lK", desc = "Typ Info",icon ={icon ="", color = "green"} },
-    { "<leader>lt", desc = "Type Definition",icon ={icon ="󱄑", color = "green"} },
-    { "<leader>lp", desc = "Build Projekt Flags",icon ={icon ="󰙵", color = "yellow"} },
-    { "<leader>lm", "<cmd>Outline<cr>", desc = "Members", icon ={icon ="", color = "cyan"} },
+    { "<leader>lt", desc = "Type Definition",icon ={icon ="󱄑", color = "green"} }
   }
 )
 end

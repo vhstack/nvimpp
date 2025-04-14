@@ -4,15 +4,15 @@ local M = {}
 -- Toggle Zeilennummer 
 -- relative->keine->absolute
 function M.ToggleLineNumber()
-  if not vim.wo.number and not vim.wo.relativenumber then
-    vim.wo.number = true
-    vim.wo.relativenumber = false
-  elseif vim.wo.number and not vim.wo.relativenumber then
-    vim.wo.relativenumber = true
-  else
-	vim.wo.number = false
-    vim.wo.relativenumber = false
-  end
+	if not vim.wo.number and not vim.wo.relativenumber then
+		vim.wo.number = true
+		vim.wo.relativenumber = false
+	elseif vim.wo.number and not vim.wo.relativenumber then
+		vim.wo.relativenumber = true
+	else
+		vim.wo.number = false
+		vim.wo.relativenumber = false
+	end
 end
 
 -- Generiert clang Projekt compile_commands.json
@@ -71,6 +71,18 @@ function M.DisableAllHighlights()
         call UncolorAllWords()
         nohlsearch
     ]])
+end
+
+-- Funktion zum Prüfen ob aktuelles Verzeichnis ein Git-Repo ist
+function M.IsGitRepo()
+	-- GIT muss installiert sein
+	if vim.fn.executable("git") ~= 1 then
+		return false
+	end
+
+	-- Handelt es um GIT Repository
+	local git_dir = vim.fn.systemlist("git rev-parse --is-inside-work-tree")[1]
+	return git_dir == "true"
 end
 
 -- Funktionen exportieren

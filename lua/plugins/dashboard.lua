@@ -11,11 +11,8 @@ local function default_header()
 	}
 end
 
--- Funktion zum Prüfen ob aktuelles Verzeichnis ein Git-Repo ist
-local function in_git_repo()
-  local git_dir = vim.fn.systemlist("git rev-parse --is-inside-work-tree")[1]
-  return git_dir == "true"
-end
+-- Lokale Funktionen
+local functions = require("core.functions")
 
 --Standard Buttons
 local buttons = {
@@ -60,17 +57,17 @@ local buttons = {
 	}, {
 		icon = ' ',
 		icon_hl = 'Title',
-		desc = 'Find text',
+		desc = 'Live grep',
 		desc_hl = 'String',
-		key = 'w',
-		keymap = 'SPC f w',
+		key = 'g',
+		keymap = 'SPC f g',
 		key_hl = 'Number',
 		action = ':Telescope live_grep'
 	}
 }
 
 -- Optional: Git Branches Button nur wenn in Git-Repo
-if in_git_repo() then
+if vim.g.is_git_enabled then
     table.insert(buttons,
 		{
 			icon = ' ',
