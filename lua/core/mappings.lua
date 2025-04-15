@@ -20,6 +20,10 @@ vim.keymap.set("n", "<leader>n", functions.ToggleLineNumber, { noremap = true, s
 -- Komplette Zeile mit Y kopieren
 vim.api.nvim_set_keymap('n', 'Y', 'yy', { noremap = true, silent = true })
 
+-- Addition/Substraktion
+vim.keymap.set('n', '+', '<C-a>', { noremap = true, silent = true })
+vim.keymap.set('n', '-', '<C-x>', { noremap = true, silent = true })
+
 -- NeoTree
 vim.keymap.set('n', '<leader>E', ':Neotree float reveal<CR>', { silent = true })
 vim.keymap.set('n', '<leader>e', ':Neotree left reveal<CR>', { silent = true })
@@ -97,8 +101,8 @@ vim.keymap.set("n", "g-", "g;", { noremap = true, silent = true })
 
 -- LSP
 if vim.g.is_lsp_enabled then
-	vim.keymap.set("n", "<leader>lg", functions.TelescopeDiagnostics, { noremap = true, silent = true })
-	vim.keymap.set("n", "<leader>lG", vim.diagnostic.open_float, { noremap = true, silent = true })
+	vim.keymap.set("n", "<leader>lx", functions.TelescopeDiagnostics, { noremap = true, silent = true })
+	vim.keymap.set("n", "<leader>lX", vim.diagnostic.open_float, { noremap = true, silent = true })
 	vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { noremap = true, silent = true })
 	vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, { silent = true })
 	vim.keymap.set('n', '<leader>lD', vim.lsp.buf.declaration, { silent = true })
@@ -108,7 +112,7 @@ if vim.g.is_lsp_enabled then
 	vim.keymap.set('n', '<leader>lR', vim.lsp.buf.rename, { silent = true })
 	vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, { silent = true })
 	vim.keymap.set('n', '<leader>lp', functions.GenerateCompileCommands, { noremap = true, silent = true })
-	vim.keymap.set("n", "<c-d>", functions.TelescopeDiagnostics, { noremap = true, silent = true })
+	vim.keymap.set("n", "<c-x>", functions.TelescopeDiagnostics, { noremap = true, silent = true })
 	vim.keymap.set("n", "<c-t>", functions.TelescopeReferences, { noremap = true, silent = true })
 	vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { noremap = true, silent = true })
 	vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { noremap = true, silent = true })

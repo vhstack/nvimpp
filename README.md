@@ -218,9 +218,9 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 | Kürzel       | Bedeutung                |
 | ------------ | ------------------------ |
-| `<leader>lg` | Diagnostik in Quickfix   |
-| `<leader>lG` | Diagnostik als Float     |
-| `<c-d>`      | Diagnostik mit Telescope |
+| `<leader>lx` | Diagnostik in Quickfix   |
+| `<leader>lX` | Diagnostik als Float     |
+| `<c-x>`      | Diagnostik mit Telescope |
 | `[d`         | Vorherige Diagnose       |
 | `]d`         | Nächste Diagnose         |
 | `<leader>la` | Code Aktionen            |
@@ -240,8 +240,10 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 | Kürzel       | Bedeutung                  |
 | ------------ | -------------------------- |
-| `<leader>n`  | Zeilennummern umschalten   |
 | `Y`          | Ganze Zeile kopieren       |
+| `+`          | Zahl inkrementieren        |
+| `-`          | Zahl dekrementieren        |
+| `<leader>n`  | Zeilennummern umschalten   |
 | `<leader>w`  | Datei speichern            |
 | `<leader>x`  | Buffer schließen           |
 | `<leader>s`  | Buffer nach Tabs sortieren |

@@ -61,8 +61,8 @@ wk.add(
   {
     { "<leader>ld", desc = "Definition", icon ={icon ="󰫍", color = "blue"}},
     { "<leader>lD", desc = "Declaration", icon ={icon ="󰫍", color = "blue"}},
-    { "<leader>lg", desc = "Diagnostic List <c-d>", icon ={icon ="󰨮", color = "purple"}},
-    { "<leader>lG", desc = "Diagnostic Float",icon ={icon ="󰨮", color = "purple"} },
+    { "<leader>lx", desc = "Diagnostic List <c-x>", icon ={icon ="󰨮", color = "purple"}},
+    { "<leader>lX", desc = "Diagnostic Float",icon ={icon ="󰨮", color = "purple"} },
     { "<leader>la", desc = "Code Action",icon ={icon ="󰨮", color = "purple"} },
     { "<leader>lf", desc = "Format",icon ={icon ="", color = "green"} },
     { "<leader>lr", desc = "References <c-t>",icon ={icon ="", color = "yellow"} },
