@@ -36,7 +36,7 @@ vim.keymap.set('n', '<leader>fb', ":Telescope buffers<CR>", { silent = true })
 vim.keymap.set('n', '<leader>fh', ":Telescope help_tags<CR>", { silent = true })
 vim.keymap.set("n", "<c-f>", ":Telescope find_files<CR>", { silent = true })
 vim.keymap.set("n", "<c-g>", ":Telescope live_grep<CR>", { silent = true })
-vim.keymap.set("n", "<c-t>", ":Telescope buffers<CR>", { silent = true })
+vim.keymap.set("n", "<c-b>", ":Telescope buffers<CR>", { silent = true })
 
 -- Telescope Git 
 if vim.g.is_git_enabled then
