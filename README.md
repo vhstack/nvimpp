@@ -232,6 +232,7 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | `<leader>lR` | Umbenennen               |
 | `<leader>lf` | Formatieren              |
 | `K`          | Hover-Dokumentation      |
+| `<c-t>`      | Referenzen anzeigen      |
 | `<c-p>`      | Zur Deklaration springen |
 | `<c-o>`      | Zurück springen          |
 

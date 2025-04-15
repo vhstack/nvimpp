@@ -109,12 +109,10 @@ if vim.g.is_lsp_enabled then
 	vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, { silent = true })
 	vim.keymap.set('n', '<leader>lp', functions.GenerateCompileCommands, { noremap = true, silent = true })
 	vim.keymap.set("n", "<c-d>", functions.TelescopeDiagnostics, { noremap = true, silent = true })
-	vim.keymap.set("n", "<c-b>", functions.TelescopeReferences, { noremap = true, silent = true })
+	vim.keymap.set("n", "<c-t>", functions.TelescopeReferences, { noremap = true, silent = true })
 	vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { noremap = true, silent = true })
 	vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { noremap = true, silent = true })
 	vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
 	vim.keymap.set('n', '<c-p>', vim.lsp.buf.definition, opt)
-	vim.keymap.set('n', 't', vim.lsp.buf.declaration, opt)
-	vim.keymap.set('n', 'T', vim.lsp.buf.definition, opt)
 end
 
