@@ -59,15 +59,15 @@ if vim.g.is_lsp_enabled then
 wk.add(
   -- LSP Befehle
   {
-    { "<leader>ld", desc = "Definition", icon ={icon ="󰫍", color = "blue"}},
+    { "<leader>ld", desc = "Definition <c-p>", icon ={icon ="󰫍", color = "blue"}},
     { "<leader>lD", desc = "Declaration", icon ={icon ="󰫍", color = "blue"}},
     { "<leader>lx", desc = "Diagnostic List <c-x>", icon ={icon ="󰨮", color = "purple"}},
     { "<leader>lX", desc = "Diagnostic Float",icon ={icon ="󰨮", color = "purple"} },
     { "<leader>la", desc = "Code Action",icon ={icon ="󰨮", color = "purple"} },
-    { "<leader>lf", desc = "Format",icon ={icon ="", color = "green"} },
-    { "<leader>lr", desc = "References <c-t>",icon ={icon ="", color = "yellow"} },
+    { "<leader>lF", desc = "Format",icon ={icon ="", color = "green"} },
+    { "<leader>lr", desc = "References",icon ={icon ="", color = "yellow"} },
     { "<leader>lR", desc = "Rename",icon ={icon ="󰑕", color = "red"} },
-    { "<leader>lK", desc = "Typ Info <s-k>",icon ={icon ="", color = "green"} },
+    { "<leader>lk", desc = "Typ Info <s-k>",icon ={icon ="", color = "green"} },
     { "<leader>lt", desc = "Type Definition",icon ={icon ="󱄑", color = "green"} }
   }
 )

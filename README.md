@@ -154,25 +154,22 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 ### NeoTree
 
-| Kürzel       | Bedeutung                  |
-| ------------ | -------------------------- |
-| `<leader>E`  | NeoTree als Float anzeigen |
-| `<leader>e`  | NeoTree links anzeigen     |
-| `<leader>gs` | Git-Status in NeoTree      |
-| `<C-e>`      | NeoTree links umschalten   |
+| Kürzel                | Bedeutung                     |
+| --------------------- | ----------------------------- |
+| `<leader>e`, `<C-e>`  | NeoTree links an-/ausschalten |
+| `<leader>E`           | NeoTree als Float anzeigen    |
+| `<leader>gs`          | Git-Status in NeoTree         |
+| `<C-e>`               | NeoTree links umschalten      |
 
 ### Telescope
 
-| Kürzel             | Bedeutung                 |
-| ------------------ | ------------------------- |
-| `<leader><leader>` | Zuletzt geöffnete Dateien |
-| `<leader>ff`       | Dateien suchen            |
-| `<leader>fg`       | Live-Grep-Suche           |
-| `<leader>fb`       | Geöffnete Buffer          |
-| `<leader>fh`       | Hilfetags durchsuchen     |
-| `<C-f>`            | Dateien suchen            |
-| `<C-g>`            | Live-Grep-Suche           |
-| `<C-b>`            | Buffer suchen             |
+| Kürzel                     | Bedeutung                 |
+| -------------------------- | ------------------------- |
+| `<leader><leader>`         | Zuletzt geöffnete Dateien |
+| `<leader>ff`, `<C-f>`      | Dateien suchen            |
+| `<leader>fg`, `<C-g>`      | Live-Grep-Suche           |
+| `<leader>fb`, `<C-b>`      | Geöffnete Buffer          |
+| `<leader>fh`               | Hilfetags durchsuchen     |
 
 ### Git (Telescope)
 
@@ -180,6 +177,7 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | ------------ | ------------ |
 | `<leader>gb` | Git-Branches |
 | `<leader>gc` | Git-Commits  |
+| `<leader>gd` | Git-Diffs    |
 | `<leader>gd` | Git-Status   |
 
 ### Kommentare
@@ -197,14 +195,12 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 ### Tabs
 
-| Kürzel    | Bedeutung               |
-| --------- | ----------------------- |
-| `<Tab>`   | Nächsten Tab wechseln   |
-| `<S-Tab>` | Vorherigen Tab wechseln |
-| `<c-right>`   | Nächsten Tab wechseln   |
-| `<c-left>` | Vorherigen Tab wechseln |
-| `<c-s-right>`   | Tab nach rechts verschieben   |
-| `<c-s-left>` | Tab nach links verschieben |
+| Kürzel                 | Bedeutung                   |
+| ---------------------- | --------------------------- |
+| `<Tab>`, `<C-right>`   | Nächsten Tab wechseln       |
+| `<S-Tab>`, `<C-left>`  | Vorherigen Tab wechseln     |
+| `<C-S-right>`          | Tab nach rechts verschieben |
+| `<C-S-left>`           | Tab nach links verschieben  |
 
 ### Terminal
 
@@ -216,25 +212,24 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 ### LSP
 
-| Kürzel       | Bedeutung                |
-| ------------ | ------------------------ |
-| `<leader>lx` | Diagnostik in Quickfix   |
-| `<leader>lX` | Diagnostik als Float     |
-| `<c-x>`      | Diagnostik mit Telescope |
-| `[d`         | Vorherige Diagnose       |
-| `]d`         | Nächste Diagnose         |
-| `<leader>la` | Code Aktionen            |
-| `<leader>ld` | Zur Definition springen  |
-| `<leader>lD` | Zur Deklaration springen |
-| `<leader>lK` | Hover-Dokumentation      |
-| `<leader>lr` | Referenzen anzeigen      |
-| `<leader>lt` | Typdefinition anzeigen   |
-| `<leader>lR` | Umbenennen               |
-| `<leader>lf` | Formatieren              |
-| `K`          | Hover-Dokumentation      |
-| `<c-t>`      | Referenzen anzeigen      |
-| `<c-p>`      | Zur Deklaration springen |
-| `<c-o>`      | Zurück springen          |
+| Kürzel                | Bedeutung                |
+| --------------------- | ------------------------ |
+| `<leader>lx`, `<C-x>` | Diagnostik mit Telscope  |
+| `<leader>lX`          | Diagnostik als Float     |
+| `[d`                  | Zur vorherigen Diagnose  |
+| `]d`                  | Zur nächsten Diagnose    |
+| `ö`                   | Zur vorherigen Diagnose  |
+| `ä`                   | Zur nächsten Diagnose    |
+| `<leader>la`          | Code Aktionen            |
+| `<leader>ld`, `<C-p>` | Zur Definition springen  |
+| `<leader>lD`, `gD`    | Zur Deklaration springen |
+| `<leader>lk`, `<S-k>` | Hover-Dokumentation      |
+| `<leader>lr`, `gr`    | Referenzen anzeigen      |
+| `<leader>lt`          | Typdefinition anzeigen   |
+| `<leader>lR`          | Umbenennen               |
+| `<leader>lF`          | Formatieren              |
+| `<C-p>`               | Zur Definition springen  |
+| `<C-o>`               | Zurück springen          |
 
 ### Sonstige
 
