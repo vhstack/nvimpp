@@ -37,8 +37,15 @@ vim.diagnostic.config({
   },
 })
 
+-- Kein Focus fuer Diagnostik Fenster
 vim.api.nvim_create_autocmd("CursorHold", {
   callback = function()
     vim.diagnostic.open_float(nil, { focus = false })
   end
 })
+
+-- Hover Fenster nicht fokusierbar
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+  vim.lsp.handlers.hover,
+  { focusable = false }
+)

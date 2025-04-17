@@ -67,7 +67,7 @@ Fans von hellen Themes können nutzen:
 ## 📥 Installation
 
 1. **NeoVim installieren** 
-2. **Tool `regrep` installieren**
+2. **Tool `rg` (Ripgrep) installieren**
 3. **Für LSP `clangd` installieren**
 4. **Repository klonen & Git-Verzeichnis entfernen:**
    ```sh
@@ -225,7 +225,7 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | `<leader>lD`, `gD`    | Zur Deklaration springen |
 | `<leader>lk`, `<S-k>` | Hover-Dokumentation      |
 | `<leader>lr`, `gr`    | Referenzen anzeigen      |
-| `<leader>lt`          | Typdefinition anzeigen   |
+| `<leader>lt`, `gt`    | Typdefinition anzeigen   |
 | `<leader>lR`          | Umbenennen               |
 | `<leader>lF`          | Formatieren              |
 | `<C-p>`               | Zur Definition springen  |

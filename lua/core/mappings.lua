@@ -120,6 +120,7 @@ if vim.g.is_lsp_enabled then
 	vim.keymap.set('n', '<leader>lp', functions.GenerateCompileCommands, opts)
 	vim.keymap.set("n", "<c-x>", functions.TelescopeDiagnostics, opts)
 	vim.keymap.set('n', '<c-p>', vim.lsp.buf.definition, opt)
+	vim.keymap.set('n', '<c-t>', vim.lsp.buf.type_definition, opt)
 	vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
 	vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 	vim.keymap.set("n", "ö", vim.diagnostic.goto_prev, opts)
@@ -129,5 +130,6 @@ if vim.g.is_lsp_enabled then
 	vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, vim.tbl_extend('force', opts, { desc = 'Declaration' })) 
 	vim.keymap.set('n', 'gr', functions.TelescopeReferences, vim.tbl_extend('force', opts, { desc = 'References' })) 
 	vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, vim.tbl_extend('force', opts, { desc = 'Implementation' }))
+	vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, vim.tbl_extend('force', opts, { desc = 'Type Definition' }))
 end
 
