@@ -90,17 +90,23 @@ Nerd Schriftarten sind unter [Nerd Fonts](https://www.nerdfonts.com/) verfügbar
 Gute Schriftarten fürs Coden sind: **Cascadia**, **FiraCode**, **DejaVuSansM**, **Cousine**
 
 
-## 🛠 Konfiguration
-In diesem Setup gibt es zwei spezielle Lua-Skripte, die es dir ermöglichen, **zusätzliche Einstellungen und Anpassungen** 
-vor und nach dem Laden der Standardkonfiguration vorzunehmen.
+## 🛠 Benutzerdefinierte Konfiguration
+Das Verzeichnis `~/.config/nvim/lua/custom` wird mit zwei Beispielskripten ausgeliefert, die dir helfen, 
+eigene Konfigurationsanpassungen vorzunehmen – ohne die Hauptkonfiguration zu verändern:
 
-### 📂 Verzeichnis erstellen
-Bevor du diese Dateien verwendest, stelle sicher, dass du das Verzeichnis `~/.config/nvim/custom` auf deinem System erstellst. 
-Lege dort die Skripte `preload.lua` und `postload.lua` ab:
+- [_preload.lua](lua/custom/_preload.lua)
+- [_postload.lua](lua/custom/_postload.lua)
+
+Wenn du die benutzerdefinierte Konfiguration verwenden willst, benenne die Vorlagendateien um:
 
 ```bash
-mkdir -p ~/.config/nvim/custom
+mv ~/.config/nvim/lua/custom/_preload.lua ~/.config/nvim/custom/lua/preload.lua
+mv ~/.config/nvim/lua/custom/_postload.lua ~/.config/nvim/lua/custom/postload.lua
 ```
+
+Durch die Anpassung dieser Dateien kannst du eigene Erweiterungen wie Keybindings, Plugins oder Lua-Code ergänzen, 
+ohne Änderungen an der Hauptkonfiguration vornehmen zu müssen – auch bei zukünftigen Aktualisierungen bleibt 
+deine Konfiguration erhalten.
 
 ### 📜 `lua/custom/preload.lua`
 - **Wird beim Starten von Neovim geladen.**
@@ -190,8 +196,8 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 | Kürzel | Bedeutung           |
 | ------ | ------------------- |
-| `|`    | Vertikales Split   |
-| `\`    | Horizontales Split |
+| `|`    | Vertikales Split    |
+| `\`    | Horizontales Split  |
 
 ### Tabs
 
@@ -233,20 +239,22 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 ### Sonstige
 
-| Kürzel       | Bedeutung                  |
-| ------------ | -------------------------- |
-| `Y`          | Ganze Zeile kopieren       |
-| `+`          | Zahl inkrementieren        |
-| `-`          | Zahl dekrementieren        |
-| `<leader>n`  | Zeilennummern umschalten   |
-| `<leader>w`  | Datei speichern            |
-| `<leader>x`  | Buffer schließen           |
-| `<leader>s`  | Buffer nach Tabs sortieren |
+| Kürzel       | Bedeutung                             |
+| ------------ | ------------------------------------- |
+| `Y`          | Ganze Zeile kopieren                  |
+| `u`          | Rückgängig machen                     |
+| `U`          | Wiederherstellen                      |
+| `+`          | Zahl inkrementieren                   |
+| `-`          | Zahl dekrementieren                   |
+| `<leader>n`  | Zeilennummern umschalten              |
+| `<leader>w`  | Datei speichern                       |
+| `<leader>x`  | Buffer schließen                      |
+| `<leader>s`  | Buffer nach Tabs sortieren            |
 | `<leader>h`  | Wort oder Auswahl farblich markieren  |
-| `<leader>H`  | Alle Markierungen zurücksetzen  |
-| `<leader>T`  | Transparenz umschalten     |
-| `<leader>pl` | Lazy Plugins öffnen        |
-| `<leader>pm` | Mason Plugins öffnen       |
+| `<leader>H`  | Alle Markierungen zurücksetzen        |
+| `<leader>T`  | Transparenz umschalten                |
+| `<leader>pl` | Lazy Plugins öffnen                   |
+| `<leader>pm` | Mason Plugins öffnen                  |
 
 
 🎯 Schlusswort

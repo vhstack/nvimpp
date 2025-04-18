@@ -30,6 +30,9 @@ vim.api.nvim_set_keymap('n', 'Y', 'yy', opts)
 vim.keymap.set('n', '+', '<C-a>', opts)
 vim.keymap.set('n', '-', '<C-x>', opts)
 
+-- Redo auf Shift-U
+vim.keymap.set('n', '<S-u>', '<C-r>', opts)
+
 -- NeoTree
 vim.keymap.set('n', '<leader>E', ':Neotree float reveal<CR>', opts)
 vim.keymap.set('n', '<leader>e', ':Neotree left reveal<CR>', opts)
