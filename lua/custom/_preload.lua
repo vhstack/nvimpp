@@ -8,7 +8,7 @@
 -- vim.g.colorscheme='catppuccin'
 
 -- Transparenz aktivieren/deaktivieren
-vim.g.is_transparency_enabled=true
+-- vim.g.is_transparency_enabled=true
 
 -- LSP aktivieren/deaktivieren
 -- vim.g.is_lsp_enabled = true
