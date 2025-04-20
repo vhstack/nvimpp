@@ -55,11 +55,6 @@ bildet es eine perfekt abgestimmte Arbeitsumgebung, die dir eine nahtlose und ef
 **Standard-Theme:**  
 Das catppuccin-Farbschema und die Transparenz sind standardmäßig aktiviert. 
 
-**Anpassungen:**  
-Diese Einstellungen können bei Bedarf in der Datei `.config/nvim/init.lua` angepasst werden.
-Farbschema: `vim.g.colorscheme`
-Transparenz: `vim.g.is_transparency_enabled`
-
 **Option für helle Themes:**  
 Fans von hellen Themes können nutzen:
 `catppuccin-latte` (Variante von catppuccin) oder weitere Themes installieren.
