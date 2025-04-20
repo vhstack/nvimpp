@@ -33,6 +33,10 @@ vim.keymap.set('n', '-', '<C-x>', opts)
 -- Redo auf Shift-U
 vim.keymap.set('n', '<S-u>', '<C-r>', opts)
 
+-- In cmd-Modus mit Pfeiltasten blättern
+vim.keymap.set('c', '<Up>', '<C-p>', { noremap = true })
+vim.keymap.set('c', '<Down>', '<C-n>', { noremap = true })
+
 -- NeoTree
 vim.keymap.set('n', '<leader>E', ':Neotree float reveal<CR>', opts)
 vim.keymap.set('n', '<leader>e', ':Neotree left reveal<CR>', opts)
