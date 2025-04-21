@@ -1,5 +1,5 @@
 <p align="right">
-  <a href="README.md">🇩🇪</a> | 🇬🇧
+  <a href="README.md" style="text-decoration: none;>🇩🇪</a> · 🇬🇧
 </p>
 
 # NeoVim C/C++ Development Setup
