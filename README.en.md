@@ -1,5 +1,5 @@
 <p align="right">
-  <a href="README.md"><img src="https://twemoji.maxcdn.com/v/latest/72x72/1f1e9-1f1ff.png" alt="Deutsch" title="Zur deutschen Version wechseln" /></a> · <a href="README.en.md"><img src="https://twemoji.maxcdn.com/v/latest/72x72/1f1ec-1f1e7.png" alt="English" title="Switch to English" /></a>
+  <a href="README.md"><img src="https://flagcdn.com/16x12/de.png" alt="Deutsch" title="Zur deutschen Version wechseln" /></a> · <a href="README.en.md"><img src="https://flagcdn.com/16x12/gb.png" alt="English" title="Switch to English" /></a>
 </p>
 
 # NeoVim C/C++ Development Setup
