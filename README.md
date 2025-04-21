@@ -2,9 +2,9 @@
   <a href="README.md"><img src="https://flagcdn.com/16x12/de.png" alt="Deutsch" title="Zur deutschen Version wechseln" /></a>  <a href="README.en.md"><img src="https://flagcdn.com/16x12/gb.png" alt="English" title="Switch to English" /></a>
 </p>
 
-# NeoVim C/C++ Development Setup
+# Neovim C/C++ Development Setup
 
-Dieses Repository enthält eine optimierte **NeoVim**-Konfiguration für die **C/C++-Entwicklung** 
+Dieses Repository enthält eine optimierte **Neovim**-Konfiguration für die **C/C++-Entwicklung** 
 mit leistungsstarken Plugins für Autovervollständigung, Syntaxhervorhebung, Git-Integration und mehr.
 Das Setup ist bewusst schlank gehalten – schnell startklar, fokussiert auf das Wesentliche und lässt sich leicht an 
 deine eigenen Bedürfnisse anpassen. 
@@ -21,7 +21,7 @@ bildet es eine perfekt abgestimmte Arbeitsumgebung, die dir eine nahtlose und ef
 ## 🚀 Features
 - **LSP-Unterstützung** für C/C++ mit automatischer Vervollständigung
 - **Syntax-Highlighting** mit Treesitter
-- **Git-Integration** direkt in NeoVim
+- **Git-Integration** direkt in Neovim
 - **Erweiterte Datei-Navigation** mit Telescope und NeoTree
 - **Terminal-Integration** für reibungslose Entwicklungsabläufe
 
@@ -34,10 +34,10 @@ bildet es eine perfekt abgestimmte Arbeitsumgebung, die dir eine nahtlose und ef
 | `mason` | Einfaches Management von LSP-Servern, Debuggern und Lintern |
 | `cmp` | Auto-Completion-Engine für besseren Code-Workflow |
 | `nullls` | Unterstützung für Formatierung und statische Analyse (Linter) |
-| `lualine` | Anpassbare Statusleiste für NeoVim |
+| `lualine` | Anpassbare Statusleiste für Neovim |
 | `gitsigns` | Git-Integration mit Inline-Diff-Anzeige |
 | `treesitter` | Verbesserte Syntaxhervorhebung für C/C++ |
-| `toggleterm` | Integriertes Terminal in NeoVim |
+| `toggleterm` | Integriertes Terminal in Neovim |
 | `outline` | Anzeige der Symbolstruktur (z. B. Klassen, Funktionen) |
 | `autopairs` | Automatische Klammer- und Anführungszeichen-Paare |
 | `comments` | Einfaches Kommentieren von Codeblöcken |
@@ -45,7 +45,7 @@ bildet es eine perfekt abgestimmte Arbeitsumgebung, die dir eine nahtlose und ef
 | `blankline` | Visuelle Darstellung von Einrückungen |
 | `neotree` | Dateimanager für verbesserte Navigation |
 | `neogen` | Dokumentation Generator in Sourcen |
-| `dashboard` | Startbildschirm für NeoVim mit Schnellzugriff |
+| `dashboard` | Startbildschirm für Neovim mit Schnellzugriff |
 | `whichkey` | Schnelle Anzeige von Tastenkombinationen |
 | `transparent` | Transparenz Modus für Farbschema |
 
@@ -66,7 +66,7 @@ Fans von hellen Themes können nutzen:
 
 ## 📥 Installation
 
-1. **NeoVim installieren** 
+1. **Neovim installieren** 
 2. **Tool `rg` (Ripgrep) installieren**
 3. **Für LSP `clangd` installieren**
 4. **Repository klonen & Git-Verzeichnis entfernen:**
@@ -75,7 +75,7 @@ Fans von hellen Themes können nutzen:
    rm -rf ~/.config/nvim/.git ~/.config/nvim/assets ~/.config/nvim/README*.md
    ```
 5. **Plugins synchronisieren** mit dem Plugin-Manager (`Packer`, `Lazy`, etc.)
-6. **LSPs & Tools installieren** über Mason (`:Mason` in NeoVim ausführen)
+6. **LSPs & Tools installieren** über Mason (`:Mason` in Neovim ausführen)
 
 ```sh
 # Optional: Um clangd zu installieren, öffne Neovim und führe folgenden Befehl aus:
@@ -128,7 +128,7 @@ Folgende Variablen können im `preload.lua` angepasst werden:
 - **Beispiel**: Keymap-Änderungen, Farben, Statusline-Anpassungen.
 
 ## ⌨  Grundlegende Tastenkombinationen
-Dies ist eine Übersicht der wichtigsten Tastenkombinationen, die in meiner NeoVim-Konfiguration definiert sind. 
+Dies ist eine Übersicht der wichtigsten Tastenkombinationen, die in meiner Neovim-Konfiguration definiert sind. 
 Die Tasten sind als Lua-Key-Mappings konfiguriert und decken eine Vielzahl von Funktionen ab, von der Navigation bis hin zu spezifischen Plugins.
 Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nutzen.
 
