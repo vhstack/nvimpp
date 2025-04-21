@@ -1,3 +1,6 @@
+<p align="right">
+  [🇩🇪 Deutsch](README.md) | 🇬🇧 **English**
+</p>
 # NeoVim C/C++ Development Setup
 
 This repository contains an optimized NeoVim configuration for C/C++ development with powerful plugins for 
