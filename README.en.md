@@ -2,15 +2,15 @@
   <a href="README.md"><img src="https://flagcdn.com/16x12/de.png" alt="Deutsch" title="Zur deutschen Version wechseln" /></a>  <a href="README.en.md"><img src="https://flagcdn.com/16x12/gb.png" alt="English" title="Switch to English" /></a>
 </p>
 
-# NeoVim C/C++ Development Setup
+# Neovim C/C++ Development Setup
 
-This repository contains an optimized NeoVim configuration for C/C++ development with powerful plugins for 
+This repository contains an optimized Neovim configuration for C/C++ development with powerful plugins for 
 auto-completion, syntax highlighting, Git integration, and more. The setup is intentionally 
 lightweight — fast to start, focused on essentials, and easy to customize to suit your needs.
 
 Together with my other projects **[vhstack/tmuxpp](https://github.com/vhstack/tmuxpp)** and 
 **[vhstack/termpp](https://github.com/vhstack/termpp)** , it forms a perfectly tuned working environment 
-that provides seamless and efficient use of the Terminal, Tmux, and NeoVim.
+that provides seamless and efficient use of the Terminal, Tmux, and Neovim.
 
 ![Screenshot](assets/screenshot01.png)
 
@@ -22,7 +22,7 @@ that provides seamless and efficient use of the Terminal, Tmux, and NeoVim.
 
 - **LSP support** for C/C++ with automatic completion
 - **Syntax highlighting with** Treesitter
-- **Git integration directly** in NeoVim
+- **Git integration directly** in Neovim
 - **Advanced file navigation** with Telescope and NeoTree
 - **Terminal integration** for smooth development workflows
 
@@ -35,10 +35,10 @@ that provides seamless and efficient use of the Terminal, Tmux, and NeoVim.
 |`mason` | Easy management of LSP servers, debuggers, and linters |
 |`cmp` | Auto-completion engine for an improved coding workflow |
 |`null-ls` | Support for formatting and static analysis (linters) |
-|`lualine` | Customizable status line for NeoVim |
+|`lualine` | Customizable status line for Neovim |
 |`gitsigns` | Git integration with inline diff display |
 |`treesitter` | Enhanced syntax highlighting for C/C++ |
-|`toggleterm` | Integrated terminal within NeoVim |
+|`toggleterm` | Integrated terminal within Neovim |
 |`outline` | Symbol outline view (e.g., classes, functions) |
 |`autopairs` | Automatic pairing of brackets and quotes |
 |`comments` | Easy commenting of code blocks |
@@ -46,7 +46,7 @@ that provides seamless and efficient use of the Terminal, Tmux, and NeoVim.
 |`blankline` | Visual representation of indent levels |
 |`neotree` | File manager for improved navigation |
 |`neogen` | Documentation generator within source code |
-|`dashboard` | Start screen for NeoVim with quick access |
+|`dashboard` | Start screen for Neovim with quick access |
 |`which-key` | Quick display of keybindings |
 |`transparent` | Transparency mode for your color scheme |
 
@@ -68,7 +68,7 @@ You can use `catppuccin-latte` (a light variant of Catppuccin) or install other 
 
 ## 📥 Installation
 
-1. **Install NeoVim  
+1. **Install Neovim  
 2. **Install the `rg` (Ripgrep) tool**  
 3. **Install `clangd` for LSP** 
 4. **Clone the repository & remove the Git directory:**
@@ -79,9 +79,9 @@ You can use `catppuccin-latte` (a light variant of Catppuccin) or install other 
     ```
 
 5. **Sync plugins** with your plugin manager (`Packer`, `Lazy`, etc.)  
-6. **Install LSPs & tools** via Mason by running `:Mason` in NeoVim
+6. **Install LSPs & tools** via Mason by running `:Mason` in Neovim
 
-Optional: To install `clangd`, open NeoVim and run:
+Optional: To install `clangd`, open Neovim and run:
 ```vim
 :MasonInstall clangd cmake-language-server
 ```
@@ -114,7 +114,7 @@ without altering the main configuration—your changes will remain intact during
 
 ### 📜 `lua/custom/preload.lua`
 
-- **Loaded at NeoVim startup.**  
+- **Loaded at Neovim startup.**  
 - Set global or environment variables or perform basic initializations here.  
 - **Example**: Set LSP flags, load themes, adjust global options.
 
@@ -122,7 +122,7 @@ Available variables in `preload.lua`:
 
 |Variable | Description | Default |
 |---|---|--- |
-|`vim.g.colorscheme` | Sets the NeoVim color scheme | `'catppuccin'` |
+|`vim.g.colorscheme` | Sets the Neovim color scheme | `'catppuccin'` |
 |`vim.g.is_transparency_enabled` | Enables/disables transparency | `true` |
 |`vim.g.is_lsp_enabled` | Enables/disables LSP features | `true` |
 |`vim.g.is_git_enabled` | Enables/disables Git features | `true` |
@@ -135,7 +135,7 @@ Available variables in `preload.lua`:
 
 ## ⌨ Keybindings
 
-This is an overview of the most important keybindings defined in this NeoVim configuration. 
+This is an overview of the most important keybindings defined in this Neovim configuration. 
 The mappings are set up in Lua and cover a variety of features, from navigation to plugin-specific commands.
 
 ### Global Leader Key
