@@ -257,7 +257,7 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | `<leader>pm` | Mason Plugins öffnen                  |
 
 
-🎯 Schlusswort
+## 🎯 Schlusswort
 
 Wenn du Ideen für neue Features hast oder das Projekt verbessern möchtest, 
 dann fühl dich frei, es nach deinen Vorstellungen weiterzuentwickeln! 
