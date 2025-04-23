@@ -109,6 +109,7 @@ require("lazy").setup({
 	-- Dashboard
 	{
         'nvimdev/dashboard-nvim',
+	commit = "63e83ad",
         event = 'VimEnter',
         dependencies = {{'nvim-tree/nvim-web-devicons'}}
     }, 
