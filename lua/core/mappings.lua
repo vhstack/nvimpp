@@ -138,5 +138,6 @@ if vim.g.is_lsp_enabled then
 	vim.keymap.set('n', 'gr', functions.TelescopeReferences, vim.tbl_extend('force', opts, { desc = 'References' })) 
 	vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, vim.tbl_extend('force', opts, { desc = 'Implementation' }))
 	vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, vim.tbl_extend('force', opts, { desc = 'Type Definition' }))
+	vim.keymap.set('n', 'gx', functions.TelescopeDiagnostics, vim.tbl_extend('force', opts, { desc = 'Diagnostic List' }))
 end
 
