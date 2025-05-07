@@ -142,37 +142,37 @@ The mappings are set up in Lua and cover a variety of features, from navigation 
 
 ### Global Leader Key
 
-|Shortcut | Description |
-|---|--- |
+|Shortcut  | Description |
+|--------- | ---------- |
 |`<Space>` | Leader key |
 
 ### Function Keys
 
-|Shortcut | Description |
-|---|---|
-|`<F5>` | Generate documentation with Neogen |
-|`<F9>` | Run `make` |
-|`<F10>` | Run `make clean` & `make -j3` |
-|`<F12>` | Close buffer |
+|Shortcut           | Description                        |
+|------------------ | ---------------------------------- |
+|`<F5>`             | Generate documentation with Neogen |
+|`<F9>`,`<leader>m` | Run `make`                         |
+|`<F10>`            | Run `make clean` & `make -j3`      |
+|`<F12>`            | Close buffer                       |
 
 ### Navigation
 
-|Shortcut | Description |
-|---|--- |
-|`<C-k>` | Move window up |
-|`<C-j>` | Move window down |
-|`<C-h>` | Move window left |
-|`<C-l>` | Move window right |
-|`<C-w>` | Switch window |
+|Shortcut | Description       |
+|-------  | ----------------- |
+|`<C-k>`  | Move window up    |
+|`<C-j>`  | Move window down  |
+|`<C-h>`  | Move window left  |
+|`<C-l>`  | Move window right |
+|`<C-w>`  | Switch window     |
 
 ### NeoTree
 
-|Shortcut | Description |
-|---|--- |
-|`<leader>e`, `<C-e>` | Toggle NeoTree (sidebar) |
-|`<leader>E` | Open NeoTree in float |
-|`<leader>gs` | Show Git status in NeoTree |
-|`<C-e>` | Toggle NeoTree sidebar |
+|Shortcut             | Description                |
+|-------------------- | -------------------------- |
+|`<leader>e`, `<C-e>` | Toggle NeoTree (sidebar)   |
+|`<leader>E`          | Open NeoTree in float      |
+|`<leader>gs`         | Show Git status in NeoTree |
+|`<C-e>`              | Toggle NeoTree sidebar     |
 
 ### Telescope
 

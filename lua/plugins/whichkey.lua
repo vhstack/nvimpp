@@ -6,6 +6,7 @@ wk.add(
     { "<leader><leader>", desc = "Recent Files", icon = {icon="󰚰", color="cyan"}},
     { "<leader>/", desc = "Comment", icon = {icon="", color="orange"}},
     { "<leader>/", desc = "Comment", icon = {icon="", color="orange"}, mode = "v"},
+    { "<leader>m", desc = "Make", icon = {icon="", color="purple"}},
     { "<leader>e", desc = "Files Left <c-e>", icon = {icon="", color="cyan"}},
     { "<leader>E", desc = "Files Float",  icon = {icon="", color="cyan"}},
     { "<leader>f", group = "Find", icon = {icon="", color="cyan"}},

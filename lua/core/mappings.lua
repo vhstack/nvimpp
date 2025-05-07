@@ -71,6 +71,9 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>', opts)
 -- Methoden Übersicht
 vim.keymap.set('n', '<c-s>', ':Outline<CR>', opts)
 
+-- Make
+vim.keymap.set('n', '<leader>m', ':make<CR>', opts)
+
 -- Kommentar
 vim.keymap.set('n', '<leader>/', ':CommentToggle<CR>', opts)
 vim.keymap.set('v', '<leader>/', ':CommentToggle<CR>', opts)

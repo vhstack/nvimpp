@@ -143,12 +143,12 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 ### F-Tasten
 
-| Kürzel  | Bedeutung                           |
-| ------- | ----------------------------------- |
-| `<F5>`  | Neogen-Dokumentation generieren     |
-| `<F9>`  | `make` ausführen                    |
-| `<F10>` | `make clean` & `make -j3` ausführen |
-| `<F12>` | Buffer schließen                    |
+| Kürzel              | Bedeutung                           |
+| ------------------- | ----------------------------------- |
+| `<F5>`              | Neogen-Dokumentation generieren     |
+| `<F9>`,`<leader>m`  | `make` ausführen                    |
+| `<F10>`             | `make clean` & `make -j3` ausführen |
+| `<F12>`             | Buffer schließen                    |
 
 ### Navigation
 

@@ -33,7 +33,7 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 -- Clipboard
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = {}
 
 -- Shorter Nachrichten
 vim.opt.shortmess:append("c")
