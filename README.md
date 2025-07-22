@@ -145,6 +145,7 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 | Kürzel              | Bedeutung                           |
 | ------------------- | ----------------------------------- |
+| `<F2>`              | Nach Wort unter dem Cursor suchen   |
 | `<F5>`              | Neogen-Dokumentation generieren     |
 | `<F9>`,`<leader>m`  | `make` ausführen                    |
 | `<F10>`             | `make clean` & `make -j3` ausführen |
@@ -171,13 +172,14 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 ### Telescope
 
-| Kürzel                     | Bedeutung                 |
-| -------------------------- | ------------------------- |
-| `<leader><leader>`         | Zuletzt geöffnete Dateien |
-| `<leader>ff`, `<C-f>`      | Dateien suchen            |
-| `<leader>fg`, `<C-g>`      | Live-Grep-Suche           |
-| `<leader>fb`, `<C-b>`      | Geöffnete Buffer          |
-| `<leader>fh`               | Hilfetags durchsuchen     |
+| Kürzel                     | Bedeutung                    |
+| -------------------------- | ---------------------------- |
+| `<leader><leader>`         | Zuletzt geöffnete Dateien    |
+| `<leader>ff`, `<C-f>`      | Dateien suchen               |
+| `<leader>fw`, `F2`         | Wort under dem Cursor suchen |
+| `<leader>fg`, `<C-g>`      | Live-Grep-Suche              |
+| `<leader>fb`, `<C-b>`      | Geöffnete Buffer             |
+| `<leader>fh`               | Hilfetags durchsuchen        |
 
 ### Git (Telescope)
 

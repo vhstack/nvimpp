@@ -8,6 +8,8 @@ local functions = require("core.functions")
 local opts = { noremap = true, silent = true }
 
 -- Eigene Einstellungen von VIM
+vim.keymap.set("n", "<F2>", ":Telescope grep_string<CR>", opts)
+vim.keymap.set("i", "<F2>", "<ESC>:Telescope grep_string<CR>", opts)
 vim.keymap.set('n', '<F5>', ':Neogen<CR>', opts)
 vim.keymap.set('i', '<F5>', '<ESC>:Neogen<CR>', opts)
 vim.keymap.set('n', '<F9>', ':make<CR>', opts);
@@ -51,6 +53,7 @@ vim.keymap.set('n', '<leader>ff', ":Telescope find_files<CR>", opts)
 vim.keymap.set('n', '<leader>fg', ":Telescope live_grep<CR>", opts)
 vim.keymap.set('n', '<leader>fb', ":Telescope buffers<CR>", opts)
 vim.keymap.set('n', '<leader>fh', ":Telescope help_tags<CR>", opts)
+vim.keymap.set("n", "<leader>fw", ":Telescope grep_string<CR>", opts)
 vim.keymap.set("n", "<c-f>", ":Telescope find_files<CR>", opts)
 vim.keymap.set("n", "<c-g>", ":Telescope live_grep<CR>", opts)
 vim.keymap.set("n", "<c-b>", ":Telescope buffers<CR>", opts)

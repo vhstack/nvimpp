@@ -150,6 +150,7 @@ The mappings are set up in Lua and cover a variety of features, from navigation 
 
 |Shortcut           | Description                        |
 |------------------ | ---------------------------------- |
+|`<F2>`             | Grep for word under cursor         |
 |`<F5>`             | Generate documentation with Neogen |
 |`<F9>`,`<leader>m` | Run `make`                         |
 |`<F10>`            | Run `make clean` & `make -j3`      |
@@ -180,6 +181,7 @@ The mappings are set up in Lua and cover a variety of features, from navigation 
 |---|--- |
 |`<leader><leader>` | Recently opened files |
 |`<leader>ff`, `<C-f>` | Find files |
+|`<leader>fw`, `F2`    | Find word  |
 |`<leader>fg`, `<C-g>` | Live grep search |
 |`<leader>fb`, `<C-b>` | Open buffers |
 |`<leader>fh` | Search help tags |

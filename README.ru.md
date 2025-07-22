@@ -134,6 +134,7 @@ mv ~/.config/nvim/lua/custom/_postload.lua ~/.config/nvim/lua/custom/postload.lu
 
 | Сочетание             | Назначение                         |
 |---------------------- | ---------------------------------- |
+| `<F2>`                | Искать слово под курсором          |
 | `<F5>`                | Генерация документации Neogen      |
 | `<F9>`,`<leader>m`    | Запуск `make`                      |
 | `<F10>`               | `make clean` & `make -j3`          |
@@ -164,6 +165,7 @@ mv ~/.config/nvim/lua/custom/_postload.lua ~/.config/nvim/lua/custom/postload.lu
 |-------------------------|--------------------------------|
 | `<leader><leader>`      | Последние открытые файлы       |
 | `<leader>ff`, `<C-f>`   | Поиск файлов                   |
+| `<leader>fw`, `F2`      | Поиск слова под курсором       |
 | `<leader>fg`, `<C-g>`   | Live-Grep поиск                |
 | `<leader>fb`, `<C-b>`   | Открытые буферы                |
 | `<leader>fh`            | Поиск по документации          |
