@@ -46,7 +46,11 @@ require("lazy").setup({
 	}, 
 
 	-- Autocomplete
-    {'hrsh7th/cmp-nvim-lsp'}, {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},
+    {
+		'hrsh7th/cmp-nvim-lsp',
+		commit = "a8912b88ce488f411177fc8aed358b04dc246d7b"
+	}, 
+	{'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},
     {'hrsh7th/cmp-cmdline'}, {'hrsh7th/nvim-cmp'}, 
 
 	-- Git Signs
@@ -109,7 +113,7 @@ require("lazy").setup({
 	-- Dashboard
 	{
         'nvimdev/dashboard-nvim',
-	commit = "63e83ad",
+		commit = "63e83ad",
         event = 'VimEnter',
         dependencies = {{'nvim-tree/nvim-web-devicons'}}
     }, 
