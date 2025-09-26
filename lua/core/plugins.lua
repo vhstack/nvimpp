@@ -40,6 +40,7 @@ require("lazy").setup({
 	-- LSP Konfiguration
 	{
 		'neovim/nvim-lspconfig',
+		commit = "38de86f...",
 		cond = function()
 			return vim.g.is_lsp_enabled == true
 		end,

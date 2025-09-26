@@ -1,26 +1,39 @@
--- Language Servers
-vim.lsp.config("clangd", {
-	capabilities=capabilities,
-	cmd = {
-		"clangd",
-		"--compile-commands-dir=build",
-		"--clang-tidy",
-		"--suggest-missing-includes",
-	},
-	settings = {
-		clangd = {
-			formatting = {
-				enable = true,
-				indentWidth = 4,   -- Setzt die Einrückung auf 4 Leerzeichen
-				tabWidth = 4,      -- Setzt die Tabulatorbreite auf 4
-				--useTab = "never",  -- Verwendet nur Leerzeichen, keine echten Tabs
-			}
-		}
-	}
-})
+local ok, lspconfig = pcall(require, "lspconfig")
 
--- Server aktivieren
-vim.lsp.enable("clangd")
+if vim.lsp.config then
+  -- NVim 0.11+
+  vim.lsp.config("clangd", {
+    capabilities = capabilities,
+    cmd = { "clangd", "--compile-commands-dir=build", "--clang-tidy", "--suggest-missing-includes" },
+    settings = {
+      clangd = {
+        formatting = {
+          enable = true,
+          indentWidth = 4,
+          tabWidth = 4,
+        }
+      }
+    }
+  })
+  
+  -- Server aktivieren
+  vim.lsp.enable("clangd")
+else
+  -- NVim 0.10
+  lspconfig.clangd.setup({
+    capabilities = capabilities,
+    cmd = { "clangd", "--compile-commands-dir=build", "--clang-tidy", "--suggest-missing-includes" },
+    settings = {
+      clangd = {
+        formatting = {
+          enable = true,
+          indentWidth = 4,
+          tabWidth = 4,
+        }
+      }
+    }
+  })
+end
 
 -- Konfiguration LSP Diagnostics
 vim.diagnostic.config({
