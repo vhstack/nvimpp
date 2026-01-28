@@ -43,6 +43,7 @@ bildet es eine perfekt abgestimmte Arbeitsumgebung, die dir eine nahtlose und ef
 | `outline` | Anzeige der Symbolstruktur (z. B. Klassen, Funktionen) |
 | `autopairs` | Automatische Klammer- und Anführungszeichen-Paare |
 | `comments` | Einfaches Kommentieren von Codeblöcken |
+| `ansi` | Darstellung farbiger ANSI-Sequenzen |
 | `buffline` | Erweiterte Buffer-Navigation |
 | `blankline` | Visuelle Darstellung von Einrückungen |
 | `neotree` | Dateimanager für verbesserte Navigation |
@@ -143,13 +144,14 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 ### F-Tasten
 
-| Kürzel              | Bedeutung                           |
-| ------------------- | ----------------------------------- |
-| `<F2>`              | Nach Wort unter dem Cursor suchen   |
-| `<F5>`              | Neogen-Dokumentation generieren     |
-| `<F9>`,`<leader>m`  | `make` ausführen                    |
-| `<F10>`             | `make clean` & `make -j3` ausführen |
-| `<F12>`             | Buffer schließen                    |
+| Kürzel              | Bedeutung                                   |
+| ------------------- | ------------------------------------------- |
+| `<F2>`              | Nach Wort unter dem Cursor suchen           |
+| `<F5>`              | Neogen-Dokumentation generieren             |
+| `<F8>`              | ANSI-Farbdarstellung umschalten             |
+| `<F9>`,`<leader>m`  | `make` ausführen                            |
+| `<F10>`             | `make clean` & `make -j3` ausführen         |
+| `<F12>`             | Buffer schließen                            |
 
 ### Navigation
 

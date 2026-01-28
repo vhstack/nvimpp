@@ -12,6 +12,8 @@ vim.keymap.set("n", "<F2>", ":Telescope grep_string<CR>", opts)
 vim.keymap.set("i", "<F2>", "<ESC>:Telescope grep_string<CR>", opts)
 vim.keymap.set('n', '<F5>', ':Neogen<CR>', opts)
 vim.keymap.set('i', '<F5>', '<ESC>:Neogen<CR>', opts)
+vim.keymap.set('n', '<F8>', functions.ToggleAnsiColors, opts);
+vim.keymap.set('i', '<F8>', functions.ToggleAnsiColors, opts);
 vim.keymap.set('n', '<F9>', ':make<CR>', opts);
 vim.keymap.set('i', '<F9>', '<ESC>:make<CR>', opts);
 vim.keymap.set('n', '<F10>', ':make clean<CR>:make -j3<CR>', opts);

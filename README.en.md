@@ -44,6 +44,7 @@ that provides seamless and efficient use of the Terminal, Tmux, and Neovim.
 |`outline` | Symbol outline view (e.g., classes, functions) |
 |`autopairs` | Automatic pairing of brackets and quotes |
 |`comments` | Easy commenting of code blocks |
+| `ansi` | Render colored ANSI escape sequences |
 |`buffline` | Enhanced buffer navigation |
 |`blankline` | Visual representation of indent levels |
 |`neotree` | File manager for improved navigation |
@@ -148,13 +149,14 @@ The mappings are set up in Lua and cover a variety of features, from navigation 
 
 ### Function Keys
 
-|Shortcut           | Description                        |
-|------------------ | ---------------------------------- |
-|`<F2>`             | Grep for word under cursor         |
-|`<F5>`             | Generate documentation with Neogen |
-|`<F9>`,`<leader>m` | Run `make`                         |
-|`<F10>`            | Run `make clean` & `make -j3`      |
-|`<F12>`            | Close buffer                       |
+|Shortcut           | Description                            |
+|------------------ | -------------------------------------- |
+|`<F2>`             | Grep for word under cursor             |
+|`<F5>`             | Generate documentation with Neogen     |
+|`<F8>`             | Toggle ANSI color rendering            |
+|`<F9>`,`<leader>m` | Run `make`                             |
+|`<F10>`            | Run `make clean` & `make -j3`          |
+|`<F12>`            | Close buffer                           |
 
 ### Navigation
 

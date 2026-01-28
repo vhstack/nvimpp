@@ -138,4 +138,15 @@ require("lazy").setup({
 		'danymat/neogen', 
 	    config = true
 	},
+
+	-- Log Colorizer
+	{'0xferrous/ansi.nvim',
+	    	config = function()
+	        	require("ansi").setup({
+				auto_enable = false,
+				filetypes = { "log" },
+				theme = 'catppuccin'
+			})
+	    	end
+	},
 });

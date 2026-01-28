@@ -85,6 +85,15 @@ function M.IsGitRepo()
 	return git_dir == "true"
 end
 
+-- Funktion für farbige Log Ascii Sequenzen 
+function M.ToggleAnsiColors() 
+  if vim.wo.conceallevel > 0 then
+    vim.cmd("AnsiDisable")
+  else
+    vim.cmd("AnsiEnable")
+  end
+end
+
 -- Funktionen exportieren
 return M
 
