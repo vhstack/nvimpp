@@ -33,7 +33,7 @@ function M.GenerateCompileCommands()
 		file:write("[\n")
 		for line in str:gmatch("[^\r\n]+") do
 			local filename = line:match("[^%s]+$")
-			if filename ~= nill then
+			if filename ~= nil then
 				local command = line:sub(1, #line - #filename)
 				local json = string.format(
 					'\t{\n\t\t"directory": "%s",\n\t\t"command": "%s",\n\t\t"file": "%s"\n\t},\n',

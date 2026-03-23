@@ -45,7 +45,6 @@ require("plugins.blankline")
 require("plugins.neotree")
 require("plugins.dashboard")
 require("plugins.whichkey")
-require("plugins.outline")
 require("plugins.colorizer")
 
 -- GIT Plugins

@@ -124,8 +124,10 @@ require("lazy").setup({
 	{'folke/which-key.nvim'},
 
 	-- Snips
-    {'hrsh7th/vim-vsnip'},
-    {'hrsh7th/vim-vsnip-integ'},
+    -- {'hrsh7th/vim-vsnip'},
+    -- {'hrsh7th/vim-vsnip-integ'},
+	{'L3MON4D3/LuaSnip', version = "v2.*"},
+	{'saadparwaiz1/cmp_luasnip'},
 
 	-- Colorizer 
 	{'norcalli/nvim-colorizer.lua'},

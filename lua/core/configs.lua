@@ -1,8 +1,8 @@
 -- Vim Enstellungen
-vim.g.did_load_filetypes = 1
+-- vim.g.did_load_filetypes = 1
 vim.g.formatoptions = "qrn1"
 vim.opt.showmode = false
-vim.opt.updatetime = 100
+vim.opt.updatetime = 500
 vim.wo.signcolumn = "yes"
 vim.opt.scrolloff = 8
 vim.opt.wrap = true
