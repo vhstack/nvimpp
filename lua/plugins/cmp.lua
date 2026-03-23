@@ -52,12 +52,12 @@ cmp.setup({
         end, {"i", "s"})
     }),
     sources = cmp.config.sources({
-		{name = 'nvim_lsp',                  priority = 900},
-		{name = 'luasnip',                   priority = 800},
-		{name = 'buffer',                    priority = 700},
-		{name = 'path',                      priority = 600},
-		{name = 'nvim_lsp_signature_help',   priority = 500}
-	})
+	{name = 'buffer',                    priority = 1000}, -- Buffer-Wörter
+	{name = 'nvim_lsp',                  priority = 900},  -- LSP-Vorschläge
+	{name = 'luasnip',                   priority = 800},  -- Lua Snips
+	{name = 'path',                      priority = 700},  -- Pfad
+	{name = 'nvim_lsp_signature_help',   priority = 600}   -- Signatur Hilfe
+    })
 })
 
 -- Set configuration for specific filetype.
