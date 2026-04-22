@@ -100,7 +100,17 @@ require("lazy").setup({
 
 	-- Null LS Formatter
     --{'jose-elias-alvarez/null-ls.nvim'}, 
-    {'nvimtools/none-ls.nvim'}, 
+    -- {'nvimtools/none-ls.nvim'}, 
+	{
+		'stevearc/conform.nvim',
+		cmd = { "ConformInfo" },
+		opts = {
+			formatters_by_ft = {
+				c   = { "clang_format" },
+				cpp = { "clang_format" },
+			},
+		},
+	},
 
 	-- Auto Klammern
 	{'windwp/nvim-autopairs'},

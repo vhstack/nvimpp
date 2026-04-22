@@ -131,7 +131,7 @@ if vim.g.is_lsp_enabled then
 	vim.keymap.set('n', '<leader>lr', functions.TelescopeReferences, opts)
 	vim.keymap.set('n', '<leader>lt', vim.lsp.buf.type_definition, opts)
 	vim.keymap.set('n', '<leader>lR', vim.lsp.buf.rename, opts)
-	vim.keymap.set('n', '<leader>lF', vim.lsp.buf.format, opts)
+	vim.keymap.set({ 'n', 'v' }, '<leader>lF', function() require("conform").format({ async = true, lsp_fallback = true }) end, opts)
 	vim.keymap.set('n', '<leader>lp', functions.GenerateCompileCommands, opts)
 	vim.keymap.set("n", "<c-x>", functions.TelescopeDiagnostics, opts)
 	vim.keymap.set('n', '<c-p>', vim.lsp.buf.definition, opts)

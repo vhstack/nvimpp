@@ -33,7 +33,7 @@ require("core.colors")
 -- Plugins config
 --require("plugins.telescope")
 require("plugins.mason")
-require("plugins.nullls")
+--require("plugins.nullls")
 require("plugins.lualine")
 require("plugins.treesitter")
 require("plugins.toggleterm")
