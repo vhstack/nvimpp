@@ -39,6 +39,7 @@ that provides seamless and efficient use of the Terminal, Tmux, and Neovim.
 |`null-ls` | Support for formatting and static analysis (linters) |
 |`lualine` | Customizable status line for Neovim |
 |`gitsigns` | Git integration with inline diff display |
+|`treesitter` | Enhanced syntax highlighting for C/C++ |
 |`toggleterm` | Integrated terminal within Neovim |
 |`outline` | Symbol outline view (e.g., classes, functions) |
 |`autopairs` | Automatic pairing of brackets and quotes |
