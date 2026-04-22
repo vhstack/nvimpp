@@ -38,7 +38,6 @@ bildet es eine perfekt abgestimmte Arbeitsumgebung, die dir eine nahtlose und ef
 | `nullls` | Unterstützung für Formatierung und statische Analyse (Linter) |
 | `lualine` | Anpassbare Statusleiste für Neovim |
 | `gitsigns` | Git-Integration mit Inline-Diff-Anzeige |
-| `treesitter` | Verbesserte Syntaxhervorhebung für C/C++ |
 | `toggleterm` | Integriertes Terminal in Neovim |
 | `outline` | Anzeige der Symbolstruktur (z. B. Klassen, Funktionen) |
 | `autopairs` | Automatische Klammer- und Anführungszeichen-Paare |
