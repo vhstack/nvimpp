@@ -16,12 +16,17 @@ require("lazy").setup({
 	{'catppuccin/nvim'},
 
 	-- Telescope
-    {
-        'nvim-telescope/telescope.nvim',
+	{
+		'nvim-telescope/telescope.nvim',
 		cmd = "Telescope",
 		commit = '84b9ba0',
-        dependencies = {'nvim-lua/plenary.nvim'}
-    }, 
+		dependencies = {'nvim-lua/plenary.nvim'},
+		opts = {
+			defaults = {
+				file_ignore_patterns = { "%.o", "%.git", "%.lock", "Debug/", "tags" },
+			},
+		},
+	}, 
 
 	-- Transparenz
 	{'xiyaowong/transparent.nvim'},

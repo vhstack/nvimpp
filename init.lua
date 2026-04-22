@@ -31,7 +31,7 @@ require("core.mappings")
 require("core.colors")
 
 -- Plugins config
-require("plugins.telescope")
+--require("plugins.telescope")
 require("plugins.mason")
 require("plugins.nullls")
 require("plugins.lualine")
