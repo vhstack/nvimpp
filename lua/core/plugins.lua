@@ -36,9 +36,21 @@ require("lazy").setup({
 	},
 
 	-- Syntax Treesitter
+	--{
+	-- 	'nvim-treesitter/nvim-treesitter'
+	--}, 
+	
 	{
-	 	'nvim-treesitter/nvim-treesitter'
-	}, 
+		'nvim-treesitter/nvim-treesitter',
+		branch = vim.fn.has('nvim-0.11') == 1 and 'main' or 'master',
+		lazy = false,
+		build = function()
+			-- master: :TSUpdate existiert, main: install() wird anders gehandhabt
+			if vim.fn.has('nvim-0.11') == 0 then
+				vim.cmd('TSUpdate')
+			end
+		end,
+	},
 
 	-- LSP Konfiguration
 	{
