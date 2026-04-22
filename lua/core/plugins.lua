@@ -36,7 +36,12 @@ require("lazy").setup({
 	},
 
 	-- Syntax Treesitter
-    {'nvim-treesitter/nvim-treesitter'}, 
+	--    	{
+	-- 	'nvim-treesitter/nvim-treesitter',
+	-- 	branch = 'master',
+	-- 	--commit = 'a80a46e',   -- stabiler Stand vor main-Umbau
+	-- 	run = ':TSUpdate',
+	-- }, 
 
 	-- LSP Konfiguration
 	{
