@@ -4,6 +4,9 @@ vim.g.mapleader = " "
 -- Lokale Funktionen
 local functions = require("core.functions")
 
+-- Version Spezifika
+local compat    = require("core.compat")
+
 -- Lokale Variablen
 local opts = { noremap = true, silent = true }
 
@@ -136,11 +139,13 @@ if vim.g.is_lsp_enabled then
 	vim.keymap.set("n", "<c-x>", functions.TelescopeDiagnostics, opts)
 	vim.keymap.set('n', '<c-p>', vim.lsp.buf.definition, opts)
 	vim.keymap.set('n', '<c-t>', vim.lsp.buf.type_definition, opts)
-	vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-	vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-	vim.keymap.set("n", "ö", vim.diagnostic.goto_prev, opts)
-	vim.keymap.set("n", "ä", vim.diagnostic.goto_next, opts)
-	vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+
+	vim.keymap.set("n", "[d", compat.diagnostic_jump_prev, opts)
+	vim.keymap.set("n", "]d", compat.diagnostic_jump_next, opts)
+	vim.keymap.set("n", "ö", compat.diagnostic_jump_prev, opts)
+	vim.keymap.set("n", "ä", compat.diagnostic_jump_next, opts)
+	vim.keymap.set("n", "K", compat.lsp_hover, opts)
+
 	vim.keymap.set('n', 'gd', vim.lsp.buf.definition, vim.tbl_extend('force', opts, { desc = 'Definition' }))
 	vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, vim.tbl_extend('force', opts, { desc = 'Declaration' })) 
 	vim.keymap.set('n', 'gr', functions.TelescopeReferences, vim.tbl_extend('force', opts, { desc = 'References' })) 
