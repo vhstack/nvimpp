@@ -2,7 +2,6 @@
 -- Author: Viktor Herzog
 -- GitHub: https://github.com/vhstack/nvimpp
 
-
 -- Color Scheme
 -- Catppuchin Themes: catppuccin, catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 -- Andere Themen: kanagawa,onedark,glowbeam
@@ -31,9 +30,7 @@ require("core.mappings")
 require("core.colors")
 
 -- Plugins config
---require("plugins.telescope")
 require("plugins.mason")
---require("plugins.nullls")
 require("plugins.lualine")
 require("plugins.treesitter")
 require("plugins.toggleterm")
@@ -46,6 +43,9 @@ require("plugins.neotree")
 require("plugins.dashboard")
 require("plugins.whichkey")
 require("plugins.colorizer")
+
+-- Lazy load plugins
+--require("plugins.telescope")
 
 -- GIT Plugins
 if vim.g.is_git_enabled then
