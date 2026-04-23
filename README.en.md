@@ -30,28 +30,28 @@ that provides seamless and efficient use of the Terminal, Tmux, and Neovim.
 
 ## 📦 Installed Plugins
 
-|Plugin | Description |
-|--- | --- |
-|`telescope` | Advanced fuzzy search and file navigation |
-|`lsp` | Language Server Protocol (LSP) support for C/C++ |
-|`mason` | Easy management of LSP servers, debuggers, and linters |
-|`cmp` | Auto-completion engine for an improved coding workflow |
-|`null-ls` | Support for formatting and static analysis (linters) |
-|`lualine` | Customizable status line for Neovim |
-|`gitsigns` | Git integration with inline diff display |
-|`treesitter` | Enhanced syntax highlighting for C/C++ |
-|`toggleterm` | Integrated terminal within Neovim |
-|`outline` | Symbol outline view (e.g., classes, functions) |
-|`autopairs` | Automatic pairing of brackets and quotes |
-|`comments` | Easy commenting of code blocks |
-| `ansi` | Render colored ANSI escape sequences |
-|`buffline` | Enhanced buffer navigation |
-|`blankline` | Visual representation of indent levels |
-|`neotree` | File manager for improved navigation |
-|`neogen` | Documentation generator within source code |
-|`dashboard` | Start screen for Neovim with quick access |
-|`which-key` | Quick display of keybindings |
-|`transparent` | Transparency mode for your color scheme |
+|Plugin        | Description                                            |
+|--------------|--------------------------------------------------------|
+|`telescope`   | Advanced fuzzy search and file navigation              |
+|`lsp`         | Language Server Protocol (LSP) support for C/C++       |
+|`mason`       | Easy management of LSP servers, debuggers, and linters |
+|`cmp`         | Auto-completion engine for an improved coding workflow |
+|`conform`     | Support for code formatting                            |
+|`lualine`     | Customizable status line for Neovim                    |
+|`gitsigns`    | Git integration with inline diff display               |
+|`treesitter`  | Enhanced syntax highlighting for C/C++                 |
+|`toggleterm`  | Integrated terminal within Neovim                      |
+|`outline`     | Symbol outline view (e.g., classes, functions)         |
+|`autopairs`   | Automatic pairing of brackets and quotes               |
+|`comments`    | Easy commenting of code blocks                         |
+| `ansi`       | Render colored ANSI escape sequences                   |
+|`buffline`    | Enhanced buffer navigation                             |
+|`blankline`   | Visual representation of indent levels                 |
+|`neotree`     | File manager for improved navigation                   |
+|`neogen`      | Documentation generator within source code             |
+|`dashboard`   | Start screen for Neovim with quick access              |
+|`which-key`   | Quick display of keybindings                           |
+|`transparent` | Transparency mode for your color scheme                |
 
 ## 🎨 Themes
 

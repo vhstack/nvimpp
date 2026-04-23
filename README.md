@@ -29,28 +29,28 @@ bildet es eine perfekt abgestimmte Arbeitsumgebung, die dir eine nahtlose und ef
 
 ## 📦 Installierte Plugins
 
-| Plugin | Beschreibung |
-|--------|-------------|
-| `telescope` | Erweiterte Fuzzy-Suche und Datei-Navigation |
-| `lsp` | Language Server Protocol (LSP) für C/C++-Unterstützung |
-| `mason` | Einfaches Management von LSP-Servern, Debuggern und Lintern |
-| `cmp` | Auto-Completion-Engine für besseren Code-Workflow |
-| `nullls` | Unterstützung für Formatierung und statische Analyse (Linter) |
-| `lualine` | Anpassbare Statusleiste für Neovim |
-| `gitsigns` | Git-Integration mit Inline-Diff-Anzeige |
-| `treesitter` | Verbesserte Syntaxhervorhebung für C/C++ |
-| `toggleterm` | Integriertes Terminal in Neovim |
-| `outline` | Anzeige der Symbolstruktur (z. B. Klassen, Funktionen) |
-| `autopairs` | Automatische Klammer- und Anführungszeichen-Paare |
-| `comments` | Einfaches Kommentieren von Codeblöcken |
-| `ansi` | Darstellung farbiger ANSI-Sequenzen |
-| `buffline` | Erweiterte Buffer-Navigation |
-| `blankline` | Visuelle Darstellung von Einrückungen |
-| `neotree` | Dateimanager für verbesserte Navigation |
-| `neogen` | Dokumentation Generator in Sourcen |
-| `dashboard` | Startbildschirm für Neovim mit Schnellzugriff |
-| `whichkey` | Schnelle Anzeige von Tastenkombinationen |
-| `transparent` | Transparenz Modus für Farbschema |
+| Plugin        | Beschreibung                                                |
+|---------------|-------------------------------------------------------------|
+| `telescope`   | Erweiterte Fuzzy-Suche und Datei-Navigation                 |
+| `lsp`         | Language Server Protocol (LSP) für C/C++-Unterstützung      |
+| `mason`       | Einfaches Management von LSP-Servern, Debuggern und Lintern |
+| `cmp`         | Auto-Completion-Engine für besseren Code-Workflow           |
+| `conform`     | Unterstützung für Code-Formatierung                         |
+| `lualine`     | Anpassbare Statusleiste für Neovim                          |
+| `gitsigns`    | Git-Integration mit Inline-Diff-Anzeige                     |
+| `treesitter`  | Verbesserte Syntaxhervorhebung für C/C++                    |
+| `toggleterm`  | Integriertes Terminal in Neovim                             |
+| `outline`     | Anzeige der Symbolstruktur (z. B. Klassen, Funktionen)      |
+| `autopairs`   | Automatische Klammer- und Anführungszeichen-Paare           |
+| `comments`    | Einfaches Kommentieren von Codeblöcken                      |
+| `ansi`        | Darstellung farbiger ANSI-Sequenzen                         |
+| `buffline`    | Erweiterte Buffer-Navigation                                |
+| `blankline`   | Visuelle Darstellung von Einrückungen                       |
+| `neotree`     | Dateimanager für verbesserte Navigation                     |
+| `neogen`      | Dokumentation Generator in Sourcen                          |
+| `dashboard`   | Startbildschirm für Neovim mit Schnellzugriff               |
+| `whichkey`    | Schnelle Anzeige von Tastenkombinationen                    |
+| `transparent` | Transparenz Modus für Farbschema                            |
 
 ## 🎨 Themen
 

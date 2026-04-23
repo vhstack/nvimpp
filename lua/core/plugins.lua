@@ -42,10 +42,6 @@ require("lazy").setup({
 	},
 
 	-- Syntax Treesitter
-	--{
-	-- 	'nvim-treesitter/nvim-treesitter'
-	--}, 
-	
 	{
 		'nvim-treesitter/nvim-treesitter',
 		branch = vim.fn.has('nvim-0.11') == 1 and 'main' or 'master',
@@ -99,9 +95,7 @@ require("lazy").setup({
 	-- Terminal
     {'akinsho/toggleterm.nvim', version = "*", config = true},
 
-	-- Null LS Formatter
-    --{'jose-elias-alvarez/null-ls.nvim'}, 
-    -- {'nvimtools/none-ls.nvim'}, 
+	-- Conform Formatter
 	{
 		'stevearc/conform.nvim',
 		cmd = { "ConformInfo" },
@@ -154,8 +148,6 @@ require("lazy").setup({
 	{'folke/which-key.nvim'},
 
 	-- Snips
-    -- {'hrsh7th/vim-vsnip'},
-    -- {'hrsh7th/vim-vsnip-integ'},
 	{'L3MON4D3/LuaSnip', version = "v2.*"},
 	{'saadparwaiz1/cmp_luasnip'},
 
