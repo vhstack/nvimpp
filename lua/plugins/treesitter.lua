@@ -2,7 +2,7 @@
 local has_new_api = vim.fn.has('nvim-0.11') == 1
 
 if has_new_api then
-	require('nvim-treesitter').install({ 'lua', 'python', 'vim', 'vimdoc' })
+	require('nvim-treesitter').install({ "c", "cpp", "lua", "python", "vim", "vimdoc" })
 	vim.api.nvim_create_autocmd('FileType', {
 	  pattern = { "c", "cpp", 'lua', 'vim' },
 	  callback = function()
@@ -13,7 +13,7 @@ if has_new_api then
 	})
 else
 	require'nvim-treesitter.configs'.setup {
-		ensure_installed = { "c", "cpp", "lua", "vim" },
+		ensure_installed = { "c", "cpp", "lua", "python", "vim", "vimdoc" },
 
 		sync_install = false,
 		auto_install = true,

@@ -77,7 +77,9 @@ vim.api.nvim_create_autocmd("CursorHold", {
 })
 
 -- Hover Fenster nicht fokusierbar
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-  vim.lsp.handlers.hover,
-  { focusable = false }
-)
+if vim.fn.has('nvim-0.12') == 0 then
+	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+		vim.lsp.handlers.hover,
+		{ focusable = false }
+	)
+end

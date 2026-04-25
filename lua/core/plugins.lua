@@ -169,7 +169,12 @@ require("lazy").setup({
 	{'saadparwaiz1/cmp_luasnip'},
 
 	-- Colorizer 
-	{'norcalli/nvim-colorizer.lua'},
+	--{'norcalli/nvim-colorizer.lua'},
+	{
+		"catgoose/nvim-colorizer.lua",
+		event = "BufReadPre",
+		opts = {},  
+	},
 
 	-- Multiple Highlighting
 	{'lfv89/vim-interestingwords'},
