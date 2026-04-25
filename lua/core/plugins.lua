@@ -46,6 +46,7 @@ require("lazy").setup({
 		'nvim-treesitter/nvim-treesitter',
 		branch = vim.fn.has('nvim-0.11') == 1 and 'main' or 'master',
 		lazy = false,
+		build = ":TSUpdate",
 		build = function()
 			-- master: :TSUpdate existiert, main: install() wird anders gehandhabt
 			if vim.fn.has('nvim-0.11') == 0 then
@@ -90,10 +91,26 @@ require("lazy").setup({
     }, 
 
 	-- Mason Plugins
-    {"williamboman/mason.nvim"},
+    {
+		"williamboman/mason.nvim",
+		opts = {},
+	},
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		dependencies = { "williamboman/mason.nvim" },
+		config = function()
+			require("mason-tool-installer").setup({
+				ensure_installed = { "tree-sitter-cli" },
+			})
+		end,
+	},
 
 	-- Terminal
-    {'akinsho/toggleterm.nvim', version = "*", config = true},
+    {
+		'akinsho/toggleterm.nvim', 
+		version = "*", 
+		config = true
+	},
 
 	-- Conform Formatter
 	{
