@@ -33,19 +33,20 @@ require("core.colors")
 require("plugins.mason")
 require("plugins.lualine")
 require("plugins.treesitter")
-require("plugins.toggleterm")
-require("plugins.outline")
-require("plugins.autopairs")
 require("plugins.comments")
 require("plugins.buffline")
 require("plugins.blankline")
-require("plugins.neotree")
 require("plugins.dashboard")
-require("plugins.whichkey")
-require("plugins.colorizer")
 
 -- Lazy load plugins
---require("plugins.telescope")
+-- plugin.telescope
+-- plugin.conform
+-- plugin.neotree
+-- plugin.outline
+-- plugins.toggleterm
+-- plugins.whichkey
+-- plugins.autopairs
+-- plugins.colorizer
 
 -- GIT Plugins
 if vim.g.is_git_enabled then

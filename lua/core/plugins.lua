@@ -22,15 +22,17 @@ require("lazy").setup({
 		cmd = "Telescope",
 		commit = '84b9ba0',
 		dependencies = {'nvim-lua/plenary.nvim'},
-		opts = {
-			defaults = {
-				file_ignore_patterns = { "%.o", "%.git", "%.lock", "Debug/", "tags" },
-			},
-		},
+		config = function()
+            require("plugins.telescope")
+        end,
+
 	}, 
 
 	-- Transparenz
-	{'xiyaowong/transparent.nvim'},
+	{
+		'xiyaowong/transparent.nvim',
+		cmd = { "TransparentToggle", "TransparentEnable", "TransparentDisable" }
+	},
 
 	-- Indent Blankline
 	{'lukas-reineke/indent-blankline.nvim',
@@ -93,6 +95,7 @@ require("lazy").setup({
 	-- Mason Plugins
     {
 		"williamboman/mason.nvim",
+		cmd = { "Mason" },
 		opts = {},
 	},
 	{
@@ -108,8 +111,11 @@ require("lazy").setup({
 	-- Terminal
     {
 		'akinsho/toggleterm.nvim', 
+		cmd = { "ToggleTerm" },
 		version = "*", 
-		config = true
+		config = function()
+            require("plugins.toggleterm")
+        end,
 	},
 
 	-- Conform Formatter
@@ -125,7 +131,13 @@ require("lazy").setup({
 	},
 
 	-- Auto Klammern
-	{'windwp/nvim-autopairs'},
+	{
+		'windwp/nvim-autopairs',
+		event = { "InsertEnter" },
+		config = function()
+            require("plugins.autopairs")
+        end,
+	},
 
 	-- Komments Plugin
 	{'terrortylor/nvim-comment'},
@@ -133,10 +145,14 @@ require("lazy").setup({
 	-- Neo Tree Explorer
 	{
         "nvim-neo-tree/neo-tree.nvim",
+		cmd = { "Neotree" },
         dependencies = {
             "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons",
             "MunifTanjim/nui.nvim", "s1n7ax/nvim-window-picker"
-        }
+        },
+		config = function()
+            require("plugins.neotree")
+        end,
     },
 
 	-- Buffer Zeile
@@ -151,7 +167,13 @@ require("lazy").setup({
     }, 
 
 	-- Anzeige Klassen Members
-	{'hedyhli/outline.nvim'},
+	{
+		'hedyhli/outline.nvim',
+		cmd = {"Outline"},
+		config = function()
+            require("plugins.outline")
+        end,
+	},
 
 	-- Dashboard
 	{
@@ -162,14 +184,19 @@ require("lazy").setup({
     }, 
 
 	-- Key Binding Hilfe
-	{'folke/which-key.nvim'},
+	{
+		'folke/which-key.nvim',
+		event = "VeryLazy",
+		config = function()
+            require("plugins.whichkey")
+        end,
+	},
 
 	-- Snips
 	{'L3MON4D3/LuaSnip', version = "v2.*"},
 	{'saadparwaiz1/cmp_luasnip'},
 
 	-- Colorizer 
-	--{'norcalli/nvim-colorizer.lua'},
 	{
 		"catgoose/nvim-colorizer.lua",
 		event = "BufReadPre",
@@ -182,17 +209,20 @@ require("lazy").setup({
 	-- Doxygen Autodokumentation
     {
 		'danymat/neogen', 
+		cmd = { "Neogen" },
 	    config = true
 	},
 
 	-- Log Colorizer
-	{'0xferrous/ansi.nvim',
-	    	config = function()
-	        	require("ansi").setup({
+	{
+		'0xferrous/ansi.nvim',
+		ft = { "log" }, 
+	    config = function()
+	      	require("ansi").setup({
 				auto_enable = false,
 				filetypes = { "log" },
 				theme = 'catppuccin'
 			})
-	    	end
+	    end
 	},
 });
