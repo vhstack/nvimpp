@@ -48,7 +48,6 @@ require("lazy").setup({
 		'nvim-treesitter/nvim-treesitter',
 		branch = vim.fn.has('nvim-0.11') == 1 and 'main' or 'master',
 		lazy = false,
-		build = ":TSUpdate",
 		build = function()
 			-- master: :TSUpdate existiert, main: install() wird anders gehandhabt
 			if vim.fn.has('nvim-0.11') == 0 then

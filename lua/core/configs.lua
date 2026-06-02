@@ -1,6 +1,12 @@
 -- Vim Enstellungen
 -- vim.g.did_load_filetypes = 1
-vim.g.formatoptions = "qrn1"
+-- formatoptions ist buffer-lokal -> per FileType-Autocmd setzen,
+-- sonst ueberschreiben ftplugins die Einstellung wieder.
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    vim.opt_local.formatoptions = "qrnj1"
+  end,
+})
 vim.opt.showmode = false
 vim.opt.updatetime = 500
 vim.wo.signcolumn = "yes"
@@ -88,4 +94,16 @@ vim.diagnostic.config({
   }
 })
 
+-- AltGr-Fix für Windows Terminal über SSH:
+-- CSI-u / modifyOtherKeys wieder abschalten, das WT bei AltGr verstümmelt.
+vim.api.nvim_create_autocmd("UIEnter", {
+  callback = function()
+   io.stdout:write("\27[<1u")    -- Kitty/CSI-u-Flags zurücknehmen
+   --io.stdout:write("\27[>4;0m")  -- modifyOtherKeys deaktivieren
+  end,
+})
 
+-- Vervollständigung aktueller Pfad der Datei mit %% 
+vim.keymap.set("c", "%%", function()
+	return vim.fn.expand("%:h") .. "/"
+end, { expr = true })
