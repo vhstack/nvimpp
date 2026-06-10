@@ -1,5 +1,30 @@
 local M = {}
 
+-- Polyfill / De-Deprecation: vim.tbl_flatten
+-- Mehrere Plugins (lualine, bufferline, telescope, neo-tree, ...) rufen noch
+-- vim.tbl_flatten auf. Ab nvim 0.10 ist die Funktion deprecated (Warnung beim
+-- Start), in künftigen Versionen wird sie entfernt. Wir ersetzen sie durch eine
+-- stille, verhaltensgleiche Implementierung:
+--   * neueres nvim -> keine Deprecation-Warnung mehr, später kein Crash
+--   * älteres nvim -> identisches Verhalten
+local function tbl_flatten(t)
+    local result = {}
+    local function rec(list)
+        for i = 1, #list do
+            local v = list[i]
+            if type(v) == "table" then
+                rec(v)
+            elseif v ~= nil then
+                result[#result + 1] = v
+            end
+        end
+    end
+    rec(t)
+    return result
+end
+vim.tbl_flatten = tbl_flatten
+M.tbl_flatten = tbl_flatten
+
 -- Feature-Detection, nicht Version-Detection
 M.has_lsp_config = vim.lsp.config ~= nil
 M.has_diagnostic_jump = vim.diagnostic.jump ~= nil

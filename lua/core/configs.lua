@@ -44,6 +44,16 @@ vim.opt.clipboard = {}
 -- Shorter Nachrichten
 vim.opt.shortmess:append("c")
 
+-- Reihenfolge der nativen Vervollständigung (i_CTRL-P / i_CTRL-N),
+-- greift auch als Fallback, wenn das cmp-Menü noch nicht offen ist:
+--   .  aktueller (interner) Buffer
+--   w  Buffer aus anderen Fenstern   } offene Buffer
+--   b  geladene Buffer der Bufferliste
+--   i  inkludierte Dateien (Includes)
+--   u  entladene Buffer              } weitere
+--   t  Tags
+vim.opt.complete = ".,w,b,i,u,t"
+
 -- Indent Einstellungen
 vim.opt.expandtab = false
 vim.opt.shiftwidth = 4

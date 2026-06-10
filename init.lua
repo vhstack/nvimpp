@@ -13,6 +13,10 @@ vim.g.is_transparency_enabled=false
 -- LSP aktivieren/deaktivieren
 vim.g.is_lsp_enabled = true
 
+-- Kompatibilität / Polyfills (muss vor den Plugins geladen werden,
+-- u.a. setzt es den stillen Ersatz für das deprecated vim.tbl_flatten)
+require("core.compat")
+
 -- Funktionen
 local functions = require("core.functions")
 
