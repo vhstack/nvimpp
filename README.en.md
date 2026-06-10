@@ -63,7 +63,7 @@ that provides seamless and efficient use of the Terminal, Tmux, and Neovim.
 - catppuccin (catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha)
 
 **Default Theme:**  
-The Catppuccin color scheme with transparency enabled is set as the default.
+The Catppuccin color scheme is set as the default; transparency is **disabled** by default (`vim.g.is_transparency_enabled = false`).
 
 
 **Option for light themes:**  
@@ -126,7 +126,7 @@ Available variables in `preload.lua`:
 |Variable | Description | Default |
 |---|---|--- |
 |`vim.g.colorscheme` | Sets the Neovim color scheme | `'catppuccin'` |
-|`vim.g.is_transparency_enabled` | Enables/disables transparency | `true` |
+|`vim.g.is_transparency_enabled` | Enables/disables transparency | `false` |
 |`vim.g.is_lsp_enabled` | Enables/disables LSP features | `true` |
 |`vim.g.is_git_enabled` | Enables/disables Git features | `true` |
 
@@ -194,8 +194,7 @@ The mappings are set up in Lua and cover a variety of features, from navigation 
 |---|--- |
 |`<leader>gb` | Git branches |
 |`<leader>gc` | Git commits |
-|`<leader>gd` | Git diffs |
-|`<leader>gs` | Git status |
+|`<leader>gd` | Git status (Telescope) |
 
 ### Comments
 
@@ -243,6 +242,11 @@ The mappings are set up in Lua and cover a variety of features, from navigation 
 |`<leader>lt`, `gt` | Show type definition |
 |`<leader>lR` | Rename |
 |`<leader>lF` | Format |
+|`<leader>lp` | Generate `compile_commands` |
+|`gd` | Go to definition |
+|`gi` | Go to implementation |
+|`gx` | Diagnostics list |
+|`<C-t>` | Show type definition |
 |`<C-p>` | Go to definition |
 |`<C-o>` | Go back |
 
@@ -264,6 +268,8 @@ The mappings are set up in Lua and cover a variety of features, from navigation 
 |`<leader>T` | Toggle transparency |
 |`<leader>pl` | Open Lazy plugins |
 |`<leader>pm` | Open Mason plugins |
+|`<C-s>` | Toggle symbol outline |
+|`g-` | Jump between changes |
 
 ## 🎯 Final Note
 

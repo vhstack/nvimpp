@@ -61,7 +61,7 @@ bildet es eine perfekt abgestimmte Arbeitsumgebung, die dir eine nahtlose und ef
 - catppuccin (catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha)
 
 **Standard-Theme:**  
-Das catppuccin-Farbschema und die Transparenz sind standardmäßig aktiviert. 
+Das catppuccin-Farbschema ist standardmäßig aktiviert; die Transparenz ist standardmäßig **deaktiviert** (`vim.g.is_transparency_enabled = false`).
 
 **Option für helle Themes:**  
 Fans von hellen Themes können nutzen:
@@ -103,7 +103,7 @@ eigene Konfigurationsanpassungen vorzunehmen – ohne die Hauptkonfiguration zu 
 Wenn du die benutzerdefinierte Konfiguration verwenden willst, benenne die Vorlagendateien um:
 
 ```bash
-mv ~/.config/nvim/lua/custom/_preload.lua ~/.config/nvim/custom/lua/preload.lua
+mv ~/.config/nvim/lua/custom/_preload.lua ~/.config/nvim/lua/custom/preload.lua
 mv ~/.config/nvim/lua/custom/_postload.lua ~/.config/nvim/lua/custom/postload.lua
 ```
 
@@ -121,7 +121,7 @@ Folgende Variablen können im `preload.lua` angepasst werden:
 | **Variable**                    | **Beschreibung**                                  | **Standardwert**           |
 |----------------------------------|--------------------------------------------------|----------------------------|
 | `vim.g.colorscheme`              | Setzt das Farbschema von Neovim                  | `'catppuccin'`             |
-| `vim.g.is_transparency_enabled`  | Aktiviert/deaktiviert die Transparenz            | `true`                     |
+| `vim.g.is_transparency_enabled`  | Aktiviert/deaktiviert die Transparenz            | `false`                    |
 | `vim.g.is_lsp_enabled`           | Aktiviert/deaktiviert LSP-Funktionen             | `true`                     |
 | `vim.g.is_git_enabled`           | Aktiviert/deaktiviert Git-Funktionen.            | `true`                     |
 
@@ -187,10 +187,9 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 | Kürzel       | Bedeutung    |
 | ------------ | ------------ |
-| `<leader>gb` | Git-Branches |
-| `<leader>gc` | Git-Commits  |
-| `<leader>gd` | Git-Diffs    |
-| `<leader>gd` | Git-Status   |
+| `<leader>gb` | Git-Branches           |
+| `<leader>gc` | Git-Commits            |
+| `<leader>gd` | Git-Status (Telescope) |
 
 ### Kommentare
 
@@ -240,6 +239,11 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | `<leader>lt`, `gt`    | Typdefinition anzeigen   |
 | `<leader>lR`          | Umbenennen               |
 | `<leader>lF`          | Formatieren              |
+| `<leader>lp`          | `compile_commands` erzeugen |
+| `gd`                  | Zur Definition springen  |
+| `gi`                  | Implementierung anzeigen |
+| `gx`                  | Diagnose-Liste anzeigen  |
+| `<C-t>`               | Typdefinition anzeigen   |
 | `<C-p>`               | Zur Definition springen  |
 | `<C-o>`               | Zurück springen          |
 
@@ -261,6 +265,8 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | `<leader>T`  | Transparenz umschalten                |
 | `<leader>pl` | Lazy Plugins öffnen                   |
 | `<leader>pm` | Mason Plugins öffnen                  |
+| `<C-s>`      | Symbolübersicht (Outline) umschalten  |
+| `g-`         | Zwischen Änderungen springen          |
 
 
 ## 🎯 Schlusswort

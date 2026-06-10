@@ -57,7 +57,7 @@
 - catppuccin (catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha)
 
 **Стандартная тема:**  
-По умолчанию активирована цветовая схема catppuccin и прозрачность.
+По умолчанию активирована цветовая схема catppuccin; прозрачность по умолчанию **отключена** (`vim.g.is_transparency_enabled = false`).
 
 **Варианты светлых тем:**  
 Любители светлых тем могут использовать:
@@ -113,7 +113,7 @@ mv ~/.config/nvim/lua/custom/_postload.lua ~/.config/nvim/lua/custom/postload.lu
 | **Переменная**                  | **Описание**                                  | **Значение по умолчанию** |
 |----------------------------------|-----------------------------------------------|----------------------------|
 | `vim.g.colorscheme`              | Задаёт цветовую схему Neovim                  | `'catppuccin'`             |
-| `vim.g.is_transparency_enabled`  | Включает/выключает прозрачность               | `true`                     |
+| `vim.g.is_transparency_enabled`  | Включает/выключает прозрачность               | `false`                    |
 | `vim.g.is_lsp_enabled`           | Включает/выключает LSP                        | `true`                     |
 | `vim.g.is_git_enabled`           | Включает/выключает Git-функции                | `true`                     |
 
@@ -176,10 +176,9 @@ mv ~/.config/nvim/lua/custom/_postload.lua ~/.config/nvim/lua/custom/postload.lu
 
 | Сочетание    | Назначение       |
 |--------------|------------------| 
-| `<leader>gb` | Ветви Git        |
-| `<leader>gc` | Коммиты Git      |
-| `<leader>gd` | Git-diffs        |
-| `<leader>gd` | Git-статус       |
+| `<leader>gb` | Ветви Git              |
+| `<leader>gc` | Коммиты Git            |
+| `<leader>gd` | Git-статус (Telescope) |
 
 ### Комментарии
 
@@ -229,6 +228,11 @@ mv ~/.config/nvim/lua/custom/_postload.lua ~/.config/nvim/lua/custom/postload.lu
 | `<leader>lt`, `gt`      | Показать определение типа       |
 | `<leader>lR`            | Переименовать                   |
 | `<leader>lF`            | Форматировать                   |
+| `<leader>lp`            | Сгенерировать `compile_commands`|
+| `gd`                    | Перейти к определению           |
+| `gi`                    | Перейти к реализации            |
+| `gx`                    | Список диагностик               |
+| `<C-t>`                 | Показать определение типа       |
 | `<C-p>`                 | Перейти к определению           |
 | `<C-o>`                 | Вернуться назад                 |
 
@@ -250,6 +254,8 @@ mv ~/.config/nvim/lua/custom/_postload.lua ~/.config/nvim/lua/custom/postload.lu
 | `<leader>T`     | Переключить прозрачность              |
 | `<leader>pl`    | Открыть Lazy Plugins                  |
 | `<leader>pm`    | Открыть Mason Plugins                 |
+| `<C-s>`         | Переключить структуру символов (Outline) |
+| `g-`            | Переход между изменениями             |
 
 ## 🎯 Заключение
 
