@@ -6,7 +6,10 @@ if has_new_api then
 	vim.api.nvim_create_autocmd('FileType', {
 	  pattern = { "c", "cpp", 'lua', 'vim' },
 	  callback = function()
-		vim.treesitter.start()
+		-- install() oben laeuft asynchron: auf frischen Systemen ist der
+		-- Parser beim ersten Oeffnen noch nicht gebaut — dann ohne
+		-- Treesitter weiterarbeiten statt mit Fehlermeldung abzubrechen.
+		if not pcall(vim.treesitter.start) then return end
 		vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 		vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 	  end,
