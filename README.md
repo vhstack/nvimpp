@@ -4,7 +4,7 @@
   <a href="README.ru.md"><img src="https://flagcdn.com/16x12/ru.png" alt="Русский" title="Переключиться на русскую версию" /></a>
 </p>
 
-# Neovim C/C++ Development Setup
+# Neovim-Setup für die C/C++-Entwicklung
 
 Dieses Repository enthält eine optimierte **Neovim**-Konfiguration für die **C/C++-Entwicklung** 
 mit leistungsstarken Plugins für Autovervollständigung, Syntaxhervorhebung, Git-Integration und mehr.
@@ -44,13 +44,14 @@ bildet es eine perfekt abgestimmte Arbeitsumgebung, die dir eine nahtlose und ef
 | `autopairs`   | Automatische Klammer- und Anführungszeichen-Paare           |
 | `comments`    | Einfaches Kommentieren von Codeblöcken                      |
 | `ansi`        | Darstellung farbiger ANSI-Sequenzen                         |
+| `colorizer`   | Farbliche Hervorhebung von Farbcodes (z. B. `#RRGGBB`)      |
 | `buffline`    | Erweiterte Buffer-Navigation                                |
 | `blankline`   | Visuelle Darstellung von Einrückungen                       |
 | `neotree`     | Dateimanager für verbesserte Navigation                     |
-| `neogen`      | Dokumentation Generator in Sourcen                          |
+| `neogen`      | Dokumentations-Generator im Quelltext                       |
 | `dashboard`   | Startbildschirm für Neovim mit Schnellzugriff               |
 | `whichkey`    | Schnelle Anzeige von Tastenkombinationen                    |
-| `transparent` | Transparenz Modus für Farbschema                            |
+| `transparent` | Transparenz-Modus für das Farbschema                        |
 
 ## 🎨 Themen
 
@@ -69,7 +70,7 @@ Fans von hellen Themes können nutzen:
 
 ## 📥 Installation
 
-1. **Neovim installieren** 
+1. **Neovim installieren** – benötigt wird **Neovim ≥ 0.10** (0.11+ wird automatisch erkannt und genutzt)
 2. **Tool `rg` (Ripgrep) installieren**
 3. **Für LSP `clangd` installieren**
 4. **Repository klonen & Git-Verzeichnis entfernen:**
@@ -77,7 +78,7 @@ Fans von hellen Themes können nutzen:
    git clone --depth 1 https://github.com/vhstack/nvimpp ~/.config/nvim
    rm -rf ~/.config/nvim/.git ~/.config/nvim/assets ~/.config/nvim/README*.md
    ```
-5. **Plugins synchronisieren** mit dem Plugin-Manager (`Packer`, `Lazy`, etc.)
+5. **Plugins synchronisieren** – beim ersten Start von Neovim installiert `lazy.nvim` alle Plugins automatisch
 6. **LSPs & Tools installieren** über Mason (`:Mason` in Neovim ausführen)
 
 ```sh
@@ -85,10 +86,10 @@ Fans von hellen Themes können nutzen:
 :MasonInstall clangd cmake-language-server
 ```
 
-## 🖥️ Terminal Schriftart
-Es wird empfohlen, eine Nerd Schriftart zu installieren, um eine optimale Darstellung von Symbolen und Glyphen im Terminal zu gewährleisten.
+## 🖥️ Terminal-Schriftart
+Es wird empfohlen, einen Nerd Font zu installieren, um eine optimale Darstellung von Symbolen und Glyphen im Terminal zu gewährleisten.
 
-Nerd Schriftarten sind unter [Nerd Fonts](https://www.nerdfonts.com/) verfügbar. 
+Nerd Fonts sind unter [nerdfonts.com](https://www.nerdfonts.com/) verfügbar. 
 
 Gute Schriftarten fürs Coden sind: **Cascadia**, **FiraCode**, **DejaVuSansM**, **Cousine**
 
@@ -130,7 +131,7 @@ Folgende Variablen können im `preload.lua` angepasst werden:
 - Ideal für **Keymaps**, **UI-Anpassungen** und **Feintuning** nach der initialen Konfiguration.
 - **Beispiel**: Keymap-Änderungen, Farben, Statusline-Anpassungen.
 
-## ⌨  Grundlegende Tastenkombinationen
+## ⌨️ Grundlegende Tastenkombinationen
 Dies ist eine Übersicht der wichtigsten Tastenkombinationen, die in meiner Neovim-Konfiguration definiert sind. 
 Die Tasten sind als Lua-Key-Mappings konfiguriert und decken eine Vielzahl von Funktionen ab, von der Navigation bis hin zu spezifischen Plugins.
 Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nutzen.
@@ -170,7 +171,6 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | `<leader>e`, `<C-e>`  | NeoTree links an-/ausschalten |
 | `<leader>E`           | NeoTree als Float anzeigen    |
 | `<leader>gs`          | Git-Status in NeoTree         |
-| `<C-e>`               | NeoTree links umschalten      |
 
 ### Telescope
 
@@ -178,7 +178,7 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 | -------------------------- | ---------------------------- |
 | `<leader><leader>`         | Zuletzt geöffnete Dateien    |
 | `<leader>ff`, `<C-f>`      | Dateien suchen               |
-| `<leader>fw`, `F2`         | Wort under dem Cursor suchen |
+| `<leader>fw`, `F2`         | Wort unter dem Cursor suchen |
 | `<leader>fg`, `<C-g>`      | Live-Grep-Suche              |
 | `<leader>fb`, `<C-b>`      | Geöffnete Buffer             |
 | `<leader>fh`               | Hilfetags durchsuchen        |
@@ -201,8 +201,8 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 | Kürzel | Bedeutung           |
 | ------ | ------------------- |
-| `|`    | Vertikales Split    |
-| `\`    | Horizontales Split  |
+| `\|`   | Vertikaler Split    |
+| `\`    | Horizontaler Split  |
 
 ### Tabs
 
@@ -223,29 +223,24 @@ Diese Übersicht hilft dir, schnell die wichtigsten Befehle zu finden und zu nut
 
 ### LSP
 
-| Kürzel                | Bedeutung                |
-| --------------------- | ------------------------ |
-| `<leader>lx`, `<C-x>` | Diagnostik mit Telscope  |
-| `<leader>lX`          | Diagnostik als Float     |
-| `[d`                  | Zur vorherigen Diagnose  |
-| `]d`                  | Zur nächsten Diagnose    |
-| `ö`                   | Zur vorherigen Diagnose  |
-| `ä`                   | Zur nächsten Diagnose    |
-| `<leader>la`          | Code Aktionen            |
-| `<leader>ld`, `<C-p>` | Zur Definition springen  |
-| `<leader>lD`, `gD`    | Zur Deklaration springen |
-| `<leader>lk`, `<S-k>` | Hover-Dokumentation      |
-| `<leader>lr`, `gr`    | Referenzen anzeigen      |
-| `<leader>lt`, `gt`    | Typdefinition anzeigen   |
-| `<leader>lR`          | Umbenennen               |
-| `<leader>lF`          | Formatieren              |
-| `<leader>lp`          | `compile_commands` erzeugen |
-| `gd`                  | Zur Definition springen  |
-| `gi`                  | Implementierung anzeigen |
-| `gx`                  | Diagnose-Liste anzeigen  |
-| `<C-t>`               | Typdefinition anzeigen   |
-| `<C-p>`               | Zur Definition springen  |
-| `<C-o>`               | Zurück springen          |
+| Kürzel                      | Bedeutung                   |
+| --------------------------- | --------------------------- |
+| `<leader>lx`, `<C-x>`       | Diagnostik mit Telescope    |
+| `<leader>lX`                | Diagnostik als Float        |
+| `[d`, `ö`                   | Zur vorherigen Diagnose     |
+| `]d`, `ä`                   | Zur nächsten Diagnose       |
+| `<leader>la`                | Code-Aktionen               |
+| `<leader>ld`, `gd`, `<C-p>` | Zur Definition springen     |
+| `<leader>lD`, `gD`          | Zur Deklaration springen    |
+| `<leader>lk`, `<S-k>`       | Hover-Dokumentation         |
+| `<leader>lr`, `gr`          | Referenzen anzeigen         |
+| `<leader>lt`, `gt`, `<C-t>` | Typdefinition anzeigen      |
+| `<leader>lR`                | Umbenennen                  |
+| `<leader>lF`                | Formatieren                 |
+| `<leader>lp`                | `compile_commands` erzeugen |
+| `gi`                        | Implementierung anzeigen    |
+| `gx`                        | Diagnose-Liste anzeigen     |
+| `<C-o>`                     | Zurück springen             |
 
 ### Sonstige
 

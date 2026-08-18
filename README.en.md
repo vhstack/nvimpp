@@ -11,7 +11,7 @@ auto-completion, syntax highlighting, Git integration, and more. The setup is in
 lightweight — fast to start, focused on essentials, and easy to customize to suit your needs.
 
 Together with my other projects **[vhstack/tmuxpp](https://github.com/vhstack/tmuxpp)** and 
-**[vhstack/termpp](https://github.com/vhstack/termpp)** , it forms a perfectly tuned working environment 
+**[vhstack/termpp](https://github.com/vhstack/termpp)**, it forms a perfectly tuned working environment 
 that provides seamless and efficient use of the Terminal, Tmux, and Neovim.
 
 ![Screenshot](assets/screenshot01.png)
@@ -23,8 +23,8 @@ that provides seamless and efficient use of the Terminal, Tmux, and Neovim.
 ## 🚀 Features
 
 - **LSP support** for C/C++ with automatic completion
-- **Syntax highlighting with** Treesitter
-- **Git integration directly** in Neovim
+- **Syntax highlighting** with Treesitter
+- **Git integration** directly in Neovim
 - **Advanced file navigation** with Telescope and NeoTree
 - **Terminal integration** for smooth development workflows
 
@@ -45,12 +45,13 @@ that provides seamless and efficient use of the Terminal, Tmux, and Neovim.
 |`autopairs`   | Automatic pairing of brackets and quotes               |
 |`comments`    | Easy commenting of code blocks                         |
 | `ansi`       | Render colored ANSI escape sequences                   |
+|`colorizer`   | Highlights color codes (e.g., `#RRGGBB`) in their color|
 |`buffline`    | Enhanced buffer navigation                             |
 |`blankline`   | Visual representation of indent levels                 |
 |`neotree`     | File manager for improved navigation                   |
 |`neogen`      | Documentation generator within source code             |
 |`dashboard`   | Start screen for Neovim with quick access              |
-|`which-key`   | Quick display of keybindings                           |
+|`whichkey`    | Quick display of keybindings                           |
 |`transparent` | Transparency mode for your color scheme                |
 
 ## 🎨 Themes
@@ -71,9 +72,9 @@ You can use `catppuccin-latte` (a light variant of Catppuccin) or install other 
 
 ## 📥 Installation
 
-1. **Install Neovim  
+1. **Install Neovim** – requires **Neovim ≥ 0.10** (0.11+ is detected and used automatically)  
 2. **Install the `rg` (Ripgrep) tool**  
-3. **Install `clangd` for LSP** 
+3. **Install `clangd` for LSP**  
 4. **Clone the repository & remove the Git directory:**
 
     ```sh
@@ -81,7 +82,7 @@ You can use `catppuccin-latte` (a light variant of Catppuccin) or install other 
     rm -rf ~/.config/nvim/.git ~/.config/nvim/assets ~/.config/nvim/README*.md
     ```
 
-5. **Sync plugins** with your plugin manager (`Packer`, `Lazy`, etc.)  
+5. **Sync plugins** – on the first launch of Neovim, `lazy.nvim` installs all plugins automatically  
 6. **Install LSPs & tools** via Mason by running `:Mason` in Neovim
 
 Optional: To install `clangd`, open Neovim and run:
@@ -136,7 +137,7 @@ Available variables in `preload.lua`:
 - Ideal for **keymaps**, **UI tweaks**, and **fine-tuning** post-initialization.  
 - **Example**: Keymap changes, color adjustments, status line tweaks.
 
-## ⌨ Keybindings
+## ⌨️ Keybindings
 
 This is an overview of the most important keybindings defined in this Neovim configuration. 
 The mappings are set up in Lua and cover a variety of features, from navigation to plugin-specific commands.
@@ -175,7 +176,6 @@ The mappings are set up in Lua and cover a variety of features, from navigation 
 |`<leader>e`, `<C-e>` | Toggle NeoTree (sidebar)   |
 |`<leader>E`          | Open NeoTree in float      |
 |`<leader>gs`         | Show Git status in NeoTree |
-|`<C-e>`              | Toggle NeoTree sidebar     |
 
 ### Telescope
 
@@ -206,8 +206,8 @@ The mappings are set up in Lua and cover a variety of features, from navigation 
 
 |Shortcut | Description |
 |---|--- |
-|`|`   | Vertical split (`:vsplit`)  |
-|`\` | Horizontal split (`:split`) |
+|`\|` | Vertical split (`:vsplit`)  |
+|`\`  | Horizontal split (`:split`) |
 
 ### Tabs
 
@@ -232,22 +232,19 @@ The mappings are set up in Lua and cover a variety of features, from navigation 
 |---|--- |
 |`<leader>lx`, `<C-x>` | Diagnostics with Telescope |
 |`<leader>lX` | Diagnostics as float |
-|`[d`,`ö` | Go to previous diagnostic |
-|`]d`,`ä` | Go to next diagnostic |
+|`[d`, `ö` | Go to previous diagnostic |
+|`]d`, `ä` | Go to next diagnostic |
 |`<leader>la` | Code actions |
-|`<leader>ld`, `<C-p>` | Go to definition |
+|`<leader>ld`, `gd`, `<C-p>` | Go to definition |
 |`<leader>lD`, `gD` | Go to declaration |
 |`<leader>lk`, `<S-k>` | Hover documentation |
 |`<leader>lr`, `gr` | Show references |
-|`<leader>lt`, `gt` | Show type definition |
+|`<leader>lt`, `gt`, `<C-t>` | Show type definition |
 |`<leader>lR` | Rename |
 |`<leader>lF` | Format |
 |`<leader>lp` | Generate `compile_commands` |
-|`gd` | Go to definition |
 |`gi` | Go to implementation |
 |`gx` | Diagnostics list |
-|`<C-t>` | Show type definition |
-|`<C-p>` | Go to definition |
 |`<C-o>` | Go back |
 
 ### Misc
