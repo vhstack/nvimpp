@@ -12,7 +12,7 @@ Das Setup ist bewusst schlank gehalten – schnell startklar, fokussiert auf das
 deine eigenen Bedürfnisse anpassen. 
 
 Zusammen mit meinen anderen Projekten **[vhstack/tmuxpp](https://github.com/vhstack/tmuxpp)** und **[vhstack/termpp](https://github.com/vhstack/termpp)** 
-bildet es eine perfekt abgestimmte Arbeitsumgebung, die dir eine nahtlose und effiziente Nutzung von Terminal, Tmux und Neovim ermöglicht.
+bildet es eine perfekt abgestimmte Arbeitsumgebung, die dir eine nahtlose und effiziente Nutzung von Terminal, Tmux und Neovim ermöglicht. Die Komplettinstallation des gesamten Stacks übernimmt ein einziger Befehl im [vhstack-Repository](https://github.com/vhstack/vhstack).
 
 ![Screenshot](assets/screenshot01.png)
 

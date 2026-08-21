@@ -12,7 +12,7 @@ lightweight — fast to start, focused on essentials, and easy to customize to s
 
 Together with my other projects **[vhstack/tmuxpp](https://github.com/vhstack/tmuxpp)** and 
 **[vhstack/termpp](https://github.com/vhstack/termpp)**, it forms a perfectly tuned working environment 
-that provides seamless and efficient use of the Terminal, Tmux, and Neovim.
+that provides seamless and efficient use of the Terminal, Tmux, and Neovim. A single command in the [vhstack repository](https://github.com/vhstack/vhstack) installs the complete stack.
 
 ![Screenshot](assets/screenshot01.png)
 
