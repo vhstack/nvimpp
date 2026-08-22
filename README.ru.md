@@ -6,6 +6,8 @@
 
 # Настройка разработки на C/C++ в Neovim
 
+[![Version](https://img.shields.io/github/v/tag/vhstack/nvimpp?label=version&sort=semver&color=8aadf4)](https://github.com/vhstack/nvimpp/tags)
+
 В этом репозитории представлена оптимизированная конфигурация **Neovim** для разработки на **C/C++** с мощными плагинами для автодополнения, подсветки синтаксиса, интеграции с Git и многого другого. Конфигурация сознательно выдержана в минималистичном стиле — быстрое начало, фокус на главном и лёгкая адаптация под ваши нужды.
 
 Вместе с моими другими проектами **[vhstack/tmuxpp](https://github.com/vhstack/tmuxpp)** и **[vhstack/termpp](https://github.com/vhstack/termpp)** это создаёт идеально согласованную рабочую среду для бесшовного и эффективного использования терминала, Tmux и Neovim. Полный стек устанавливается одной командой из [репозитория vhstack](https://github.com/vhstack/vhstack).

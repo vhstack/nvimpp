@@ -6,6 +6,8 @@
 
 # Neovim C/C++ Development Setup
 
+[![Version](https://img.shields.io/github/v/tag/vhstack/nvimpp?label=version&sort=semver&color=8aadf4)](https://github.com/vhstack/nvimpp/tags)
+
 This repository contains an optimized Neovim configuration for C/C++ development with powerful plugins for 
 auto-completion, syntax highlighting, Git integration, and more. The setup is intentionally 
 lightweight — fast to start, focused on essentials, and easy to customize to suit your needs.
