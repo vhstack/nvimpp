@@ -59,7 +59,7 @@ require("lazy").setup({
 	-- LSP Konfiguration
 	{
 		'neovim/nvim-lspconfig',
-		commit = "38de86f...",
+		commit = "38de86f82efd9ba0881203767d6a8e1815abca28",
 		cond = function()
 			return vim.g.is_lsp_enabled == true
 		end,
@@ -68,7 +68,9 @@ require("lazy").setup({
 	-- Autocomplete
     {
 		'hrsh7th/cmp-nvim-lsp',
-		commit = "a8912b88ce488f411177fc8aed358b04dc246d7b"
+		-- cbc7b02: ruft Client-Methoden kompatibel zu NVim 0.10 und 0.11+ auf
+		-- (keine Deprecation-Warnungen client.is_stopped / client.request)
+		commit = "cbc7b02bb99fae35cb42f514762b89b5126651ef"
 	}, 
 	{'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},
     {'hrsh7th/cmp-cmdline'}, {'hrsh7th/nvim-cmp'}, 

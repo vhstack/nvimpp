@@ -8,6 +8,16 @@ Für eine Konfigurationssammlung gilt:
 - **minor** — neue Funktionen, abwärtskompatibel
 - **patch** — Fehlerbehebungen, Feinschliff
 
+## [1.5.1] — 2026-08-25
+
+### Behoben
+
+- `cmp-nvim-lsp` auf Commit `cbc7b02` gesetzt: beseitigt die Deprecation-Warnungen
+  `client.is_stopped` / `client.request` (`:checkhealth vim.deprecated`) unter
+  NVim 0.11+; bleibt kompatibel zu NVim 0.10
+- `nvim-lspconfig`: unvollständiger Commit-Hash (`38de86f...`) durch den
+  vollständigen Hash ersetzt (gleicher Stand)
+
 ## [1.5.0] — 2026-08-22
 
 Erstes getaggtes Release. Der Stand entspricht der bisherigen Entwicklung auf
