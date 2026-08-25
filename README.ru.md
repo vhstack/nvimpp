@@ -4,15 +4,21 @@
   <a href="README.ru.md"><img src="assets/flag-ru.png" width="16" height="12" alt="Русский" title="Переключиться на русскую версию" /></a>
 </p>
 
-# Настройка разработки на C/C++ в Neovim
+# nvimpp — Neovim как C/C++ IDE
 
 [![Version](https://img.shields.io/github/v/tag/vhstack/nvimpp?label=version&sort=semver&color=8aadf4)](https://github.com/vhstack/nvimpp/tags)
 
+[![CI](https://github.com/vhstack/nvimpp/actions/workflows/ci.yml/badge.svg)](https://github.com/vhstack/nvimpp/actions/workflows/ci.yml)
+
 В этом репозитории представлена оптимизированная конфигурация **Neovim** для разработки на **C/C++** с мощными плагинами для автодополнения, подсветки синтаксиса, интеграции с Git и многого другого. Конфигурация сознательно выдержана в минималистичном стиле — быстрое начало, фокус на главном и лёгкая адаптация под ваши нужды.
 
-Вместе с моими другими проектами **[vhstack/tmuxpp](https://github.com/vhstack/tmuxpp)** и **[vhstack/termpp](https://github.com/vhstack/termpp)** это создаёт идеально согласованную рабочую среду для бесшовного и эффективного использования терминала, Tmux и Neovim. Полный стек устанавливается одной командой из [репозитория vhstack](https://github.com/vhstack/vhstack).
-
 ![nvimpp — IDE в терминале: Telescope, Neo-tree, Outline, LSP, диагностика](assets/ide.gif)
+
+nvimpp входит в [vhstack](https://github.com/vhstack/vhstack). Там одна команда настраивает prompt, tmux и Neovim сразу вместе:
+
+```bash
+curl -sL https://raw.githubusercontent.com/vhstack/vhstack/main/install.sh | bash
+```
 
 ## 🚀 Возможности
 - **Поддержка LSP** для C/C++ с автоматическим автодополнением
@@ -64,16 +70,17 @@
 
 ## 📥 Установка
 
-1. **Установите Neovim** — требуется **Neovim ≥ 0.10** (0.11+ определяется и используется автоматически)
-2. **Установите утилиту `rg` (Ripgrep)**
-3. **Установите для LSP сервер `clangd`**
-4. **Клонируйте репозиторий и удалите папку .git:**
+1. **Установите зависимости:** Neovim ≥ 0.10 (0.11+ определяется автоматически), ripgrep и clangd
+   ```sh
+   sudo apt install neovim ripgrep clangd
+   ```
+2. **Клонируйте репозиторий и удалите папку .git:**
    ```sh
    git clone --depth 1 https://github.com/vhstack/nvimpp ~/.config/nvim
    rm -rf ~/.config/nvim/.git ~/.config/nvim/assets ~/.config/nvim/README*.md
    ```
-5. **Синхронизируйте плагины** — при первом запуске Neovim `lazy.nvim` установит все плагины автоматически
-6. **Установите LSP и утилиты** через Mason (выполните `:Mason` внутри Neovim)
+3. **Синхронизируйте плагины** — при первом запуске Neovim `lazy.nvim` установит все плагины автоматически
+4. **Установите LSP и утилиты** через Mason (выполните `:Mason` внутри Neovim)
 
 ```sh
 # Опционально: чтобы установить clangd, откройте Neovim и выполните:
@@ -250,8 +257,6 @@ mv ~/.config/nvim/lua/custom/_postload.lua ~/.config/nvim/lua/custom/postload.lu
 | `<C-s>`         | Переключить структуру символов (Outline) |
 | `g-`            | Переход между изменениями             |
 
-## 🎯 Заключение
+---
 
-Если у вас есть идеи для новых функций или вы хотите улучшить проект, 
-не стесняйтесь развивать его по своему усмотрению! 
-Желаю приятного и успешного программирования с nvimpp! 💻🚀
+Лицензия MIT · часть [vhstack](https://github.com/vhstack/vhstack)
