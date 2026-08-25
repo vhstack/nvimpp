@@ -11,7 +11,7 @@ if vim.lsp.config then
   -- NVim 0.11+
   vim.lsp.config("clangd", {
     capabilities = capabilities,
-    cmd = { "clangd", "--compile-commands-dir=build", "--clang-tidy", "--suggest-missing-includes" },
+    cmd = { "clangd", "--clang-tidy", "--suggest-missing-includes" },
 	filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
 	root_markers = { ".clangd", "compile_commands.json", "compile_flags.txt", ".git" },
     settings = {
@@ -31,7 +31,7 @@ else
   -- NVim 0.10
   lspconfig.clangd.setup({
     capabilities = capabilities,
-    cmd = { "clangd", "--compile-commands-dir=build", "--clang-tidy", "--suggest-missing-includes" },
+    cmd = { "clangd", "--clang-tidy", "--suggest-missing-includes" },
     settings = {
       clangd = {
         formatting = {

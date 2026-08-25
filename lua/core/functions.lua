@@ -28,27 +28,33 @@ function M.GenerateCompileCommands()
 			return
 		end
 		local str = f:read("*a")
+		f:close()
+		os.remove(tmpfile)
 		local current_dir = vim.fn.getcwd()
-		local file = io.open(current_dir .. "/compile_commands.json", "w")
-		file:write("[\n")
+		local entries = {}
 		for line in str:gmatch("[^\r\n]+") do
-			local filename = line:match("[^%s]+$")
+			-- Quelldatei ist das Token mit C/C++-Endung, nicht das letzte Wort
+			local filename = line:match("(%S+%.c[cp]?p?)%s") or line:match("(%S+%.cxx)%s")
 			if filename ~= nil then
-				local command = line:sub(1, #line - #filename)
-				local json = string.format(
-					'\t{\n\t\t"directory": "%s",\n\t\t"command": "%s",\n\t\t"file": "%s"\n\t},\n',
-					current_dir,
-					command,
-					filename
-				)
-				file:write(json)
+				table.insert(entries, string.format(
+					'\t{\n\t\t"directory": "%s",\n\t\t"command": "%s",\n\t\t"file": "%s"\n\t}',
+					current_dir, (line:gsub('"', '\\"')), filename))
 			end
 		end
-		file:write("]")
-		f:close()
+		local file = io.open(current_dir .. "/compile_commands.json", "w")
+		file:write("[\n" .. table.concat(entries, ",\n") .. "\n]\n")
 		file:close()
-		os.remove(tmpfile)
-		vim.cmd("silent! LspRestart")
+		-- clangd stoppen und in allen Buffern neu anhaengen
+		for _, client in ipairs(vim.lsp.get_clients({ name = "clangd" })) do
+			client:stop()
+		end
+		vim.defer_fn(function()
+			for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+				if vim.api.nvim_buf_is_loaded(buf) and vim.bo[buf].filetype:match("^c") then
+					vim.api.nvim_buf_call(buf, function() vim.cmd("doautocmd FileType") end)
+				end
+			end
+		end, 400)
 		print("compile_commands.json generated, LSP restarted")
 	else
 		print("Make failed, error: " .. vim.v.shell_error)

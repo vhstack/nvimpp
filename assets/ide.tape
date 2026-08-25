@@ -19,7 +19,7 @@ Set TypingSpeed 60ms
 Hide
 Type "SP=${VHS_DEMO_DIR:-$HOME/.cache/vhstack-demo}; FH=$SP/fakehome"
 Enter
-Type "mkdir -p $FH/projekte/vlib2; rm -rf $FH/projekte/stacktop; cp -r ${VHS_APP_DIR:-$HOME/projekte/stacktop} $FH/projekte/stacktop; rm -rf $FH/projekte/stacktop/build $FH/projekte/stacktop/stacktop"
+Type "mkdir -p $FH/projekte/vlib2; rm -rf $FH/projekte/stacktop; cp -r ${VHS_APP_DIR:-$HOME/projekte/stacktop} $FH/projekte/stacktop; rm -rf $FH/projekte/stacktop/build $FH/projekte/stacktop/Debug $FH/projekte/stacktop/stacktop"
 Enter
 Type "cp -ru ${VHS_VLIB_DIR:-$HOME/projekte/vlib2}/include ${VHS_VLIB_DIR:-$HOME/projekte/vlib2}/lib $FH/projekte/vlib2/"
 Enter
@@ -70,8 +70,12 @@ Space
 Sleep 200ms
 Type "e"
 Sleep 2s
-Type "k"
+Type "j"
+Sleep 600ms
+Enter
 Sleep 800ms
+Type "j"
+Sleep 600ms
 Enter
 Sleep 2s
 Ctrl+E

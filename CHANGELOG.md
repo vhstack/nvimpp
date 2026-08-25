@@ -8,6 +8,19 @@ Für eine Konfigurationssammlung gilt:
 - **minor** — neue Funktionen, abwärtskompatibel
 - **patch** — Fehlerbehebungen, Feinschliff
 
+## [1.5.2] — 2026-08-25
+
+### Behoben
+
+- `<leader>lp` (`GenerateCompileCommands`): clangd wurde unter NVim 0.11+ nur
+  gestoppt, aber nicht neu gestartet (`LspRestart` kennt Server aus
+  `vim.lsp.config` nicht) — jetzt Neustart über `client:stop()` und erneutes
+  Anhängen in allen C/C++-Buffern, kein Neuöffnen mehr nötig
+- `compile_commands.json`: gültiges JSON (kein Komma vor `]`), `file` zeigt auf
+  die Quelldatei statt auf das letzte Token der Compilerzeile
+- clangd ohne `--compile-commands-dir=build`: die Datei liegt per Konvention in
+  der Projektwurzel und wird dort gefunden
+
 ## [1.5.1] — 2026-08-25
 
 ### Behoben
