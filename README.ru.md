@@ -12,11 +12,7 @@
 
 Вместе с моими другими проектами **[vhstack/tmuxpp](https://github.com/vhstack/tmuxpp)** и **[vhstack/termpp](https://github.com/vhstack/termpp)** это создаёт идеально согласованную рабочую среду для бесшовного и эффективного использования терминала, Tmux и Neovim. Полный стек устанавливается одной командой из [репозитория vhstack](https://github.com/vhstack/vhstack).
 
-![Скриншот](assets/screenshot01.png)
-
-![Скриншот](assets/screenshot02.png)
-
-![Скриншот](assets/screenshot03.png)
+![nvimpp — IDE в терминале: Telescope, Neo-tree, Outline, LSP, диагностика](assets/ide.gif)
 
 ## 🚀 Возможности
 - **Поддержка LSP** для C/C++ с автоматическим автодополнением

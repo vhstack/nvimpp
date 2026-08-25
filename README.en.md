@@ -16,11 +16,7 @@ Together with my other projects **[vhstack/tmuxpp](https://github.com/vhstack/tm
 **[vhstack/termpp](https://github.com/vhstack/termpp)**, it forms a perfectly tuned working environment 
 that provides seamless and efficient use of the Terminal, Tmux, and Neovim. A single command in the [vhstack repository](https://github.com/vhstack/vhstack) installs the complete stack.
 
-![Screenshot](assets/screenshot01.png)
-
-![Screenshot](assets/screenshot02.png)
-
-![Screenshot](assets/screenshot03.png)
+![nvimpp – IDE in the terminal: Telescope, Neo-tree, Outline, LSP, diagnostics](assets/ide.gif)
 
 ## 🚀 Features
 
