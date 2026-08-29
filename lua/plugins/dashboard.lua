@@ -1,4 +1,16 @@
+-- Version aus VERSION-Datei lesen (Fallback: leer)
+local function read_version()
+	local root = vim.fn.fnamemodify(debug.getinfo(1, 'S').source:sub(2), ':h:h:h')
+	local f = io.open(root .. '/VERSION', 'r')
+	if not f then return '' end
+	local v = (f:read('*l') or ''):gsub('%s+$', '')
+	f:close()
+	return v ~= '' and ('v' .. v) or ''
+end
+
 local function default_header()
+	local ver = read_version()
+	local sub = 'vhstack' .. (ver ~= '' and (' · ' .. ver) or '')
 	return {
 	    '', '', '',
 		'███╗   ██╗██╗   ██╗██╗███╗   ███╗               ',
@@ -7,7 +19,9 @@ local function default_header()
 		'██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║╚═██╔═╝╚═██╔═╝ ',
 		'██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║  ╚═╝    ╚═╝   ',
 		'╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝               ',
-	    '', '', ''
+		'',
+		sub,
+	    '', ''
 	}
 end
 
@@ -72,7 +86,7 @@ if vim.g.is_git_enabled then
 		{
 			icon = ' ',
 			icon_hl = 'Title',
-			desc = 'Git Braches',
+			desc = 'Git Branches',
 			desc_hl = 'String',
 			key = 'b',
 			keymap = 'SPC g b',
