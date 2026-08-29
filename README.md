@@ -6,7 +6,7 @@
 
 # <img src="assets/vhstack.svg" width="28" height="28" alt="vhstack" style="vertical-align:middle; margin-right: 6px;" /> nvimpp – Neovim als C/C++-IDE
 
-[![Version](https://img.shields.io/github/v/tag/vhstack/nvimpp?label=version&sort=semver&color=8aadf4)](https://github.com/vhstack/nvimpp/tags)
+[![Version](https://img.shields.io/github/v/tag/vhstack/nvimpp?label=version&sort=semver&color=8b8fd9)](https://github.com/vhstack/nvimpp/tags)
 
 [![CI](https://github.com/vhstack/nvimpp/actions/workflows/ci.yml/badge.svg)](https://github.com/vhstack/nvimpp/actions/workflows/ci.yml)
 
