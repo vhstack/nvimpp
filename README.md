@@ -39,7 +39,7 @@ curl -sL https://raw.githubusercontent.com/vhstack/vhstack/main/install.sh | bas
 | `mason`       | Einfaches Management von LSP-Servern, Debuggern und Lintern |
 | `cmp`         | Auto-Completion-Engine für besseren Code-Workflow           |
 | `conform`     | Unterstützung für Code-Formatierung                         |
-| `lualine`     | Anpassbare Statusleiste für Neovim                          |
+| `lualine`     | Anpassbare Statusleiste mit Dateiinformationen              |
 | `gitsigns`    | Git-Integration mit Inline-Diff-Anzeige                     |
 | `treesitter`  | Verbesserte Syntaxhervorhebung für C/C++                    |
 | `toggleterm`  | Integriertes Terminal in Neovim                             |

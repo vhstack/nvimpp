@@ -8,6 +8,14 @@ Für eine Konfigurationssammlung gilt:
 - **minor** — neue Funktionen, abwärtskompatibel
 - **patch** — Fehlerbehebungen, Feinschliff
 
+## [1.5.3] — 2026-09-04
+
+### Geändert
+
+- Statusleiste (`lualine`): zeigt jetzt die Dateikodierung inklusive BOM
+  rechts neben dem Dateityp; das Zeilenende-Symbol wandert aus der Mitte in
+  dieselbe Sektion
+
 ## [1.5.2] — 2026-08-25
 
 ### Behoben
