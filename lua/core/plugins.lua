@@ -14,7 +14,14 @@ require("lazy").setup({
 	{'cooperuser/glowbeam.nvim'}, 
 	{'joshdick/onedark.vim'},
    	{'rebelot/kanagawa.nvim'},
-	{'catppuccin/nvim'},
+
+	-- Catppuccin
+	{
+		'catppuccin/nvim',
+		name = "catppuccin",
+		priority = 1000,
+		tag = "v1.10.0",
+	},
 
 	-- Telescope
 	{

@@ -8,6 +8,17 @@ Für eine Konfigurationssammlung gilt:
 - **minor** — neue Funktionen, abwärtskompatibel
 - **patch** — Fehlerbehebungen, Feinschliff
 
+## [1.5.4] — 2026-10-13
+
+### Behoben
+
+- `catppuccin`: auf Tag `v1.10.0` festgenagelt (`name = "catppuccin"`,
+  `priority = 1000`). Der aktuelle `main`-Stand des Themes ruft unter
+  NVim 0.12 ungeprüft `vim.pack.get` auf und bricht auf Builds ohne
+  `vim.pack` beim Start mit `attempt to index field 'pack'` ab. Bestehende
+  Installationen: nach dem Update einmal `:Lazy clean`, damit das alte
+  Plugin-Verzeichnis `lazy/nvim` entfernt wird
+
 ## [1.5.3] — 2026-09-04
 
 ### Geändert
