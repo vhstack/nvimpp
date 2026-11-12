@@ -8,6 +8,16 @@ Für eine Konfigurationssammlung gilt:
 - **minor** — neue Funktionen, abwärtskompatibel
 - **patch** — Fehlerbehebungen, Feinschliff
 
+## [1.5.5] — 2026-11-12
+
+### Behoben
+
+- `gitsigns`: unter NVim 0.10 auf Commit `3123632` festgenagelt. Ab
+  `5eb287f` setzt gitsigns NVim 0.11 voraus und bricht unter 0.10 beim
+  Öffnen jeder Datei in einem Git-Repo mit `opt: expected table, got string`
+  ab. Ab NVim 0.11 folgt gitsigns weiter dem `main`-Branch. Bestehende
+  0.10-Installationen: nach dem Update einmal `:Lazy sync`
+
 ## [1.5.4] — 2026-10-13
 
 ### Behoben

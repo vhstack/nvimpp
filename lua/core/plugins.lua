@@ -85,6 +85,11 @@ require("lazy").setup({
 	-- Git Signs
 	{
 		'lewis6991/gitsigns.nvim',
+		-- Ab 5eb287f (2026-09-15) verlangt gitsigns NVim >= 0.11 (vim.validate
+		-- mit Positionsargumenten). Unter 0.10 auf den letzten kompatiblen
+		-- Commit festnageln, ab 0.11 normal dem Branch folgen.
+		commit = vim.fn.has('nvim-0.11') == 0
+			and "312363204ea4dc1880608b8747904f522c87ff2f" or nil,
 		cond = function()
 			return vim.g.is_git_enabled == true
 		end,
